@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Excel lộn xộn thành sạch · Làm thật, thấy thật</title>
+<meta name="description" content="Bậc 3: Excel lộn xộn thành sạch. Đưa file chi phí 300 dòng lộn xộn, để bạn ấy gợi ý việc cần làm, dọn sạch, phân nhóm, vẽ biểu đồ và tự giải thích cách tính.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Excel lộn xộn thành sạch · Làm thật, thấy thật">
+<meta property="og:description" content="Bậc 3: Excel lộn xộn thành sạch. Đưa file chi phí 300 dòng lộn xộn, để bạn ấy gợi ý việc cần làm, dọn sạch, phân nhóm, vẽ biểu đồ và tự giải thích cách tính.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=1791903580">
+<script>
+(function () {
+  var r = document.documentElement;
+  try {
+    var t = localStorage.getItem('ltt:theme'); if (t) r.dataset.theme = t;
+    var f = parseFloat(localStorage.getItem('ltt:fs')); if (f) r.style.setProperty('--fs', f);
+  } catch (e) {}
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    r.classList.add('motion-pre');
+    setTimeout(function () { r.classList.remove('motion-pre'); }, 2600);
+  }
+})();
+</script>
+
+</head>
+<body class="page-lesson" id="top">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<div class="progress-line" aria-hidden="true"></div>
+
+<header class="nav" data-nav>
+  <a class="brand" href="index.html" aria-label="Làm thật, thấy thật: trang chủ"><span>Làm thật</span><span class="brand-sep">/</span><span class="brand-b">thấy thật</span></a>
+  <nav class="nav-main" aria-label="Điều hướng chính">
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Bắt đầu <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Nền tảng · đọc trước khi vào 7 bậc</p><div class="mega-grid mega-3"><a href="bat-dau.html" class="mega-item"><span class="mega-n">NỀN TẢNG · BẮT ĐẦU Ở ĐÂY</span><span class="mega-t">Làm quen người bạn AI</span><span class="mega-h">Đọc trang này trước khi học. Ba câu để nhớ, cách tự học ở nhà, chuẩn bị tài khoản và chiêu…</span></a><a href="khoang-cach.html" class="mega-item"><span class="mega-n">NỀN TẢNG · ĐỌC TRƯỚC</span><span class="mega-t">Khoảng cách AI: phễu 6 tỷ người và vị trí của bạn</span><span class="mega-h">Phễu của Andrej Karpathy cho thấy khoảng cách dùng AI đang nới rộng. Bạn đang ở tầng nào, …</span></a><a href="giao-viec-nhu-dong-nghiep.html" class="mega-item"><span class="mega-n">NỀN TẢNG · CÁCH NÓI CHUYỆN</span><span class="mega-t">Giao việc như giao cho đồng nghiệp</span><span class="mega-h">Người tạo ra Claude Code nói prompt chẳng có bí mật gì. Chỉ cần nói rõ ba điều: muốn gì, b…</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">7 bậc <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">7 bậc đi xuống phễu · 7 cách nhờ</p><div class="mega-grid"><a href="cap-1.html" class="mega-item"><span class="mega-n">N°01</span><span class="mega-t">Email khó, viết lại trong 30 giây</span><span class="mega-h">Giao như cho đồng nghiệp, rồi nhờ góp ý thẳng</span></a><a href="cap-2.html" class="mega-item"><span class="mega-n">N°02</span><span class="mega-t">Tài liệu dài, và bẫy “AI bịa”</span><span class="mega-h">Bạn giỏi nhưng đôi khi đoán, nên cứ hỏi “căn cứ đâu?”</span></a><a href="cap-3.html" class="mega-item is-active"><span class="mega-n">N°03</span><span class="mega-t">Excel lộn xộn thành sạch</span><span class="mega-h">Đưa đống bừa bộn, nhờ sắp xếp</span></a><a href="cap-4.html" class="mega-item"><span class="mega-n">N°04</span><span class="mega-t">Số liệu thành báo cáo thành slide</span><span class="mega-h">Một cuộc trò chuyện, nhiều thành phẩm</span></a><a href="cap-5.html" class="mega-item"><span class="mega-n">N°05</span><span class="mega-t">Trợ lý biết nhớ việc</span><span class="mega-h">Dạy bạn ấy một lần, nhờ mãi mãi</span></a><a href="cap-6.html" class="mega-item"><span class="mega-n">N°06</span><span class="mega-t">Tự tạo công cụ không cần code</span><span class="mega-h">Thiếu công cụ? Nhờ bạn ấy làm luôn</span></a><a href="cap-7.html" class="mega-item"><span class="mega-n">N°07</span><span class="mega-t">Giao cả đầu việc cho AI agent</span><span class="mega-h">Giao cả đầu việc, không chỉ giao câu hỏi</span></a><a href="thu-thach-7-ngay.html" class="mega-item"><span class="mega-n">+ 7 NGÀY</span><span class="mega-t">Thử thách 7 ngày, 7 lần nhờ</span><span class="mega-h">Biến hiểu biết thành thói quen</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Chuyên đề <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Chuyên đề thực chiến · đọc theo nhu cầu</p><div class="mega-grid"><a href="giong-noi.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 01</span><span class="mega-t">Nói thay vì gõ: trò chuyện bằng giọng nói với AI</span><span class="mega-h">20 phút</span></a><a href="anh-chup.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 02</span><span class="mega-t">Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</span><span class="mega-h">20 phút</span></a><a href="tra-cuu-co-nguon.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 03</span><span class="mega-t">Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</span><span class="mega-h">30 phút</span></a><a href="hop-hanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 04</span><span class="mega-t">Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</span><span class="mega-h">25 phút</span></a><a href="hoc-nhanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 05</span><span class="mega-t">Học nhanh mọi thứ với một gia sư kiên nhẫn</span><span class="mega-h">25 phút</span></a><a href="giong-van.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 06</span><span class="mega-t">Viết đúng giọng của bạn và của công ty</span><span class="mega-h">30 phút</span></a><a href="mot-ngay.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 07</span><span class="mega-t">Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</span><span class="mega-h">25 phút đọc</span></a></div></div>
+    </div>
+    <a href="thu-vien-prompt.html">Thư viện prompt</a>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Tài nguyên <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Tra cứu & tự học thêm</p><div class="mega-list"><a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a></div></div>
+    </div>
+    <a href="trinh-chieu.html" class="nav-deck">Trình chiếu ↗</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="nav-search" type="button" data-open-search aria-label="Tìm kiếm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="nav-search-t">Tìm kiếm</span><kbd>Ctrl K</kbd></button>
+    <button class="nav-theme" type="button" data-theme-toggle aria-label="Đổi nền sáng / tối" title="Đổi nền sáng / tối">◐</button>
+    <button class="nav-burger" type="button" data-menu aria-label="Mở menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" data-menu-panel aria-hidden="true">
+  <div class="menu-cols">
+    <div class="menu-list">
+      <h3 class="label" style="color:#a29e96">Nền tảng & 7 bậc</h3>
+      <a href="bat-dau.html"><small>NỀN TẢNG</small>Bắt đầu ở đây</a><a href="khoang-cach.html"><small>NỀN TẢNG</small>Khoảng cách AI</a><a href="giao-viec-nhu-dong-nghiep.html"><small>NỀN TẢNG</small>Giao việc như đồng nghiệp</a>
+      <a href="cap-1.html"><small>N°01</small>Email khó, viết lại trong 30 giây</a><a href="cap-2.html"><small>N°02</small>Tài liệu dài, và bẫy “AI bịa”</a><a href="cap-3.html"><small>N°03</small>Excel lộn xộn thành sạch</a><a href="cap-4.html"><small>N°04</small>Số liệu thành báo cáo thành slide</a><a href="cap-5.html"><small>N°05</small>Trợ lý biết nhớ việc</a><a href="cap-6.html"><small>N°06</small>Tự tạo công cụ không cần code</a><a href="cap-7.html"><small>N°07</small>Giao cả đầu việc cho AI agent</a>
+    </div>
+    <div class="menu-list menu-res">
+      <h3 class="label" style="color:#a29e96">Chuyên đề</h3>
+      <a href="giong-noi.html"><small>CĐ 01</small>Nói thay vì gõ: trò chuyện bằng giọng nói với AI</a><a href="anh-chup.html"><small>CĐ 02</small>Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</a><a href="tra-cuu-co-nguon.html"><small>CĐ 03</small>Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</a><a href="hop-hanh.html"><small>CĐ 04</small>Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</a><a href="hoc-nhanh.html"><small>CĐ 05</small>Học nhanh mọi thứ với một gia sư kiên nhẫn</a><a href="giong-van.html"><small>CĐ 06</small>Viết đúng giọng của bạn và của công ty</a><a href="mot-ngay.html"><small>CĐ 07</small>Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</a>
+      <h3 class="label" style="color:#a29e96;margin-top:26px">Tài nguyên</h3>
+      <a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a>
+      <a href="trinh-chieu.html">Trình chiếu ↗</a>
+      <a href="#" data-open-search>Tìm kiếm…</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<header class="lhero ink grain">
+  <div class="lhero-n" aria-hidden="true">03</div>
+  <div class="lhero-top" data-reveal>
+    <span class="label">Bậc 03 / 07 · Bài tự học</span>
+    <span class="label"><a href="index.html#bo-suu-tap" style="text-decoration:none">← Cả 7 bậc</a></span>
+  </div>
+  <div class="lhero-steps" data-reveal aria-label="Vị trí trong 7 bậc"><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><span class="label">Bậc 03 trên hành trình đi xuống phễu</span></div>
+  <h1 data-split>Excel lộn xộn thành sạch</h1>
+  <p class="lhero-how" data-reveal>Đưa đống bừa bộn, nhờ sắp xếp</p>
+  <p class="lhero-sum" data-reveal>Đưa file chi phí 300 dòng lộn xộn, để bạn ấy gợi ý việc cần làm, dọn sạch, phân nhóm, vẽ biểu đồ và tự giải thích cách tính.</p>
+  <div class="lhero-meta" data-reveal>
+    <div><span class="label">Thời gian</span><b>40 phút</b></div>
+    <div><span class="label">Công cụ</span><b>ChatGPT hoặc Claude</b></div>
+    <div><span class="label">Bản miễn phí</span><b>Một phần</b></div>
+    <div><span class="label">Tiến độ</span><b data-hero-progress="cap-3" data-total="5">0/5</b></div>
+  </div>
+  <div class="lhero-cta" data-reveal>
+    <a class="btn btn-solid" href="#ban-se-lam-duoc-gi">Bắt đầu đọc <span class="arr">↓</span></a>
+    <a class="btn" href="trinh-chieu.html?mode=study#b3">Xem phần trình chiếu <span class="arr">↗</span></a>
+    <a class="btn" href="trinh-chieu.html?mode=film#b3">Xem như phim <span class="arr">▶</span></a>
+  </div>
+</header>
+<div class="doc"><aside class="doc-side"><nav class="toc" aria-label="Mục lục bài"><p class="toc-label">Trong bài này</p><ol><li><a href="#ban-se-lam-duoc-gi">Bạn sẽ làm được gì</a></li><li><a href="#vi-sao-cach-nho-nay-hieu-qua">Vì sao cách nhờ này hiệu quả</a></li><li><a href="#chuan-bi">Chuẩn bị</a></li><li><a href="#lam-that-tung-buoc">Làm thật: từng bước</a></li><li><a href="#dam-hoi-lai">Dám hỏi lại</a></li><li><a href="#bien-the-theo-nganh">Biến thể theo ngành</a></li><li><a href="#con-viec-gi-giong-vay">Còn việc gì giống vậy?</a></li><li><a href="#khi-ket-qua-chua-nhu-y">Khi kết quả chưa như ý</a></li><li><a href="#tu-kiem-tra">Tự kiểm tra</a></li><li><a href="#di-xa-hon">Đi xa hơn</a></li></ol><div class="toc-progress" data-progress-of="cap-3" data-total="5"><span class="toc-progress-bar"><i></i></span><span class="toc-progress-txt">0/5 đã tích</span></div><div class="toc-tools"><button type="button" data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button type="button" data-fs="1" aria-label="Chữ lớn hơn">A+</button><button type="button" onclick="window.print()">In bài</button></div></nav></aside><article class="prose" data-slug="cap-3"><h2 id="ban-se-lam-duoc-gi">Bạn sẽ làm được gì</h2>
+<ul>
+<li>Dùng chiêu "mình chưa biết nhờ gì, bạn gợi ý đi" với một file lộn xộn.</li>
+<li>Dọn một file chi phí 300 dòng: bỏ dòng trùng, thống nhất ngày tháng, tên nhà cung cấp, số tiền.</li>
+<li>Phân chi phí vào 5 nhóm, tổng hợp theo nhóm và theo tuần, vẽ biểu đồ, tải về file sạch.</li>
+<li>Bắt bạn ấy giải thích 3 dòng bất kỳ và cách tính, để tự kiểm tra con số.</li>
+<li>Nhờ bạn ấy viết công thức Excel và giải thích bằng tiếng Việt dễ hiểu.</li>
+</ul>
+<h2 id="vi-sao-cach-nho-nay-hieu-qua">Vì sao cách nhờ này hiệu quả</h2>
+<p>Ai làm văn phòng cũng từng nhận một file như thế này: mỗi người nhập một kiểu, ngày tháng đủ định dạng, một nhà cung cấp viết năm sáu cách, có dòng trùng, có ô trống. Dọn tay mất cả buổi. Muốn dùng hàm thì phải biết mình cần hàm gì.</p>
+<p>Cách nhờ ở bậc này đi ngược thói quen: <strong>bạn không cần biết mình cần gì</strong>. Cứ đưa nguyên đống bừa bộn và hỏi "bạn thấy làm được gì với cái này?". Người bạn AI nhìn ra quy luật rất nhanh: "Grab", "GRAB", "grab car" là một; "02 tháng 9" và "2026-09-02" là cùng một ngày. Bạn ấy đề xuất, bạn chọn, bạn ấy làm.</p>
+<p>Với file upload, ChatGPT hay Claude thường có thể chạy một đoạn chương trình nhỏ phía sau để tính toán thay vì "đọc bằng mắt", nên con số đáng tin hơn hỏi đáp thông thường. Nhưng chưa phải đúng tuyệt đối: bạn ấy vẫn có thể bỏ sót vài ô số tiền gõ dạng chữ, đọc 03/09 thành ngày 9 tháng 3, hoặc xoá nhầm hai khoản chi khác nhau chỉ vì trông giống nhau. Vì vậy, <strong>với số liệu, luôn nhờ bạn ấy giải thích cách tính và tự kiểm vài dòng.</strong> Đó là vế "dám hỏi lại" của bậc này.</p>
+<div class="admonition view">
+<p class="admonition-title">Góc nhìn</p>
+<p>Rất nhiều lần mình không biết chính xác mình cần gì. Thay vì loay hoay, mình đưa nguyên đống bừa bộn cho bạn ấy và hỏi "bạn thấy làm được gì với cái này?". Có điều với số liệu thì luôn nhờ bạn ấy giải thích cách tính và tự kiểm vài dòng.</p>
+</div>
+<h2 id="chuan-bi">Chuẩn bị</h2>
+<ul>
+<li><strong>Công cụ:</strong> ChatGPT (<a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a>) hoặc Claude (<a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>). Bản miễn phí có thể bị giới hạn số file upload, lượt phân tích hoặc khả năng tạo file tải về. Giới hạn thay đổi thường xuyên, hãy xem trang chính thức.</li>
+<li><strong>Thời gian:</strong> khoảng 40 phút (30 phút cho file chi phí, 10 phút cho file công nợ).</li>
+<li><strong>File:</strong> hai file mẫu bên dưới, đều hư cấu.</li>
+</ul>
+<p><a class="dl" href="files/cap-3/chi-phi-thang-9.xlsx">Tải file chi phí tháng 9 (.xlsx)</a></p>
+<p><a class="dl" href="files/cap-3/cong-no-mau.xlsx">Tải file công nợ mẫu (.xlsx)</a></p>
+<p><strong><code>chi-phi-thang-9.xlsx</code>:</strong> 300 dòng chi phí tháng 9/2026 của Công ty CP Phân phối Thiết bị Văn phòng Sao Mai. Các cột: Ngày, Nhà cung cấp, Nội dung, Số tiền (VND), Người đề nghị, Phòng ban. Mở ra cuộn xuống một phút, bạn sẽ thấy đủ kiểu lỗi quen thuộc. Đừng sửa gì cả.</p>
+<p><strong><code>cong-no-mau.xlsx</code>:</strong> 25 khách hàng. Cột A Mã khách hàng, B Ngày hoá đơn, C Số tiền, D Ngày đã trả (trống nếu chưa trả). Cột E "Số ngày quá hạn" và F "Tình trạng" đang trống, chờ bạn nhờ viết công thức.</p>
+<div class="admonition tip">
+<p class="admonition-title">Bản miễn phí không cho upload file?</p>
+<p>Bôi đen khoảng 30 dòng đầu (kể cả dòng tiêu đề), nhấn <kbd>Ctrl</kbd> + <kbd>C</kbd>, rồi dán thẳng vào khung chat. Bạn ấy vẫn đọc được dạng bảng, làm mẫu cách dọn, rồi chỉ cho bạn công thức hoặc thao tác để tự làm phần còn lại trong Excel.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Với file thật của bạn</p>
+<p>File chi phí thật thường có tên nhân viên, có khi có cả số tài khoản. Theo <a href="an-toan.html">đèn giao thông dữ liệu</a>: thay tên người bằng mã (NV01, NV02…) hoặc xoá cột không cần thiết trước khi upload. Số tài khoản thì không đưa.</p>
+</div>
+<h2 id="lam-that-tung-buoc">Làm thật: từng bước</h2>
+<h3 id="buoc-1-hoi-thang-ban-ay-nen-lam-gi-voi-file-nay" class="step"><span class="step-n">01</span><span class="step-t">Hỏi thẳng bạn ấy: "Nên làm gì với file này?"</span></h3>
+<p>Mở cuộc trò chuyện mới, upload <code>chi-phi-thang-9.xlsx</code>, rồi gõ đúng tâm trạng của bạn:</p>
+<div class="prompt" id="p-cap-3-1" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 3a</span><span class="prompt-title">Hỏi thẳng bạn ấy</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">File này lộn xộn quá, mình cũng chưa biết nên làm gì với nó. Bạn xem qua rồi gợi ý 5 việc bạn có thể làm giúp mình nhé.</pre><div class="prompt-actions"></div></div>
+
+<p>Vì sao hiệu quả: bạn không phải biết trước tên các thao tác như "chuẩn hoá", "loại trùng", "pivot". Bạn ấy xem file, tự gọi tên vấn đề, rồi đề xuất. Bạn chỉ cần gật hoặc lắc.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Bạn ấy mô tả nhanh file rồi đề xuất khoảng 5 việc, đại loại: thống nhất định dạng ngày, chuẩn hoá tên nhà cung cấp, đổi số tiền dạng chữ thành số, xoá dòng trùng, xử lý ô trống, phân loại, tổng hợp và vẽ biểu đồ. Thường bạn ấy đã kịp chỉ ra vài lỗi cụ thể, kiểu "Grab được viết theo 4 cách". Bạn vừa có kế hoạch dọn dẹp mà không cần nghĩ.</p>
+</div>
+<h3 id="buoc-2-nho-lam-va-noi-ro-thanh-pham-ban-muon" class="step"><span class="step-n">02</span><span class="step-t">Nhờ làm, và nói rõ thành phẩm bạn muốn</span></h3>
+<p>Giờ đã biết có thể nhờ gì, hãy nói rõ bạn muốn nhận về cái gì:</p>
+<div class="prompt" id="p-cap-3-2" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 3b</span><span class="prompt-title">Dọn, phân nhóm, tổng hợp, cho tải file</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Làm hết mấy việc đó giúp mình nhé. Cụ thể:&#10;1. Bỏ dòng trùng (dòng giống hệt nhau ở mọi cột).&#10;2. Đưa cột Ngày về một định dạng ngày/tháng/năm. Tất cả đều là tháng 9/2026.&#10;3. Thống nhất tên nhà cung cấp, mỗi nơi một tên chuẩn.&#10;4. Đổi số tiền gõ dạng chữ thành số.&#10;5. Ô trống thì ghi &quot;Chưa rõ&quot;, đừng tự điền.&#10;6. Thêm cột Nhóm chi phí với 5 nhóm: Văn phòng phẩm, Đi lại, Tiếp khách, Dịch vụ thuê ngoài, Khác.&#10;Sau đó tổng hợp theo nhóm và theo tuần (tuần tính từ thứ Hai đến Chủ nhật), vẽ biểu đồ, và cho mình tải file Excel đã làm sạch. Làm xong thì liệt kê ngắn những gì bạn đã sửa, mỗi loại bao nhiêu dòng.</pre><div class="prompt-actions"></div></div>
+
+<p>Mỗi dòng trong câu nhờ đều có lý do:</p>
+<ul>
+<li>"Tất cả đều là tháng 9/2026" để bạn ấy không đọc nhầm 03/09 thành ngày 9 tháng 3 theo kiểu Mỹ.</li>
+<li>"Đừng tự điền" ngăn bạn ấy "đoán cho đẹp" những ô đang trống.</li>
+<li>"Tuần từ thứ Hai đến Chủ nhật" để cách chia tuần khớp với đáp án.</li>
+<li>"Mỗi loại bao nhiêu dòng" cho bạn con số để kiểm tra ở bước sau.</li>
+</ul>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Bảng tổng hợp theo 5 nhóm, bảng theo tuần, một biểu đồ, một link hoặc nút để tải file <code>.xlsx</code> đã làm sạch, và danh sách những gì đã sửa (bao nhiêu dòng trùng, ô ngày, tên nhà cung cấp, ô trống). Hai nhóm Tiếp khách và Dịch vụ thuê ngoài thường chiếm phần lớn chi phí. Không thấy link tải thì nói: "Cho mình link tải file .xlsx nhé."</p>
+</div>
+<h3 id="buoc-3-dam-hoi-lai-ngay-giai-thich-3-dong-bat-ky" class="step"><span class="step-n">03</span><span class="step-t">Dám hỏi lại ngay: giải thích 3 dòng bất kỳ</span></h3>
+<p>Khoan tải file về. Hỏi trước đã:</p>
+<div class="prompt" id="p-cap-3-3" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 3c</span><span class="prompt-title">Giải thích 3 dòng và cách tính</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Chọn ngẫu nhiên 3 dòng trong file gốc, cho mình biết số thứ tự dòng, rồi giải thích từng dòng: bạn đã sửa gì, xếp vào nhóm nào và vì sao. Chỉ luôn cho mình cách bạn tính tổng của nhóm Tiếp khách.</pre><div class="prompt-actions"></div></div>
+
+<p>Mở file gốc, tìm đúng 3 dòng đó và so. Thêm một dòng <strong>do chính bạn chọn</strong>: dòng "lạ" nhất bạn thấy khi lướt file (số tiền có chữ "đ", ngày kiểu "05 tháng 9", ô trống…), rồi hỏi: "Dòng [số] bạn xử lý thế nào?"</p>
+<p>Vì sao hiệu quả: kiểm 3–4 dòng, nhất là dòng khó, là cách nhanh nhất để biết bạn ấy làm cẩn thận hay làm ẩu. Giống kế toán trưởng kiểm xác suất chứng từ.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Với mỗi dòng: giá trị gốc, giá trị sau khi sửa, nhóm được xếp và lý do. Ví dụ "Giấy note, bút dạ" của "VPP Bút Xanh" được đổi tên thành "Cửa hàng VPP Bút Xanh" và xếp vào Văn phòng phẩm. Phần cách tính cho thấy bạn ấy cộng những dòng nào, đã bỏ trùng chưa. Trả lời vòng vo hoặc không khớp file gốc thì yêu cầu làm lại.</p>
+</div>
+<h3 id="buoc-4-tai-file-ve-va-tu-kiem-bang-excel" class="step"><span class="step-n">04</span><span class="step-t">Tải file về và tự kiểm bằng Excel</span></h3>
+<p>Giờ mới tải file về. Chưa quen tự kiểm trong Excel thì nhờ bạn ấy chỉ:</p>
+<div class="prompt" id="p-cap-3-4" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 3d</span><span class="prompt-title">Chỉ cách tự kiểm trong Excel</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Mình đã tải file về. Chỉ mình cách tự kiểm tra trong Excel trong 2 phút: đếm số dòng, tính lại tổng tiền, và lọc xem tên nhà cung cấp đã thống nhất chưa. Hướng dẫn từng bước, nói rõ bấm vào đâu.</pre><div class="prompt-actions"></div></div>
+
+<p>Thường là: chọn cột Số tiền rồi nhìn tổng (Sum) ở thanh trạng thái góc dưới bên phải; bật bộ lọc (Filter) ở cột Nhà cung cấp để xem danh sách tên; nhìn số dòng cuối bảng.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Một file gọn gàng: ngày cùng một định dạng, mỗi nhà cung cấp chỉ còn một tên trong bộ lọc, có cột Nhóm chi phí, có thể có thêm sheet tổng hợp và biểu đồ. Tổng ở thanh trạng thái phải khớp con số bạn ấy báo. Lệch thì hỏi ngay: "Excel của mình ra [số], bạn báo [số]. Vì sao lệch?"</p>
+</div>
+<h3 id="buoc-5-nho-viet-cong-thuc-excel-giai-thich-bang-tieng-viet" class="step"><span class="step-n">05</span><span class="step-t">Nhờ viết công thức Excel, giải thích bằng tiếng Việt</span></h3>
+<p>Nhiều khi bạn không cần bạn ấy làm hộ, mà cần một công thức để tự dùng mãi. Mở <code>cong-no-mau.xlsx</code> xem cấu trúc. Không cần upload, chỉ cần mô tả bảng bằng lời:</p>
+<div class="prompt" id="p-cap-3-5" data-tags="ketoan chung"><div class="prompt-head"><span class="prompt-label">Prompt · 3e</span><span class="prompt-title">Viết công thức và giải thích bằng tiếng Việt</span><span class="tag">Kế toán</span><span class="tag">Chung</span></div><pre class="prompt-body">Bảng của mình: cột A mã khách hàng, cột B ngày hoá đơn, cột C số tiền, cột D ngày đã trả (trống nếu chưa trả). Dữ liệu từ dòng 2 đến dòng 26. Hạn trả là 30 ngày kể từ ngày hoá đơn.&#10;Mình muốn cột E tính số ngày quá hạn (khoản chưa trả thì tính đến hôm nay, khoản đã trả thì để 0), cột F ghi &quot;Đã trả&quot;, &quot;Quá hạn&quot; hoặc &quot;Trong hạn&quot;.&#10;Viết công thức giúp mình, giải thích từng phần thật dễ hiểu. Excel của mình dùng dấu &quot;;&quot;.</pre><div class="prompt-actions"></div></div>
+
+<p>Vì sao phải nói "dấu ;": Excel trên nhiều máy cài định dạng Việt Nam dùng dấu chấm phẩy để ngăn các phần trong công thức, vì dấu phẩy đã dùng làm dấu thập phân. Công thức viết bằng dấu phẩy dán vào sẽ báo lỗi.</p>
+<p>Để bạn hình dung: ý tưởng cho cột E là "nếu ô D trống thì lấy hôm nay trừ ngày hoá đơn, trừ tiếp 30 ngày, không cho ra số âm; còn không thì bằng 0", viết ra có dạng kiểu <code>=IF(D2="";MAX(0;TODAY()-B2-30);0)</code>. Bạn không cần nhớ, bạn ấy sẽ viết và giải thích từng mảnh. Dán vào ô E2, F2, rồi kéo ô vuông nhỏ ở góc dưới bên phải ô xuống đến dòng 26.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Hai công thức cho E2 và F2, giải thích bằng lời thường (IF là "nếu… thì… không thì…", TODAY() là "ngày hôm nay"…), kèm hướng dẫn kéo xuống. Dán vào Excel, cột F hiện "Đã trả", "Quá hạn" hoặc "Trong hạn" cho 25 khách. Số ngày quá hạn tự tăng mỗi ngày vì tính theo hôm nay. Nếu cột E hiện ra ngày tháng thay vì con số, chỉ cần đổi định dạng ô sang Number (Số).</p>
+</div>
+<div class="admonition try">
+<p class="admonition-title">Thử ngay</p>
+<p>Hỏi tiếp trong cùng cuộc trò chuyện: "Mình muốn cả dòng tự tô đỏ khi khách quá hạn, làm sao?". Bạn ấy sẽ hướng dẫn dùng Conditional Formatting (Định dạng có điều kiện), từng bước bấm vào đâu.</p>
+</div>
+<h2 id="dam-hoi-lai">Dám hỏi lại</h2>
+<p>Với số liệu, câu hỏi lại này nên thành phản xạ. Quay lại cuộc trò chuyện về file chi phí và hỏi:</p>
+<div class="prompt" id="p-cap-3-6" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 3f</span><span class="prompt-title">Hỏi lại dòng trùng và tổng tiền</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Bạn tìm được bao nhiêu dòng trùng? Liệt kê số thứ tự các dòng đó trong file gốc. Tổng chi phí sau khi bỏ trùng là bao nhiêu? Có dòng nào số tiền không phải dạng số không, bạn xử lý chúng thế nào?</pre><div class="prompt-actions"></div></div>
+
+<p>So câu trả lời với đáp án bên dưới. Nếu lệch, đọc phần "Vì sao hay lệch" trong đáp án.</p>
+<div class="admonition check">
+<p class="admonition-title">Tự kiểm bằng chính Excel, không cần tin ai</p>
+<ul>
+<li>Trên <strong>một bản sao</strong> của file gốc, chọn toàn bảng, vào <strong>Data → Remove Duplicates</strong> (Excel tiếng Việt: thẻ Dữ liệu, nút loại bỏ trùng lặp). Excel sẽ báo đã xoá bao nhiêu dòng trùng.</li>
+<li>Chọn cột Số tiền, nhìn <strong>Sum</strong> ở thanh trạng thái. Lưu ý: Excel <strong>bỏ qua</strong> những ô số tiền gõ dạng chữ, nên con số này sẽ thấp hơn tổng đúng. Tức là bạn tự làm cũng có thể mắc đúng lỗi mà bạn ấy hay mắc!</li>
+<li>Trong file sạch, bật bộ lọc cột Nhà cung cấp: mỗi nhà cung cấp chỉ còn một tên.</li>
+</ul>
+</div>
+<details class="answer"><summary><span>Xem đáp án: dòng trùng, tổng tiền và các lỗi đã cài</span></summary><div class="answer-body">
+<p><strong>Dòng trùng: 8 dòng</strong>, ở các dòng 87, 91, 134, 182, 184, 186, 207, 254 trong Excel (tính cả dòng tiêu đề; bạn ấy có thể đánh số lệch 1–2 dòng). File có 300 dòng dữ liệu, gồm 292 dòng thật và 8 dòng chép y nguyên.</p>
+<p><strong>Tổng chi phí sau khi bỏ trùng: 384.070.000đ.</strong></p>
+<p><strong>Các lỗi khác đã cài sẵn:</strong></p>
+<ul>
+<li><strong>3 số tiền gõ dạng chữ</strong> (kiểu "449.000đ"), ở các dòng 42, 174, 193.</li>
+<li><strong>10 ô trống</strong>, nằm ở các cột Nội dung, Người đề nghị, Phòng ban.</li>
+<li><strong>109 ô ngày gõ dạng chữ</strong>, trộn 4 kiểu: 01/09/2026, 2026-09-01, 2-9-26, "02 tháng 9".</li>
+<li><strong>11 nhà cung cấp</strong>, mỗi nơi được viết 3–6 kiểu (ví dụ: GRAB, Grab, Grab Vietnam, grab car).</li>
+</ul>
+<p><strong>Tổng theo nhóm (để tham khảo):</strong> Văn phòng phẩm 48.279.000đ · Đi lại 30.258.000đ · Tiếp khách 121.722.000đ · Dịch vụ thuê ngoài 134.183.000đ · Khác 49.628.000đ. Một vài khoản có thể xếp vào hai nhóm (ví dụ "Taxi đón đối tác" là Đi lại hay Tiếp khách?), nên tổng từng nhóm của bạn ấy có thể lệch đôi chút. Tổng toàn bộ thì phải khớp.</p>
+<p><strong>Vì sao hay lệch:</strong></p>
+<ul>
+<li>Ra <strong>381.601.000đ</strong>: bạn ấy quên đổi 3 số tiền dạng chữ (thiếu đúng 2.469.000đ, là tổng của ba khoản đó).</li>
+<li>Ra con số <strong>lớn hơn 384.070.000đ</strong>: còn sót dòng trùng.</li>
+<li>Số dòng trùng <strong>nhiều hơn 8</strong>: bạn ấy coi hai khoản chi khác nhau (cùng nhà cung cấp, cùng số tiền) là trùng. Hỏi lại: "Bạn coi thế nào là trùng? Chỉ xoá dòng giống hệt nhau ở mọi cột."</li>
+</ul>
+</div></details>
+<h2 id="bien-the-theo-nganh">Biến thể theo ngành</h2>
+<h3 id="phap-ly">⚖️ Pháp lý</h3>
+<p>Danh sách hồ sơ vụ việc do nhiều người nhập cũng lộn xộn không kém file chi phí, mà trễ hạn thì hậu quả lớn hơn nhiều.</p>
+<div class="prompt" id="p-cap-3-7" data-tags="luat"><div class="prompt-head"><span class="prompt-label">Prompt · 3g</span><span class="prompt-title">Dọn danh sách hồ sơ vụ việc</span><span class="tag">Pháp lý</span></div><pre class="prompt-body">Đây là danh sách hồ sơ vụ việc (đã thay tên khách hàng bằng mã). Bạn xem rồi gợi ý cách sắp xếp lại cho dễ theo dõi. Sau đó đánh dấu giúp mình những hồ sơ còn dưới 7 ngày là đến hạn, và giải thích bạn tính hạn thế nào.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="ke-toan-tai-chinh">💰 Kế toán – Tài chính</h3>
+<p>Sao kê tải từ ngân hàng thường rất khó đọc: diễn giải dài, viết tắt, không phân loại. Nhớ xoá số tài khoản trước khi upload.</p>
+<div class="prompt" id="p-cap-3-8" data-tags="ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 3h</span><span class="prompt-title">Phân loại sao kê ngân hàng</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Đây là sao kê tài khoản tháng [9] tải từ ngân hàng (mình đã xoá số tài khoản). Phân loại các khoản thu chi theo nhóm hợp lý, tổng hợp theo nhóm, đánh dấu các khoản bất thường. Chọn 3 dòng giải thích cách bạn phân loại để mình kiểm tra.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="kinh-doanh-cskh">🤝 Kinh doanh – CSKH</h3>
+<p>Danh sách đơn hàng là mỏ vàng nếu được dọn sạch: biết ai là khách quan trọng, ai đang rời đi.</p>
+<div class="prompt" id="p-cap-3-9" data-tags="kinhdoanh"><div class="prompt-head"><span class="prompt-label">Prompt · 3i</span><span class="prompt-title">Ai là khách hàng quan trọng nhất?</span><span class="tag">Kinh doanh</span></div><pre class="prompt-body">Đây là danh sách đơn hàng 3 tháng gần nhất. Gộp những tên khách hàng bị viết khác nhau, rồi cho mình biết: top 10 khách hàng theo doanh số, và những khách đang mua ít đi so với tháng trước. Nói rõ cách bạn tính.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="van-hanh-xay-dung">🏗️ Vận hành – Xây dựng</h3>
+<p>Nhật ký sự cố ghi tay mỗi người một kiểu, nhưng chứa câu trả lời cho câu hỏi "nên ưu tiên bảo trì cái gì trước".</p>
+<div class="prompt" id="p-cap-3-10" data-tags="vanhanh"><div class="prompt-head"><span class="prompt-label">Prompt · 3j</span><span class="prompt-title">Phân tích nhật ký sự cố</span><span class="tag">Vận hành</span></div><pre class="prompt-body">Đây là nhật ký sự cố bảo trì 6 tháng. Chuẩn hoá tên hạng mục, rồi cho mình biết: hạng mục nào hỏng nhiều nhất, thời gian xử lý trung bình bao lâu, tháng nào nhiều sự cố nhất. Vẽ biểu đồ và cho mình tải file đã làm sạch.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="con-viec-gi-giong-vay">Còn việc gì giống vậy?</h2>
+<div class="cols">
+<div class="admonition work">
+<p class="admonition-title">💼 Công việc</p>
+<ul>
+<li>Danh sách khách hàng gom từ nhiều nguồn, vừa trùng vừa sai chính tả</li>
+<li>Ghi chú họp viết vội → biên bản có người phụ trách và hạn chót</li>
+<li>Ảnh chụp bảng trắng sau buổi brainstorm → danh sách ý tưởng đã nhóm</li>
+<li>Kết quả đăng ký sự kiện từ Google Form, mỗi người điền một kiểu</li>
+<li>Ảnh chụp chồng hoá đơn công tác phí → bảng kê để quyết toán</li>
+</ul>
+</div>
+<div class="admonition life">
+<p class="admonition-title">🏡 Đời sống</p>
+<ul>
+<li>Chụp ảnh 20 hoá đơn đi chợ → tổng hợp chi tiêu theo nhóm</li>
+<li>Danh sách khách mời đám cưới lộn xộn → bảng có số người, số bàn, đã xác nhận chưa</li>
+<li>Ảnh chụp tủ lạnh → thực đơn 3 ngày từ những gì đang có</li>
+<li>Lịch học thêm của con rải rác trong nhiều nhóm Zalo → một lịch tuần gọn gàng</li>
+<li>Ghi chép chi tiêu viết tay cả tháng → biết tiền đã đi đâu</li>
+</ul>
+</div>
+</div>
+<p>Thứ gì lộn xộn, dù là ảnh chụp, file hay ghi chú, cứ đưa cho bạn ấy và hỏi <strong>"bạn giúp được gì với cái này?"</strong>. Riêng con số thì luôn hỏi lại.</p>
+<h2 id="khi-ket-qua-chua-nhu-y">Khi kết quả chưa như ý</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Bạn gặp</th>
+<th>Vì sao</th>
+<th>Nói với bạn ấy thế này</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Không upload được file, hoặc báo hết lượt</td>
+<td>Giới hạn của bản miễn phí</td>
+<td>Dán khoảng 30 dòng vào chat: "Đây là 30 dòng mẫu. Làm mẫu cách dọn, rồi chỉ mình công thức hoặc thao tác để tự làm phần còn lại."</td>
+</tr>
+<tr>
+<td>Tổng tiền lệch so với đáp án</td>
+<td>Thường do quên đổi số tiền dạng chữ, hoặc bỏ trùng sai</td>
+<td>"Liệt kê các dòng có số tiền không phải dạng số và cách bạn xử lý. Bạn coi thế nào là trùng? Tính lại tổng."</td>
+</tr>
+<tr>
+<td>Ô trống bị tự điền nội dung</td>
+<td>Bạn ấy muốn bảng trông "đầy đủ"</td>
+<td>"Không tự điền ô trống. Ghi 'Chưa rõ' và liệt kê các dòng đó cho mình."</td>
+</tr>
+<tr>
+<td>Ngày bị hiểu nhầm (03/09 thành 9 tháng 3)</td>
+<td>Bạn ấy đọc theo kiểu Mỹ: tháng trước, ngày sau</td>
+<td>"Tất cả ngày đều thuộc tháng 9/2026, định dạng Việt Nam ngày/tháng/năm. Kiểm tra lại cột Ngày."</td>
+</tr>
+<tr>
+<td>Phân nhóm lạ, ví dụ cà phê bị xếp vào Văn phòng phẩm</td>
+<td>Nội dung mơ hồ, bạn ấy tự đặt quy tắc</td>
+<td>"Cho mình xem quy tắc bạn dùng để phân nhóm. Sửa: [khoản] thuộc nhóm [X]. Áp dụng lại cho cả file."</td>
+</tr>
+<tr>
+<td>Công thức dán vào Excel báo lỗi</td>
+<td>Sai dấu ngăn cách (phẩy hay chấm phẩy), hoặc lệch cột, lệch dòng</td>
+<td>"Excel báo lỗi [dán nguyên thông báo]. Máy mình dùng dấu ';', dữ liệu bắt đầu từ dòng 2. Sửa giúp mình."</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tu-kiem-tra">Tự kiểm tra</h2>
+<ul class="tasks">
+<li class="task"><label><input type="checkbox" data-task="cap-3:1"><span class="box" aria-hidden="true"></span><span class="txt">Đã để bạn ấy xem file và gợi ý những việc nên làm.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-3:2"><span class="box" aria-hidden="true"></span><span class="txt">Đã có file sạch: có cột Nhóm chi phí, tổng hợp theo nhóm và theo tuần, có biểu đồ.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-3:3"><span class="box" aria-hidden="true"></span><span class="txt">Đã nhờ bạn ấy giải thích 3 dòng bất kỳ và tự đối chiếu với file gốc.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-3:4"><span class="box" aria-hidden="true"></span><span class="txt">Đã hỏi số dòng trùng và tổng tiền, rồi so với đáp án.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-3:5"><span class="box" aria-hidden="true"></span><span class="txt">Đã có công thức cho cột E, F của file công nợ và chạy được trong Excel.</span></label></li>
+</ul>
+<h2 id="di-xa-hon">Đi xa hơn</h2>
+<ul>
+<li><strong>Ghi lại "công thức nấu ăn".</strong> "Viết lại các bước bạn vừa dọn thành hướng dẫn, để tháng sau mình đưa file mới là làm y hệt." Hoặc dạy bạn ấy nhớ luôn ở <a href="cap-5.html">Bậc 5</a>.</li>
+<li><strong>Chữa tận gốc.</strong> Hỏi: "Làm sao để tháng sau file nhập liệu không lộn xộn nữa?" Bạn ấy có thể gợi ý danh sách thả xuống (Data Validation) cho tên nhà cung cấp và chỉ bạn làm từng bước.</li>
+<li><strong>Tự động hoá bằng Power Query.</strong> Tháng nào cũng dọn một kiểu file? Nhờ bạn ấy hướng dẫn dùng Power Query: thiết lập một lần, tháng sau chỉ cần bấm làm mới (Refresh).</li>
+<li><strong>Theo dõi khách trả trễ.</strong> File công nợ có khách đã trả nhưng trả sau hạn. Hỏi tiếp: "Thêm cột G tính số ngày trả trễ cho những khoản đã trả."</li>
+<li><strong>Nói tiếp, đừng mở chat mới.</strong> File đã sạch, giờ cần báo cáo cho sếp? Cứ nói tiếp trong cùng cuộc trò chuyện. Đó chính là <a href="cap-4.html">Bậc 4</a>: một cuộc trò chuyện, nhiều thành phẩm.</li>
+</ul></article></div><nav class="pager"><a class="pager-prev" href="cap-2.html"><small>← Bậc 02</small><span>Tài liệu dài, và bẫy “AI bịa”</span></a><a class="pager-next" href="cap-4.html"><small>Bậc 04 →</small><span>Số liệu thành báo cáo thành slide</span></a></nav>
+</main>
+
+<footer class="foot ink">
+  <div class="marquee red" aria-hidden="true"><div class="marquee-track"><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span></div></div>
+  <div class="foot-grid">
+    <div>
+      <p class="foot-big">Dám nhờ.<br><em>Dám hỏi lại.</em></p>
+    </div>
+    <div>
+      <h4 class="label">Tự học</h4>
+      <ul><li><a href="bat-dau.html">Bắt đầu ở đây</a></li><li><a href="khoang-cach.html">Khoảng cách AI</a></li><li><a href="giao-viec-nhu-dong-nghiep.html">Giao việc như đồng nghiệp</a></li><li><a href="cap-1.html">7 bậc</a></li><li><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a></li><li><a href="thu-vien-prompt.html">Thư viện prompt</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Tra cứu</h4>
+      <ul><li><a href="an-toan.html">An toàn & tỉnh táo</a></li><li><a href="cong-cu.html">Bản đồ công cụ</a></li><li><a href="tu-dien.html">Từ điển AI</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="tai-lieu.html">Tải tài liệu</a></li><li><a href="trinh-chieu.html?mode=film">Xem như phim ▶</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Về trang này</h4>
+      <p class="foot-note">Toàn bộ website và bài trình chiếu, từ nội dung, thiết kế, chuyển động đến từng khung hình, được làm bằng cách <b>trò chuyện với Claude Code</b>. <a href="giao-viec-nhu-dong-nghiep.html#mot-vi-du-that-cau-giao-viec-da-tao-ra-phien-ban-nay">Xem câu giao việc đã tạo ra nó →</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Làm thật, thấy thật · Phiên bản 2</span><span>Dữ liệu demo đều hư cấu · <a href="#top">Lên đầu trang ↑</a></span></div>
+</footer>
+
+<div class="search" data-search hidden role="dialog" aria-modal="true" aria-label="Tìm kiếm trong trang">
+  <div class="search-box">
+    <div class="search-top"><input type="search" data-search-input placeholder="Tìm bài, prompt, thuật ngữ… (gõ không dấu cũng được)" autocomplete="off" aria-label="Từ khoá"><button type="button" data-close-search>ESC</button></div>
+    <div class="search-hints"><span class="label">Gợi ý</span><button type="button">tóm tắt hợp đồng</button><button type="button">excel công thức</button><button type="button">phễu khoảng cách</button><button type="button">đồng nghiệp</button><button type="button">giọng nói</button><button type="button">họp biên bản</button><button type="button">agent</button></div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> chọn</span><span><kbd>Enter</kbd> mở</span><span><kbd>Esc</kbd> đóng</span></div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+<script src="assets/js/site.js?v=1791903580" data-ver="1791903580" defer></script>
+</body>
+</html>

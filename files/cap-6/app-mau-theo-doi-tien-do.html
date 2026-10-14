@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theo dõi tiến độ dự án</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Bản DỰ PHÒNG cho cấp 6, mở khi AI tạo app live bị trục trặc. */
+:root{--bg:#f6f7fb;--card:#fff;--text:#1d2033;--muted:#6b7090;--line:#e4e6f0;--brand:#6d28d9;--red:#dc2626;--redbg:#fee2e2;--orange:#c2410c;--orangebg:#ffedd5;--green:#15803d;--greenbg:#dcfce7}
+*{box-sizing:border-box}body{margin:0;font-family:'Be Vietnam Pro',system-ui,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(120deg,#6d28d9,#0891b2);color:#fff;padding:22px 16px 70px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+h1{margin:0;font-size:clamp(22px,3vw,32px)}header p{margin:6px 0 0;opacity:.85}
+.panel{background:var(--card);border-radius:18px;box-shadow:0 10px 40px -20px rgba(30,20,80,.35);padding:20px;margin-top:-50px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.stat{border:1px solid var(--line);border-radius:14px;padding:12px 14px}.stat b{display:block;font-size:26px}.stat span{color:var(--muted);font-size:13px}
+.prog{height:12px;border-radius:9px;background:#eceef6;overflow:hidden;margin:6px 0 18px}.prog i{display:block;height:100%;background:linear-gradient(90deg,#16a34a,#22d3ee);transition:width .5s}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+select,input,button{font:inherit;font-size:14px}select,input{padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:#fff}
+button{padding:9px 14px;border-radius:10px;border:0;background:var(--brand);color:#fff;font-weight:600;cursor:pointer}button.ghost{background:#eef0f8;color:var(--text)}
+table{width:100%;min-width:900px;border-collapse:collapse;font-size:14.5px}
+td select[data-k=status]{min-width:105px}td input[data-k=who]{min-width:140px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+tr.late{background:var(--redbg)}tr.soon{background:var(--orangebg)}tr.done{background:var(--greenbg)}
+.badge{font-size:12px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.late .badge{color:var(--red)}.soon .badge{color:var(--orange)}.done .badge{color:var(--green)}
+td input,td select{width:100%;padding:6px 8px}.x{background:none;color:var(--muted);padding:4px 8px}.x:hover{color:var(--red)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:13px;color:var(--muted)}.legend span::before{content:'';display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-2px;background:var(--c)}
+.scroll{overflow-x:auto}
+@media (max-width:700px){th:nth-child(3),td:nth-child(3){display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>📋 Theo dõi tiến độ dự án</h1><p>Dự án: Triển khai phần mềm kế toán mới · Công ty Sao Mai (dữ liệu mẫu, hư cấu)</p></div></header>
+<main class="wrap">
+  <div class="panel">
+    <div class="stats">
+      <div class="stat"><b id="sTotal">0</b><span>Tổng công việc</span></div>
+      <div class="stat"><b id="sDone" style="color:var(--green)">0</b><span>Đã xong</span></div>
+      <div class="stat"><b id="sSoon" style="color:var(--orange)">0</b><span>Sắp đến hạn (≤ 5 ngày)</span></div>
+      <div class="stat"><b id="sLate" style="color:var(--red)">0</b><span>Quá hạn</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:14px"><b>Tiến độ dự án</b><span id="pct">0%</span></div>
+    <div class="prog"><i id="bar"></i></div>
+    <div class="tools">
+      <label>Người phụ trách: <select id="filter"></select></label>
+      <button id="add">+ Thêm công việc</button>
+      <button class="ghost" id="csv">⬇️ Xuất CSV</button>
+      <button class="ghost" id="reset">↺ Dữ liệu mẫu</button>
+    </div>
+    <div class="scroll"><table>
+      <thead><tr><th style="width:30%">Công việc</th><th>Người phụ trách</th><th>Bắt đầu</th><th>Hạn chót</th><th>Trạng thái</th><th>Cảnh báo</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+    <div class="legend"><span style="--c:#fecaca">Quá hạn</span><span style="--c:#fed7aa">Còn ≤ 5 ngày</span><span style="--c:#bbf7d0">Đã xong</span></div>
+  </div>
+</main>
+<script>
+const KEY = 'tienDoDuAn.v1';
+const STATUS = ['Chưa làm', 'Đang làm', 'Xong'];
+const pad = n => String(n).padStart(2, '0');
+const day = n => { const d = new Date(); d.setDate(d.getDate() + n); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
+const sample = () => [
+  { name: 'Khảo sát quy trình kế toán hiện tại', who: 'Phạm Thị Lan', start: day(-30), due: day(-18), status: 'Xong' },
+  { name: 'Chọn nhà cung cấp phần mềm', who: 'Nguyễn Văn Hùng', start: day(-20), due: day(-6), status: 'Xong' },
+  { name: 'Chuẩn hoá danh mục tài khoản', who: 'Phạm Thị Lan', start: day(-10), due: day(-2), status: 'Đang làm' },
+  { name: 'Chuyển dữ liệu số dư đầu kỳ', who: 'Trần Thu Hà', start: day(-5), due: day(3), status: 'Đang làm' },
+  { name: 'Phân quyền người dùng', who: 'Đỗ Quốc Tuấn', start: day(-2), due: day(5), status: 'Chưa làm' },
+  { name: 'Đào tạo kế toán chi nhánh', who: 'Trần Thu Hà', start: day(4), due: day(14), status: 'Chưa làm' },
+  { name: 'Chạy song song hệ thống cũ & mới', who: 'Phạm Thị Lan', start: day(10), due: day(30), status: 'Chưa làm' },
+  { name: 'Nghiệm thu & tắt hệ thống cũ', who: 'Nguyễn Văn Hùng', start: day(30), due: day(40), status: 'Chưa làm' },
+];
+let tasks; try { tasks = JSON.parse(localStorage.getItem(KEY)) || sample(); } catch { tasks = sample(); }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(tasks)); } catch {} };
+const left = t => Math.round((new Date(t.due) - new Date(day(0))) / 864e5);
+const state = t => t.status === 'Xong' ? 'done' : left(t) < 0 ? 'late' : left(t) <= 5 ? 'soon' : '';
+const label = t => { const s = state(t), n = left(t);
+  return s === 'done' ? '✓ Hoàn thành' : s === 'late' ? `Quá hạn ${-n} ngày` : s === 'soon' ? (n === 0 ? 'Hạn hôm nay' : `Còn ${n} ngày`) : `Còn ${n} ngày`; };
+function render() {
+  const f = document.getElementById('filter'), cur = f.value;
+  const people = [...new Set(tasks.map(t => t.who).filter(Boolean))].sort();
+  f.innerHTML = '<option value="">Tất cả</option>' + people.map(p => `<option ${p === cur ? 'selected' : ''}>${p}</option>`).join('');
+  const list = tasks.map((t, i) => ({ t, i })).filter(x => !f.value || x.t.who === f.value)
+    .sort((a, b) => a.t.due.localeCompare(b.t.due));
+  document.getElementById('rows').innerHTML = list.map(({ t, i }) => `
+    <tr class="${state(t)}">
+      <td><input data-i="${i}" data-k="name" value="${t.name.replace(/"/g, '&quot;')}"></td>
+      <td><input data-i="${i}" data-k="who" value="${t.who.replace(/"/g, '&quot;')}"></td>
+      <td><input type="date" data-i="${i}" data-k="start" value="${t.start}"></td>
+      <td><input type="date" data-i="${i}" data-k="due" value="${t.due}"></td>
+      <td><select data-i="${i}" data-k="status">${STATUS.map(s => `<option ${s === t.status ? 'selected' : ''}>${s}</option>`).join('')}</select></td>
+      <td><span class="badge">${label(t)}</span></td>
+      <td><button class="x" data-del="${i}" title="Xoá">✕</button></td>
+    </tr>`).join('');
+  const done = tasks.filter(t => t.status === 'Xong').length;
+  document.getElementById('sTotal').textContent = tasks.length;
+  document.getElementById('sDone').textContent = done;
+  document.getElementById('sSoon').textContent = tasks.filter(t => state(t) === 'soon').length;
+  document.getElementById('sLate').textContent = tasks.filter(t => state(t) === 'late').length;
+  const p = tasks.length ? Math.round(done / tasks.length * 100) : 0;
+  document.getElementById('pct').textContent = p + '%';
+  document.getElementById('bar').style.width = p + '%';
+}
+document.addEventListener('change', e => {
+  const el = e.target;
+  if (el.id === 'filter') return render();
+  if (el.dataset.i !== undefined) { tasks[+el.dataset.i][el.dataset.k] = el.value; save(); render(); }
+});
+document.addEventListener('click', e => {
+  const del = e.target.closest('[data-del]');
+  if (del && confirm('Xoá công việc này?')) { tasks.splice(+del.dataset.del, 1); save(); render(); }
+});
+document.getElementById('add').onclick = () => { tasks.push({ name: 'Công việc mới', who: '', start: day(0), due: day(7), status: 'Chưa làm' }); save(); render(); };
+document.getElementById('reset').onclick = () => { if (confirm('Khôi phục dữ liệu mẫu?')) { tasks = sample(); save(); render(); } };
+document.getElementById('csv').onclick = () => {
+  const rows = [['Công việc', 'Người phụ trách', 'Bắt đầu', 'Hạn chót', 'Trạng thái', 'Cảnh báo'], ...tasks.map(t => [t.name, t.who, t.start, t.due, t.status, label(t)])];
+  const csv = '﻿' + rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+  a.download = 'tien-do-du-an.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+};
+render();
+</script>
+</body>
+</html>

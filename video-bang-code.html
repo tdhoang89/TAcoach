@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Video bằng code · Làm thật, thấy thật</title>
+<meta name="description" content="Thủ thuật làm video bằng code với Claude Code và Remotion, kèm 3 bộ phim được viết hoàn toàn bằng code ngay trên trang.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Video bằng code · Làm thật, thấy thật">
+<meta property="og:description" content="Thủ thuật làm video bằng code với Claude Code và Remotion, kèm 3 bộ phim được viết hoàn toàn bằng code ngay trên trang.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=1791903580">
+<script>
+(function () {
+  var r = document.documentElement;
+  try {
+    var t = localStorage.getItem('ltt:theme'); if (t) r.dataset.theme = t;
+    var f = parseFloat(localStorage.getItem('ltt:fs')); if (f) r.style.setProperty('--fs', f);
+  } catch (e) {}
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    r.classList.add('motion-pre');
+    setTimeout(function () { r.classList.remove('motion-pre'); }, 2600);
+  }
+})();
+</script>
+
+</head>
+<body class="page-video" id="top">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<div class="progress-line" aria-hidden="true"></div>
+
+<header class="nav" data-nav>
+  <a class="brand" href="index.html" aria-label="Làm thật, thấy thật: trang chủ"><span>Làm thật</span><span class="brand-sep">/</span><span class="brand-b">thấy thật</span></a>
+  <nav class="nav-main" aria-label="Điều hướng chính">
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Bắt đầu <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Nền tảng · đọc trước khi vào 7 bậc</p><div class="mega-grid mega-3"><a href="bat-dau.html" class="mega-item"><span class="mega-n">NỀN TẢNG · BẮT ĐẦU Ở ĐÂY</span><span class="mega-t">Làm quen người bạn AI</span><span class="mega-h">Đọc trang này trước khi học. Ba câu để nhớ, cách tự học ở nhà, chuẩn bị tài khoản và chiêu…</span></a><a href="khoang-cach.html" class="mega-item"><span class="mega-n">NỀN TẢNG · ĐỌC TRƯỚC</span><span class="mega-t">Khoảng cách AI: phễu 6 tỷ người và vị trí của bạn</span><span class="mega-h">Phễu của Andrej Karpathy cho thấy khoảng cách dùng AI đang nới rộng. Bạn đang ở tầng nào, …</span></a><a href="giao-viec-nhu-dong-nghiep.html" class="mega-item"><span class="mega-n">NỀN TẢNG · CÁCH NÓI CHUYỆN</span><span class="mega-t">Giao việc như giao cho đồng nghiệp</span><span class="mega-h">Người tạo ra Claude Code nói prompt chẳng có bí mật gì. Chỉ cần nói rõ ba điều: muốn gì, b…</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">7 bậc <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">7 bậc đi xuống phễu · 7 cách nhờ</p><div class="mega-grid"><a href="cap-1.html" class="mega-item"><span class="mega-n">N°01</span><span class="mega-t">Email khó, viết lại trong 30 giây</span><span class="mega-h">Giao như cho đồng nghiệp, rồi nhờ góp ý thẳng</span></a><a href="cap-2.html" class="mega-item"><span class="mega-n">N°02</span><span class="mega-t">Tài liệu dài, và bẫy “AI bịa”</span><span class="mega-h">Bạn giỏi nhưng đôi khi đoán, nên cứ hỏi “căn cứ đâu?”</span></a><a href="cap-3.html" class="mega-item"><span class="mega-n">N°03</span><span class="mega-t">Excel lộn xộn thành sạch</span><span class="mega-h">Đưa đống bừa bộn, nhờ sắp xếp</span></a><a href="cap-4.html" class="mega-item"><span class="mega-n">N°04</span><span class="mega-t">Số liệu thành báo cáo thành slide</span><span class="mega-h">Một cuộc trò chuyện, nhiều thành phẩm</span></a><a href="cap-5.html" class="mega-item"><span class="mega-n">N°05</span><span class="mega-t">Trợ lý biết nhớ việc</span><span class="mega-h">Dạy bạn ấy một lần, nhờ mãi mãi</span></a><a href="cap-6.html" class="mega-item"><span class="mega-n">N°06</span><span class="mega-t">Tự tạo công cụ không cần code</span><span class="mega-h">Thiếu công cụ? Nhờ bạn ấy làm luôn</span></a><a href="cap-7.html" class="mega-item"><span class="mega-n">N°07</span><span class="mega-t">Giao cả đầu việc cho AI agent</span><span class="mega-h">Giao cả đầu việc, không chỉ giao câu hỏi</span></a><a href="thu-thach-7-ngay.html" class="mega-item"><span class="mega-n">+ 7 NGÀY</span><span class="mega-t">Thử thách 7 ngày, 7 lần nhờ</span><span class="mega-h">Biến hiểu biết thành thói quen</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Chuyên đề <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Chuyên đề thực chiến · đọc theo nhu cầu</p><div class="mega-grid"><a href="giong-noi.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 01</span><span class="mega-t">Nói thay vì gõ: trò chuyện bằng giọng nói với AI</span><span class="mega-h">20 phút</span></a><a href="anh-chup.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 02</span><span class="mega-t">Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</span><span class="mega-h">20 phút</span></a><a href="tra-cuu-co-nguon.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 03</span><span class="mega-t">Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</span><span class="mega-h">30 phút</span></a><a href="hop-hanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 04</span><span class="mega-t">Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</span><span class="mega-h">25 phút</span></a><a href="hoc-nhanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 05</span><span class="mega-t">Học nhanh mọi thứ với một gia sư kiên nhẫn</span><span class="mega-h">25 phút</span></a><a href="giong-van.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 06</span><span class="mega-t">Viết đúng giọng của bạn và của công ty</span><span class="mega-h">30 phút</span></a><a href="mot-ngay.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 07</span><span class="mega-t">Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</span><span class="mega-h">25 phút đọc</span></a></div></div>
+    </div>
+    <a href="thu-vien-prompt.html">Thư viện prompt</a>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Tài nguyên <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Tra cứu & tự học thêm</p><div class="mega-list"><a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html" class=is-active>Video bằng code</a></div></div>
+    </div>
+    <a href="trinh-chieu.html" class="nav-deck">Trình chiếu ↗</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="nav-search" type="button" data-open-search aria-label="Tìm kiếm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="nav-search-t">Tìm kiếm</span><kbd>Ctrl K</kbd></button>
+    <button class="nav-theme" type="button" data-theme-toggle aria-label="Đổi nền sáng / tối" title="Đổi nền sáng / tối">◐</button>
+    <button class="nav-burger" type="button" data-menu aria-label="Mở menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" data-menu-panel aria-hidden="true">
+  <div class="menu-cols">
+    <div class="menu-list">
+      <h3 class="label" style="color:#a29e96">Nền tảng & 7 bậc</h3>
+      <a href="bat-dau.html"><small>NỀN TẢNG</small>Bắt đầu ở đây</a><a href="khoang-cach.html"><small>NỀN TẢNG</small>Khoảng cách AI</a><a href="giao-viec-nhu-dong-nghiep.html"><small>NỀN TẢNG</small>Giao việc như đồng nghiệp</a>
+      <a href="cap-1.html"><small>N°01</small>Email khó, viết lại trong 30 giây</a><a href="cap-2.html"><small>N°02</small>Tài liệu dài, và bẫy “AI bịa”</a><a href="cap-3.html"><small>N°03</small>Excel lộn xộn thành sạch</a><a href="cap-4.html"><small>N°04</small>Số liệu thành báo cáo thành slide</a><a href="cap-5.html"><small>N°05</small>Trợ lý biết nhớ việc</a><a href="cap-6.html"><small>N°06</small>Tự tạo công cụ không cần code</a><a href="cap-7.html"><small>N°07</small>Giao cả đầu việc cho AI agent</a>
+    </div>
+    <div class="menu-list menu-res">
+      <h3 class="label" style="color:#a29e96">Chuyên đề</h3>
+      <a href="giong-noi.html"><small>CĐ 01</small>Nói thay vì gõ: trò chuyện bằng giọng nói với AI</a><a href="anh-chup.html"><small>CĐ 02</small>Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</a><a href="tra-cuu-co-nguon.html"><small>CĐ 03</small>Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</a><a href="hop-hanh.html"><small>CĐ 04</small>Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</a><a href="hoc-nhanh.html"><small>CĐ 05</small>Học nhanh mọi thứ với một gia sư kiên nhẫn</a><a href="giong-van.html"><small>CĐ 06</small>Viết đúng giọng của bạn và của công ty</a><a href="mot-ngay.html"><small>CĐ 07</small>Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</a>
+      <h3 class="label" style="color:#a29e96;margin-top:26px">Tài nguyên</h3>
+      <a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a>
+      <a href="trinh-chieu.html">Trình chiếu ↗</a>
+      <a href="#" data-open-search>Tìm kiếm…</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<header class="phero ink grain">
+  <div class="lhero-top" data-reveal><span class="label">Thủ thuật · Showcase</span><span class="label">Không camera · Không phần mềm dựng phim</span></div>
+  <h1 data-split>Video bằng code</h1>
+  <p data-reveal>Một trong những thủ thuật "wow" nhất của năm: <b>nói chuyện với Claude Code để nó viết ra cả một bộ phim</b>. Trang này giải thích nguyên lý, cho bạn xem 3 bộ phim được viết hoàn toàn bằng code ngay tại đây, và hướng dẫn bạn tự làm video MP4 thật.</p>
+</header>
+
+<div class="doc">
+<aside class="doc-side"><nav class="toc" aria-label="Mục lục"><p class="toc-label label">Trong trang này</p><ol>
+  <li><a href="#nguyen-ly">Nguyên lý: video là một hàm của thời gian</a></li>
+  <li><a href="#xem-tan-mat">Xem tận mắt: 3 bộ phim viết bằng code</a></li>
+  <li><a href="#tu-lam-mp4">Tự làm video MP4 với Claude Code + Remotion</a></li>
+  <li><a href="#khong-cai-gi">Không muốn cài gì? Dùng ngay Claude</a></li>
+  <li><a href="#nguon">Nguồn tham khảo</a></li>
+</ol></nav></aside>
+
+<article class="prose" data-slug="video-bang-code">
+
+<h2 id="nguyen-ly">Nguyên lý: video là một hàm của thời gian</h2>
+<p>Bình thường, làm video là quay, cắt, ghép, thêm chữ trong phần mềm dựng phim. Với cách làm "video bằng code", một video chỉ là <b>một hàm của thời gian</b>: ở giây thứ <i>t</i>, khung hình trông thế nào? Chữ nằm ở đâu, màu gì, to bao nhiêu? Viết điều đó ra bằng code, cho thời gian chạy từ 0 đến hết, là bạn có một bộ phim.</p>
+<p><b>Remotion</b> là một thư viện mã nguồn mở cho phép viết video bằng React (một công nghệ làm web). Mỗi khung hình là một lần "vẽ" trang web, sau đó Remotion ghép tất cả thành file <b>MP4</b>. Đầu năm 2026, đội Remotion phát hành bộ <b>Agent Skills</b>: một bộ hướng dẫn cài vào Claude Code để nó hiểu cách viết Remotion cho đúng. Từ đó, bạn chỉ cần <b>mô tả bộ phim bằng lời</b>, Claude Code viết code, Remotion xuất ra video.</p>
+<div class="admonition view"><p class="admonition-title">Góc nhìn</p><p>Đây là ví dụ rõ nhất cho câu "gần như mọi thứ bạn muốn, AI đều làm được". Bạn không cần biết dựng phim, cũng không cần biết code. Bạn cần biết mình muốn một bộ phim như thế nào, và dám nói ra.</p></div>
+<p>Các bộ phim trên trang này dùng <b>đúng nguyên lý đó</b>, nhưng chạy thẳng trong trình duyệt (vẽ lên canvas) thay vì dùng Remotion, để website chạy được trên GitHub Pages mà không cần cài gì. Bạn vẫn có thể bấm <b>Tải video</b> để trình duyệt ghi lại thành một file video thật.</p>
+
+<h2 id="xem-tan-mat">Xem tận mắt: 3 bộ phim viết bằng code</h2>
+<div class="vgrid">
+  <div>
+    <div data-film="intro"></div>
+    <h3 id="phim-1">Phim 1 · 7 bậc trong 60 giây</h3>
+    <p>Phim mở màn cho buổi chia sẻ: bìa tạp chí, ba câu tinh thần, rồi lần lượt 7 bậc. 15 cảnh, 52 giây, phong cách tạp chí đen trắng với một màu nhấn đỏ son.</p>
+    <details class="vcode"><summary>Xem code của phim này</summary><pre data-film-code="intro"></pre></details>
+  </div>
+  <div>
+    <div data-film="trap"></div>
+    <h3 id="phim-2">Phim 2 · Bẫy “AI bịa”</h3>
+    <p>Minh hoạ cấp 2: hỏi AI một điều <b>không có</b> trong hợp đồng, AI "đoán" bằng một con số trông giống đáp án. Bài học: dám hỏi lại "căn cứ đâu?".</p>
+    <details class="vcode"><summary>Xem code của phim này</summary><pre data-film-code="trap"></pre></details>
+  </div>
+  <div>
+    <div data-film="excel"></div>
+    <h3 id="phim-3">Phim 3 · Excel lộn xộn thành sạch</h3>
+    <p>Minh hoạ cấp 3: bảng chi phí "như đời thật" được sắp xếp lại, dòng trùng biến mất, tên nhà cung cấp được chuẩn hoá, rồi thành biểu đồ. Tổng đúng: 384.070.000đ.</p>
+    <details class="vcode"><summary>Xem code của phim này</summary><pre data-film-code="excel"></pre></details>
+  </div>
+</div>
+<div class="admonition tip"><p class="admonition-title">Mẹo</p><p>Nút <b>Tải video</b> ghi phim theo thời gian thực, nên hãy giữ tab mở cho tới khi phim chạy hết. Trình duyệt Chrome hoặc Edge trên máy tính cho kết quả ổn định nhất. Tuỳ trình duyệt, file sẽ là <code>.webm</code> hoặc <code>.mp4</code>.</p></div>
+
+<h2 id="tu-lam-mp4">Tự làm video MP4 với Claude Code + Remotion</h2>
+<p>Phần này dành cho bạn nào muốn thử "thật": làm video MP4 để đăng mạng xã hội, chiếu trong cuộc họp, hay làm video giới thiệu sản phẩm. Bạn cần một máy tính, gói Claude có Claude Code, và khoảng 30 phút cho lần đầu.</p>
+
+<h3 id="b1" class="step"><span class="step-n">01</span><span class="step-t">Cài Node.js</span></h3>
+<p>Vào <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>, tải bản <b>LTS</b> và cài như phần mềm bình thường. Đây là "động cơ" để chạy Remotion trên máy bạn.</p>
+
+<h3 id="b2" class="step"><span class="step-n">02</span><span class="step-t">Tạo dự án video</span></h3>
+<p>Mở Terminal (hoặc PowerShell trên Windows) trong một thư mục trống, chạy lệnh dưới đây và làm theo hướng dẫn trên màn hình. Nếu được hỏi có muốn cài Agent Skills không, hãy chọn có.</p>
+<div class="cmd"><code>npx create-video@latest</code><button type="button" data-copy-cmd>Copy</button></div>
+
+<h3 id="b3" class="step"><span class="step-n">03</span><span class="step-t">Cài Agent Skills của Remotion cho Claude Code</span></h3>
+<p>Nếu chưa cài ở bước trên, chạy lệnh này trong thư mục dự án:</p>
+<div class="cmd"><code>npx skills add remotion-dev/skills</code><button type="button" data-copy-cmd>Copy</button></div>
+
+<h3 id="b4" class="step"><span class="step-n">04</span><span class="step-t">Nói chuyện với Claude Code</span></h3>
+<p>Mở Claude Code trong thư mục dự án và mô tả bộ phim bằng lời, như nói chuyện với một người dựng phim. Nhớ chiêu quen thuộc: <b>để bạn ấy hỏi lại trước, rồi duyệt kịch bản từng cảnh</b> trước khi viết code.</p>
+<div class="prompt" id="p-video-1" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · V1</span><span class="prompt-title">Đặt hàng một bộ phim 30 giây</span><span class="tag">Chung</span></div><pre class="prompt-body">Mình muốn làm một video 30 giây giới thiệu [chủ đề, ví dụ: dịch vụ tư vấn pháp lý cho doanh nghiệp nhỏ] cho [đối tượng xem], đăng trên [Facebook / Zalo / chiếu trong cuộc họp].
+Phong cách: tạp chí thời trang, nền đen trắng, chữ serif cỡ lớn, một màu nhấn [đỏ son], chuyển cảnh mượt, chữ "trồi lên" từng dòng.
+Tỉ lệ khung hình: [16:9 hoặc 9:16 cho điện thoại].
+
+Trước khi code, bạn hỏi mình những gì bạn cần biết, từng câu một nhé. Sau đó viết kịch bản từng cảnh (thời lượng, chữ trên màn hình, chuyển động) để mình duyệt. Mình đồng ý rồi mới viết code bằng Remotion.</pre><div class="prompt-actions"></div></div>
+<div class="prompt" id="p-video-2" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · V2</span><span class="prompt-title">Chỉnh sửa như nói với người dựng phim</span><span class="tag">Chung</span></div><pre class="prompt-body">Cảnh 2 hơi nhanh, kéo dài thêm 1 giây. Chữ tiêu đề ở cảnh 3 to hơn một chút và để căn trái. Cảnh cuối thêm dòng "[lời kêu gọi]" và logo [mô tả hoặc đường dẫn file logo]. Xong thì cho mình xem lại trong Remotion Studio.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="b5" class="step"><span class="step-n">05</span><span class="step-t">Xem trước và xuất MP4</span></h3>
+<p>Xem trước trong Remotion Studio (một trang web chạy trên máy bạn, có thanh tua như phần mềm dựng phim):</p>
+<div class="cmd"><code>npm start</code><button type="button" data-copy-cmd>Copy</button></div>
+<p>Lệnh trên tương đương <code>npx remotion studio</code>.</p>
+<p>Khi ưng ý, xuất ra file MP4. Thay <code>TenComposition</code> bằng tên phim mà Claude Code đã đặt (cứ hỏi thẳng bạn ấy: "lệnh render phim này là gì?"):</p>
+<div class="cmd"><code>npx remotion render src/index.ts TenComposition out/video.mp4</code><button type="button" data-copy-cmd>Copy</button></div>
+<div class="admonition note"><p class="admonition-title">Lưu ý về giấy phép</p><p>Remotion miễn phí cho cá nhân, tổ chức phi lợi nhuận và công ty có tối đa 3 nhân viên. Công ty từ 4 người trở lên cần mua giấy phép công ty. Điều khoản có thể thay đổi, hãy đọc trang giấy phép chính thức trước khi dùng cho công việc.</p></div>
+
+<h2 id="khong-cai-gi">Không muốn cài gì? Dùng ngay Claude</h2>
+<p>Bạn vẫn có thể làm phim bằng code mà không cần cài gì: nhờ Claude (Artifacts) hoặc ChatGPT (Canvas) viết một trang HTML dùng canvas, giống hệt cách các phim trên trang này được làm. Đây cũng chính là <a href="cap-6.html">cấp 6: tự tạo công cụ không cần code</a>.</p>
+<div class="prompt" id="p-video-3" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · V3</span><span class="prompt-title">Phim 20 giây chạy ngay trong trình duyệt</span><span class="tag">Chung</span></div><pre class="prompt-body">Viết giúp mình một trang HTML duy nhất dùng thẻ canvas để chiếu một "phim" 20 giây về [chủ đề].
+- 4 cảnh, mỗi cảnh 5 giây, chữ tiếng Việt cỡ lớn trồi lên từng dòng, chuyển cảnh kiểu quét màn hình.
+- Phong cách đen trắng, một màu nhấn [màu].
+- Có nút Phát / Dừng, thanh tua, và nút "Tải video" ghi lại canvas thành file video bằng MediaRecorder.
+- Mỗi khung hình được tính từ thời gian t (video là một hàm của thời gian).
+Nếu cần thêm thông tin thì hỏi mình trước nhé.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="nguon">Nguồn tham khảo</h2>
+<ul>
+  <li><a href="https://www.remotion.dev/docs/ai/skills" target="_blank" rel="noopener">Remotion · Agent Skills</a> (cách cài Skills cho Claude Code)</li>
+  <li><a href="https://github.com/remotion-dev/skills" target="_blank" rel="noopener">GitHub · remotion-dev/skills</a></li>
+  <li><a href="https://www.remotion.dev/docs/ai/coding-agents" target="_blank" rel="noopener">Remotion · Prompting videos with coding agents</a></li>
+  <li><a href="https://www.remotion.dev/docs/cli/create-video" target="_blank" rel="noopener">Remotion · npx create-video</a></li>
+  <li><a href="https://www.remotion.dev/docs/cli/render" target="_blank" rel="noopener">Remotion · lệnh render</a></li>
+  <li><a href="https://www.remotion.dev/docs/license" target="_blank" rel="noopener">Remotion · giấy phép</a></li>
+</ul>
+<div class="admonition check"><p class="admonition-title">Dám hỏi lại</p><p>Lệnh và điều khoản của công cụ có thể thay đổi theo thời gian. Nếu một lệnh không chạy, hãy dán nguyên thông báo lỗi cho Claude Code và hỏi: "Lỗi này là gì, mình cần làm gì tiếp?"</p></div>
+
+</article>
+</div>
+
+<script>
+addEventListener('DOMContentLoaded', function () {
+  var films = (window.CodeVideo && window.CodeVideo.films) || {};
+  document.querySelectorAll('[data-film-code]').forEach(function (pre) {
+    var f = films[pre.dataset.filmCode]; if (!f) return;
+    pre.textContent = '// ' + f.title + ' · ' + f.duration + ' giây · ' + f.scenes.length + ' cảnh\n\n' + f.scenes.map(function (s) {
+      return '// ── Cảnh "' + s.name + '" · ' + s.from.toFixed(1) + 's → ' + s.to.toFixed(1) + 's\n' + s.draw.toString();
+    }).join('\n\n');
+  });
+  document.querySelectorAll('[data-copy-cmd]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.parentElement.querySelector('code').textContent;
+      (window.LTT ? window.LTT.copyText(t) : navigator.clipboard.writeText(t)).then(function () { b.textContent = 'Đã copy ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+    });
+  });
+});
+</script>
+
+</main>
+
+<footer class="foot ink">
+  <div class="marquee red" aria-hidden="true"><div class="marquee-track"><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span></div></div>
+  <div class="foot-grid">
+    <div>
+      <p class="foot-big">Dám nhờ.<br><em>Dám hỏi lại.</em></p>
+    </div>
+    <div>
+      <h4 class="label">Tự học</h4>
+      <ul><li><a href="bat-dau.html">Bắt đầu ở đây</a></li><li><a href="khoang-cach.html">Khoảng cách AI</a></li><li><a href="giao-viec-nhu-dong-nghiep.html">Giao việc như đồng nghiệp</a></li><li><a href="cap-1.html">7 bậc</a></li><li><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a></li><li><a href="thu-vien-prompt.html">Thư viện prompt</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Tra cứu</h4>
+      <ul><li><a href="an-toan.html">An toàn & tỉnh táo</a></li><li><a href="cong-cu.html">Bản đồ công cụ</a></li><li><a href="tu-dien.html">Từ điển AI</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="tai-lieu.html">Tải tài liệu</a></li><li><a href="trinh-chieu.html?mode=film">Xem như phim ▶</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Về trang này</h4>
+      <p class="foot-note">Toàn bộ website và bài trình chiếu, từ nội dung, thiết kế, chuyển động đến từng khung hình, được làm bằng cách <b>trò chuyện với Claude Code</b>. <a href="giao-viec-nhu-dong-nghiep.html#mot-vi-du-that-cau-giao-viec-da-tao-ra-phien-ban-nay">Xem câu giao việc đã tạo ra nó →</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Làm thật, thấy thật · Phiên bản 2</span><span>Dữ liệu demo đều hư cấu · <a href="#top">Lên đầu trang ↑</a></span></div>
+</footer>
+
+<div class="search" data-search hidden role="dialog" aria-modal="true" aria-label="Tìm kiếm trong trang">
+  <div class="search-box">
+    <div class="search-top"><input type="search" data-search-input placeholder="Tìm bài, prompt, thuật ngữ… (gõ không dấu cũng được)" autocomplete="off" aria-label="Từ khoá"><button type="button" data-close-search>ESC</button></div>
+    <div class="search-hints"><span class="label">Gợi ý</span><button type="button">tóm tắt hợp đồng</button><button type="button">excel công thức</button><button type="button">phễu khoảng cách</button><button type="button">đồng nghiệp</button><button type="button">giọng nói</button><button type="button">họp biên bản</button><button type="button">agent</button></div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> chọn</span><span><kbd>Enter</kbd> mở</span><span><kbd>Esc</kbd> đóng</span></div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="assets/js/code-video.js?v=1791903580" defer></script><script src="assets/js/films.js?v=1791903580" defer></script>
+<script src="assets/js/site.js?v=1791903580" data-ver="1791903580" defer></script>
+</body>
+</html>

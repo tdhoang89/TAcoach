@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chứng nhận Level Up · In</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,500..900&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Noto+Serif+Display:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+<style>
+@page{size:A4 landscape;margin:0}
+*{box-sizing:border-box}
+:root{--ink:#0b0b0b;--red:#ff4a1c;--mut:#6b675f}
+body{margin:0;font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);background:#e7e3da}
+.ui{max-width:900px;margin:0 auto;padding:18px 16px;display:grid;gap:10px}
+.ui h1{margin:0;font:400 30px 'Noto Serif Display',serif}.ui p{margin:0;color:#555;font-size:14px}
+.ui textarea{width:100%;min-height:140px;padding:12px;border:1px solid var(--ink);font:inherit;font-size:15px}
+.ui .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.ui input{padding:10px 12px;border:1px solid var(--ink);font:inherit;min-width:220px}
+.ui button{font:600 13px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:12px 18px;border:0;border-radius:99px;background:var(--ink);color:#f2efe8;cursor:pointer}
+.ui button.red{background:var(--red);color:var(--ink)}
+.cert{width:297mm;height:210mm;margin:16px auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 10px 40px -10px rgba(0,0,0,.3);padding:16mm 20mm;display:grid;grid-template-rows:auto 1fr auto}
+.cert::before{content:'';position:absolute;inset:8mm;border:1.4px solid var(--ink);pointer-events:none}
+.bign{position:absolute;right:6mm;bottom:-22mm;font:800 150mm/1 'Archivo',sans-serif;font-stretch:62%;color:transparent;-webkit-text-stroke:1.2px rgba(11,11,11,.12);pointer-events:none}
+.top{display:flex;justify-content:space-between;font:500 8pt 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--ink);padding-bottom:3mm;position:relative}
+.mid{align-self:center;position:relative}
+.kicker{font:600 9pt 'JetBrains Mono',monospace;letter-spacing:.2em;color:var(--red);text-transform:uppercase}
+.title{margin:2mm 0 0;font:800 64pt/.9 'Archivo',sans-serif;font-stretch:62%;text-transform:uppercase;letter-spacing:-.01em}
+.give{margin-top:8mm;font-size:11pt;color:var(--mut)}
+.name{margin-top:1mm;font:300 italic 40pt/1.1 'Noto Serif Display',serif;min-width:170mm;border-bottom:1.4px solid var(--ink);padding-bottom:2mm;display:inline-block}
+.why{margin-top:6mm;font-size:12pt;line-height:1.6;max-width:200mm}
+.why b{font-weight:600}
+.thread{display:block;width:120mm;height:6mm;margin-top:5mm}
+.motto{font:400 13pt 'Noto Serif Display',serif;margin-top:2mm}
+.motto em{color:var(--red);font-style:italic;font-weight:300}
+.sign{display:flex;justify-content:space-between;align-items:flex-end;font-size:10pt;color:var(--mut);position:relative}
+.sign div{min-width:60mm}.sign b{display:block;margin-top:12mm;color:var(--ink);border-top:1px solid var(--ink);padding-top:2mm;font-weight:600}
+@media print{body{background:#fff}.ui{display:none}.cert{margin:0;box-shadow:none;page-break-after:always}}
+</style>
+</head>
+<body>
+<div class="ui">
+  <h1>Chứng nhận <i>Level Up</i></h1>
+  <p>Dán danh sách tên (mỗi dòng 1 người) → <b>Tạo</b> → <b>In</b> (khổ A4 ngang). Để trống thì in bản có dòng kẻ để viết tay.</p>
+  <textarea id="names" placeholder="Nguyễn Văn A&#10;Trần Thị B&#10;…"></textarea>
+  <div class="row">
+    <input id="presenter" placeholder="Tên người chia sẻ (ký tên)">
+    <input id="date" placeholder="Ngày, VD: 18/10/2026">
+    <button id="make">Tạo</button>
+    <button class="red" onclick="window.print()">In</button>
+  </div>
+</div>
+<div id="out"></div>
+<script>
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+function make() {
+  const names = document.getElementById('names').value.split('\n').map(s => s.trim()).filter(Boolean);
+  const presenter = document.getElementById('presenter').value.trim();
+  const date = document.getElementById('date').value.trim() || '…… / …… / 2026';
+  document.getElementById('out').innerHTML = (names.length ? names : ['']).map(n => `
+  <div class="cert">
+    <div class="bign" aria-hidden="true">07</div>
+    <div class="top"><span>Làm thật, thấy thật · V2</span><span>7 bậc đi xuống phễu</span></div>
+    <div class="mid">
+      <div class="kicker">Chứng nhận</div>
+      <div class="title">Level up</div>
+      <div class="give">trao cho</div>
+      <div class="name">${esc(n) || '&nbsp;'}</div>
+      <div class="why">đã dám nghĩ, dám nhờ và hoàn thành <b>từ 4 / 7 bậc làm bạn với AI</b>,<br>đi thêm một bước xuống phễu tại buổi chia sẻ <b>"Làm thật, thấy thật"</b>.</div>
+      <svg class="thread" viewBox="0 0 400 20" preserveAspectRatio="none"><path d="M0 12 C 90 12, 120 4, 200 10 S 320 18, 400 8" fill="none" stroke="#ff4a1c" stroke-width="2.2"/></svg>
+      <div class="motto">Dám nhờ mọi thứ, và <em>dám hỏi lại</em> mọi thứ.</div>
+    </div>
+    <div class="sign"><div>Ngày ${esc(date)}</div><div>Người chia sẻ<b>${esc(presenter) || '&nbsp;'}</b></div></div>
+  </div>`).join('');
+}
+document.getElementById('make').onclick = make;
+make();
+</script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dùng AI an toàn &amp; tỉnh táo · Làm thật, thấy thật</title>
+<meta name="description" content="Biết điều gì nên kể, điều gì phải che, vì sao bạn ấy đôi khi bịa, và 5 bước kiểm chứng trước khi dùng kết quả.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dùng AI an toàn &amp; tỉnh táo · Làm thật, thấy thật">
+<meta property="og:description" content="Biết điều gì nên kể, điều gì phải che, vì sao bạn ấy đôi khi bịa, và 5 bước kiểm chứng trước khi dùng kết quả.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=1791903580">
+<script>
+(function () {
+  var r = document.documentElement;
+  try {
+    var t = localStorage.getItem('ltt:theme'); if (t) r.dataset.theme = t;
+    var f = parseFloat(localStorage.getItem('ltt:fs')); if (f) r.style.setProperty('--fs', f);
+  } catch (e) {}
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    r.classList.add('motion-pre');
+    setTimeout(function () { r.classList.remove('motion-pre'); }, 2600);
+  }
+})();
+</script>
+
+</head>
+<body class="page-page" id="top">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<div class="progress-line" aria-hidden="true"></div>
+
+<header class="nav" data-nav>
+  <a class="brand" href="index.html" aria-label="Làm thật, thấy thật: trang chủ"><span>Làm thật</span><span class="brand-sep">/</span><span class="brand-b">thấy thật</span></a>
+  <nav class="nav-main" aria-label="Điều hướng chính">
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Bắt đầu <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Nền tảng · đọc trước khi vào 7 bậc</p><div class="mega-grid mega-3"><a href="bat-dau.html" class="mega-item"><span class="mega-n">NỀN TẢNG · BẮT ĐẦU Ở ĐÂY</span><span class="mega-t">Làm quen người bạn AI</span><span class="mega-h">Đọc trang này trước khi học. Ba câu để nhớ, cách tự học ở nhà, chuẩn bị tài khoản và chiêu…</span></a><a href="khoang-cach.html" class="mega-item"><span class="mega-n">NỀN TẢNG · ĐỌC TRƯỚC</span><span class="mega-t">Khoảng cách AI: phễu 6 tỷ người và vị trí của bạn</span><span class="mega-h">Phễu của Andrej Karpathy cho thấy khoảng cách dùng AI đang nới rộng. Bạn đang ở tầng nào, …</span></a><a href="giao-viec-nhu-dong-nghiep.html" class="mega-item"><span class="mega-n">NỀN TẢNG · CÁCH NÓI CHUYỆN</span><span class="mega-t">Giao việc như giao cho đồng nghiệp</span><span class="mega-h">Người tạo ra Claude Code nói prompt chẳng có bí mật gì. Chỉ cần nói rõ ba điều: muốn gì, b…</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">7 bậc <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">7 bậc đi xuống phễu · 7 cách nhờ</p><div class="mega-grid"><a href="cap-1.html" class="mega-item"><span class="mega-n">N°01</span><span class="mega-t">Email khó, viết lại trong 30 giây</span><span class="mega-h">Giao như cho đồng nghiệp, rồi nhờ góp ý thẳng</span></a><a href="cap-2.html" class="mega-item"><span class="mega-n">N°02</span><span class="mega-t">Tài liệu dài, và bẫy “AI bịa”</span><span class="mega-h">Bạn giỏi nhưng đôi khi đoán, nên cứ hỏi “căn cứ đâu?”</span></a><a href="cap-3.html" class="mega-item"><span class="mega-n">N°03</span><span class="mega-t">Excel lộn xộn thành sạch</span><span class="mega-h">Đưa đống bừa bộn, nhờ sắp xếp</span></a><a href="cap-4.html" class="mega-item"><span class="mega-n">N°04</span><span class="mega-t">Số liệu thành báo cáo thành slide</span><span class="mega-h">Một cuộc trò chuyện, nhiều thành phẩm</span></a><a href="cap-5.html" class="mega-item"><span class="mega-n">N°05</span><span class="mega-t">Trợ lý biết nhớ việc</span><span class="mega-h">Dạy bạn ấy một lần, nhờ mãi mãi</span></a><a href="cap-6.html" class="mega-item"><span class="mega-n">N°06</span><span class="mega-t">Tự tạo công cụ không cần code</span><span class="mega-h">Thiếu công cụ? Nhờ bạn ấy làm luôn</span></a><a href="cap-7.html" class="mega-item"><span class="mega-n">N°07</span><span class="mega-t">Giao cả đầu việc cho AI agent</span><span class="mega-h">Giao cả đầu việc, không chỉ giao câu hỏi</span></a><a href="thu-thach-7-ngay.html" class="mega-item"><span class="mega-n">+ 7 NGÀY</span><span class="mega-t">Thử thách 7 ngày, 7 lần nhờ</span><span class="mega-h">Biến hiểu biết thành thói quen</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Chuyên đề <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Chuyên đề thực chiến · đọc theo nhu cầu</p><div class="mega-grid"><a href="giong-noi.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 01</span><span class="mega-t">Nói thay vì gõ: trò chuyện bằng giọng nói với AI</span><span class="mega-h">20 phút</span></a><a href="anh-chup.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 02</span><span class="mega-t">Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</span><span class="mega-h">20 phút</span></a><a href="tra-cuu-co-nguon.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 03</span><span class="mega-t">Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</span><span class="mega-h">30 phút</span></a><a href="hop-hanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 04</span><span class="mega-t">Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</span><span class="mega-h">25 phút</span></a><a href="hoc-nhanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 05</span><span class="mega-t">Học nhanh mọi thứ với một gia sư kiên nhẫn</span><span class="mega-h">25 phút</span></a><a href="giong-van.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 06</span><span class="mega-t">Viết đúng giọng của bạn và của công ty</span><span class="mega-h">30 phút</span></a><a href="mot-ngay.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 07</span><span class="mega-t">Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</span><span class="mega-h">25 phút đọc</span></a></div></div>
+    </div>
+    <a href="thu-vien-prompt.html">Thư viện prompt</a>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Tài nguyên <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Tra cứu & tự học thêm</p><div class="mega-list"><a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html" class=is-active>An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a></div></div>
+    </div>
+    <a href="trinh-chieu.html" class="nav-deck">Trình chiếu ↗</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="nav-search" type="button" data-open-search aria-label="Tìm kiếm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="nav-search-t">Tìm kiếm</span><kbd>Ctrl K</kbd></button>
+    <button class="nav-theme" type="button" data-theme-toggle aria-label="Đổi nền sáng / tối" title="Đổi nền sáng / tối">◐</button>
+    <button class="nav-burger" type="button" data-menu aria-label="Mở menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" data-menu-panel aria-hidden="true">
+  <div class="menu-cols">
+    <div class="menu-list">
+      <h3 class="label" style="color:#a29e96">Nền tảng & 7 bậc</h3>
+      <a href="bat-dau.html"><small>NỀN TẢNG</small>Bắt đầu ở đây</a><a href="khoang-cach.html"><small>NỀN TẢNG</small>Khoảng cách AI</a><a href="giao-viec-nhu-dong-nghiep.html"><small>NỀN TẢNG</small>Giao việc như đồng nghiệp</a>
+      <a href="cap-1.html"><small>N°01</small>Email khó, viết lại trong 30 giây</a><a href="cap-2.html"><small>N°02</small>Tài liệu dài, và bẫy “AI bịa”</a><a href="cap-3.html"><small>N°03</small>Excel lộn xộn thành sạch</a><a href="cap-4.html"><small>N°04</small>Số liệu thành báo cáo thành slide</a><a href="cap-5.html"><small>N°05</small>Trợ lý biết nhớ việc</a><a href="cap-6.html"><small>N°06</small>Tự tạo công cụ không cần code</a><a href="cap-7.html"><small>N°07</small>Giao cả đầu việc cho AI agent</a>
+    </div>
+    <div class="menu-list menu-res">
+      <h3 class="label" style="color:#a29e96">Chuyên đề</h3>
+      <a href="giong-noi.html"><small>CĐ 01</small>Nói thay vì gõ: trò chuyện bằng giọng nói với AI</a><a href="anh-chup.html"><small>CĐ 02</small>Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</a><a href="tra-cuu-co-nguon.html"><small>CĐ 03</small>Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</a><a href="hop-hanh.html"><small>CĐ 04</small>Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</a><a href="hoc-nhanh.html"><small>CĐ 05</small>Học nhanh mọi thứ với một gia sư kiên nhẫn</a><a href="giong-van.html"><small>CĐ 06</small>Viết đúng giọng của bạn và của công ty</a><a href="mot-ngay.html"><small>CĐ 07</small>Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</a>
+      <h3 class="label" style="color:#a29e96;margin-top:26px">Tài nguyên</h3>
+      <a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a>
+      <a href="trinh-chieu.html">Trình chiếu ↗</a>
+      <a href="#" data-open-search>Tìm kiếm…</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<header class="phero ink grain">
+  <div class="lhero-top" data-reveal><span class="label">Nền tảng</span><span class="label">15 phút đọc</span></div>
+  <h1 data-split>Dùng AI an toàn &amp; tỉnh táo</h1>
+  <p data-reveal>Biết điều gì nên kể, điều gì phải che, vì sao bạn ấy đôi khi bịa, và 5 bước kiểm chứng trước khi dùng kết quả.</p>
+  
+  
+</header>
+<div class="doc"><aside class="doc-side"><nav class="toc" aria-label="Mục lục bài"><p class="toc-label">Trong bài này</p><ol><li><a href="#den-giao-thong-du-lieu">Đèn giao thông dữ liệu</a></li><li><a href="#an-danh-hoa-che-truoc-dan-sau">Ẩn danh hoá: che trước, dán sau</a></li><li><a href="#cai-dat-quyen-rieng-tu-cho-tai-khoan-ca-nhan">Cài đặt quyền riêng tư cho tài khoản cá nhân</a></li><li><a href="#hoi-cong-ty-truoc-khi-dung">Hỏi công ty trước khi dùng</a></li><li><a href="#vi-sao-ai-bia">Vì sao AI &quot;bịa&quot;?</a></li><li><a href="#5-buoc-kiem-chung">5 bước kiểm chứng</a></li><li><a href="#vung-rui-ro-cao-kiem-ky-gap-doi">Vùng rủi ro cao: kiểm kỹ gấp đôi</a></li><li><a href="#ban-quyen-bao-mat-nhung-dieu-co-ban">Bản quyền &amp; bảo mật: những điều cơ bản</a></li><li><a href="#bo-cau-dam-hoi-lai">Bộ câu &quot;Dám hỏi lại&quot;</a></li><li><a href="#tu-kiem-tra">Tự kiểm tra</a></li></ol><div class="toc-progress" data-progress-of="an-toan" data-total="6"><span class="toc-progress-bar"><i></i></span><span class="toc-progress-txt">0/6 đã tích</span></div><div class="toc-tools"><button type="button" data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button type="button" data-fs="1" aria-label="Chữ lớn hơn">A+</button><button type="button" onclick="window.print()">In bài</button></div></nav></aside><article class="prose" data-slug="an-toan"><p>Người bạn AI giỏi thật. Nhưng bạn thân đến mấy thì cũng có chuyện mình không kể, và có lúc mình phải hỏi lại "căn cứ đâu?". Trang này gom những điều mình mong bạn nắm trước khi đưa công việc thật vào AI: dữ liệu nào được kể, che thông tin thế nào, cài đặt gì cho tài khoản, vì sao bạn ấy bịa và cách bắt lỗi.</p>
+<p>Hai nỗi lo lớn nhất của dân văn phòng khi dùng AI là <strong>lộ dữ liệu</strong> và <strong>AI bịa</strong>. Tin vui là cả hai đều có cách xử lý đơn giản, không cần biết kỹ thuật.</p>
+<div class="admonition view">
+<p class="admonition-title">Góc nhìn</p>
+<p>Mình tin bạn ấy vì mình biết cách kiểm tra bạn ấy, chứ không phải tin mù quáng.</p>
+</div>
+<h2 id="den-giao-thong-du-lieu">Đèn giao thông dữ liệu</h2>
+<p>Trước khi dán bất cứ thứ gì vào khung chat, dừng lại 3 giây và tự hỏi: thông tin này thuộc đèn nào?</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Đèn</th>
+<th>Loại thông tin</th>
+<th>Cách làm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 Xanh</td>
+<td>Thông tin công khai: văn bản pháp luật đã ban hành, tin tức, kiến thức chung, mẫu biểu trống, nội dung bạn tự viết mà không nhắc tên ai</td>
+<td>Kể thoải mái</td>
+</tr>
+<tr>
+<td>🟡 Vàng</td>
+<td>Tài liệu nội bộ: hợp đồng, báo cáo, email, biên bản họp, số liệu kinh doanh</td>
+<td><strong>Che trước rồi mới đưa</strong>: tên người, tên công ty, số tiền, mã số, địa chỉ</td>
+</tr>
+<tr>
+<td>🔴 Đỏ</td>
+<td>Thông tin định danh khách hàng, số tài khoản, số CCCD, mật khẩu, dữ liệu tài chính chưa công bố, bí mật kinh doanh, thông tin sức khoẻ</td>
+<td><strong>Không đưa</strong>. Nếu cần giúp, chỉ mô tả tình huống chung chung hoặc dùng dữ liệu giả</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="vi-du-theo-nganh">Ví dụ theo ngành</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Ngành</th>
+<th>🟢 Thoải mái</th>
+<th>🟡 Che rồi mới đưa</th>
+<th>🔴 Không đưa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⚖️ Pháp lý</td>
+<td>Luật, nghị định, thông tư đã công bố · bản án đã công khai · mẫu hợp đồng trống · câu hỏi chung như "điều khoản bất khả kháng thường gồm gì?"</td>
+<td>Hợp đồng đang đàm phán · công văn nội bộ · biên bản làm việc · thư tư vấn đã bỏ tên khách</td>
+<td>Hồ sơ vụ việc kèm tên đương sự · chiến lược tranh tụng · thông tin khách hàng mà bạn có nghĩa vụ bảo mật · tài liệu đóng dấu "Mật"</td>
+</tr>
+<tr>
+<td>💰 Kế toán – Tài chính</td>
+<td>Chuẩn mực, quy định thuế đã ban hành · câu hỏi về công thức Excel · cách lập một loại báo cáo · bảng số liệu tự tạo để thử</td>
+<td>Bảng chi phí, công nợ đã thay mã khách · thuyết minh báo cáo đã bỏ tên công ty · số liệu đã làm tròn hoặc nhân cùng một hệ số</td>
+<td>Số tài khoản ngân hàng · bảng lương có tên và mã số thuế cá nhân · báo cáo tài chính chưa công bố · mật khẩu phần mềm kế toán, chữ ký số</td>
+</tr>
+<tr>
+<td>🤝 Kinh doanh – CSKH</td>
+<td>Thông tin sản phẩm đã công khai · bài đăng quảng cáo · kịch bản chào hàng chung · câu hỏi về kỹ năng đàm phán</td>
+<td>Email khách đã bỏ tên và số điện thoại · báo giá đã che tên khách · ghi chú cuộc gọi đã ẩn danh</td>
+<td>Danh sách khách hàng kèm số điện thoại, email · giá vốn, chính sách chiết khấu nội bộ · dữ liệu xuất nguyên bản từ phần mềm quản lý khách hàng</td>
+</tr>
+<tr>
+<td>🏗️ Vận hành – Xây dựng</td>
+<td>Tiêu chuẩn kỹ thuật công khai · quy trình an toàn lao động chung · checklist bảo trì mẫu · câu hỏi về cách lập tiến độ</td>
+<td>Nhật ký công trình đã bỏ tên dự án · báo cáo sự cố đã che tên người · bảng tiến độ đã đổi tên hạng mục</td>
+<td>Hồ sơ dự thầu chưa nộp, giá dự thầu · thông tin cá nhân công nhân, cư dân · sơ đồ an ninh, mã ra vào toà nhà</td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition note">
+<p class="admonition-title">Chính sách công ty đứng trên mọi bảng</p>
+<p>Bảng này là điểm khởi đầu, không thay được quy định nơi bạn làm. Công ty cấm hay giới hạn điều gì thì làm theo công ty. Không chắc thì hỏi trước (xem phần "Hỏi công ty trước khi dùng" bên dưới).</p>
+</div>
+<h2 id="an-danh-hoa-che-truoc-dan-sau">Ẩn danh hoá: che trước, dán sau</h2>
+<p>Ẩn danh hoá là thay thông tin nhận diện bằng mã giả, để AI vẫn hiểu nội dung mà không biết đó là ai. Điều quan trọng nhất: <strong>che ngay trên máy của bạn, trước khi dán</strong>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Đừng làm</p>
+<p>Đừng dán bản gốc vào rồi gõ "che giúp mình tên khách hàng nhé". Lúc bạn bấm gửi, dữ liệu thật đã rời khỏi máy rồi.</p>
+</div>
+<h3 id="buoc-1-tim-nhung-thu-can-che" class="step"><span class="step-n">01</span><span class="step-t">Tìm những thứ cần che</span></h3>
+<p>Đọc lướt tài liệu và đánh dấu:</p>
+<ul>
+<li>Tên người, kể cả chức danh đi kèm ("ông A, Giám đốc")</li>
+<li>Tên công ty, tên dự án, tên thương hiệu riêng</li>
+<li>Số hợp đồng, số hoá đơn, mã khách hàng, mã số thuế</li>
+<li>Số điện thoại, email, địa chỉ cụ thể</li>
+<li>Số tài khoản, số CCCD, biển số xe</li>
+<li>Số tiền, đơn giá, khi con số tự nó đã tiết lộ điều gì đó</li>
+<li>Ngày tháng cụ thể khiến người khác đoán ra vụ việc</li>
+<li>Logo, chữ ký, con dấu trong ảnh chụp hoặc file PDF</li>
+</ul>
+<h3 id="buoc-2-lap-bang-thay-the-giu-tren-may-ban" class="step"><span class="step-n">02</span><span class="step-t">Lập bảng thay thế, giữ trên máy bạn</span></h3>
+<p>Mở một file ghi chú riêng, ghi lại "thật → mã". File này <strong>chỉ bạn giữ</strong>, không bao giờ dán vào AI. Ví dụ với dữ liệu hư cấu của trang này:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Thông tin thật (chỉ bạn giữ)</th>
+<th>Thay bằng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Công ty TNHH Kệ kho Phú An</td>
+<td>[BÊN BÁN]</td>
+</tr>
+<tr>
+<td>Công ty CP Phân phối Thiết bị Văn phòng Sao Mai</td>
+<td>[BÊN MUA]</td>
+</tr>
+<tr>
+<td>Trần Thu Hà</td>
+<td>[NGƯỜI 1]</td>
+</tr>
+<tr>
+<td>27/2026/HĐMB/PA-SM</td>
+<td>[SỐ HĐ]</td>
+</tr>
+<tr>
+<td>1.164.240.000đ</td>
+<td>[TỔNG GIÁ TRỊ]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giữ mã <strong>nhất quán</strong>: cùng một người thì luôn là [NGƯỜI 1], để bạn ấy hiểu đúng ai làm gì. Nếu cần bạn ấy tính toán, có thể giữ số nhưng bỏ hết tên, hoặc nhân mọi con số với cùng một hệ số (tỷ lệ giữa các số vẫn đúng, số thật thì không lộ).</p>
+<h3 id="buoc-3-thay-hang-loat-bang-tim-va-thay-the" class="step"><span class="step-n">03</span><span class="step-t">Thay hàng loạt bằng Tìm và Thay thế</span></h3>
+<ol>
+<li>Lưu một <strong>bản sao</strong> tài liệu, thêm chữ "AN-DANH" vào tên file. Làm trên bản sao, không đụng bản gốc.</li>
+<li>Bấm <kbd>Ctrl</kbd> + <kbd>H</kbd> (Word, Excel, Google Docs đều có). Trên Mac, vào menu Edit (Sửa) &gt; Find (Tìm) &gt; Replace (Thay thế).</li>
+<li>Ô "Tìm": thông tin thật. Ô "Thay bằng": mã. Bấm <strong>Thay thế tất cả</strong> (Replace All).</li>
+<li>Lặp lại cho từng dòng trong bảng. Nhớ các cách viết khác nhau: "Công ty Phú An", "Cty Phú An", "Phú An", "PA".</li>
+<li>Với Excel, chọn phạm vi là cả sổ làm việc (Within: Workbook) để thay ở mọi sheet.</li>
+<li>Với PDF, chuyển sang Word trước, hoặc chỉ copy phần chữ thật sự cần.</li>
+</ol>
+<h3 id="buoc-4-ra-lan-cuoi" class="step"><span class="step-n">04</span><span class="step-t">Rà lần cuối</span></h3>
+<p>Dùng <kbd>Ctrl</kbd> + <kbd>F</kbd> tìm nhanh vài từ hay lọt lưới: dấu "@" (email), "Công ty", "Ông", "Bà", "STK", "Số:", các đầu số điện thoại. Đọc kỹ phần đầu và phần cuối văn bản, nơi hay có tên, chữ ký, địa chỉ. Đừng quên đầu trang, chân trang, chú thích và tên file.</p>
+<h3 id="buoc-5-nhan-ket-qua-doi-nguoc-lai" class="step"><span class="step-n">05</span><span class="step-t">Nhận kết quả, đổi ngược lại</span></h3>
+<p>Bạn ấy trả kết quả có [BÊN BÁN], [NGƯỜI 1]… Dán vào Word, dùng bảng thay thế đổi ngược lại thành tên thật. Đọc lại một lượt trước khi gửi đi.</p>
+<p>Bạn có thể nhờ bạn ấy làm sẵn <strong>bảng mẫu</strong> mà không cần đưa bất kỳ dữ liệu thật nào:</p>
+<div class="prompt" id="p-an-toan-1" data-tags="meta chung"><div class="prompt-head"><span class="prompt-label">Prompt · AT1</span><span class="prompt-title">Nhờ tạo bảng thay thế mẫu (không dùng dữ liệu thật)</span><span class="tag">Hỏi thẳng</span><span class="tag">Chung</span></div><pre class="prompt-body">Mình sắp ẩn danh một [hợp đồng / bảng công nợ / email khách hàng] trước khi nhờ AI đọc. Mình sẽ không gửi dữ liệu thật cho bạn.&#10;Bạn tạo giúp mình một bảng thay thế mẫu gồm 3 cột: Loại thông tin, Mã thay thế gợi ý, Lưu ý khi thay. Liệt kê đủ các loại thông tin dễ bị sót trong loại tài liệu này của ngành [pháp lý / kế toán / kinh doanh / vận hành].&#10;Cuối bảng, gợi ý thêm 5 từ khoá mình nên tìm bằng Ctrl+F để rà lần cuối.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="cai-dat-quyen-rieng-tu-cho-tai-khoan-ca-nhan">Cài đặt quyền riêng tư cho tài khoản cá nhân</h2>
+<p>Nếu bạn dùng tài khoản cá nhân (không phải tài khoản do công ty cấp), dành 5 phút làm những việc sau:</p>
+<ol>
+<li><strong>Tắt tuỳ chọn cho phép dùng dữ liệu của bạn để cải thiện mô hình.</strong> Thường nằm trong phần Cài đặt (Settings), ở mục kiểu "Kiểm soát dữ liệu" (Data controls) hoặc "Quyền riêng tư" (Privacy).</li>
+<li><strong>Biết chỗ bật trò chuyện tạm thời.</strong> Nhiều công cụ có chế độ trò chuyện không lưu vào lịch sử, hợp cho những câu hỏi bạn không muốn giữ lại.</li>
+<li><strong>Xem lại các kết nối đã cấp quyền</strong> như Gmail, Drive, lịch. Không dùng nữa thì ngắt.</li>
+<li><strong>Xoá các cuộc trò chuyện cũ</strong> có nội dung không cần giữ.</li>
+<li><strong>Bật xác minh 2 bước</strong> cho tài khoản AI, vì toàn bộ lịch sử trò chuyện của bạn nằm trong đó.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Menu thay đổi thường xuyên</p>
+<p>Tên mục và vị trí nút đổi theo từng phiên bản, nên mình không ghi đường dẫn cụ thể. Nếu không tìm thấy, mở trang trợ giúp chính thức (Help Center) của công cụ và tìm "privacy" hoặc "data controls". Bạn cũng có thể hỏi thẳng bạn ấy "tắt chia sẻ dữ liệu ở đâu?", nhưng nhớ đối chiếu với trang trợ giúp, vì bạn ấy không phải lúc nào cũng biết giao diện mới nhất.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Tắt rồi vẫn giữ đèn giao thông</p>
+<p>Tắt tuỳ chọn cải thiện mô hình giúp giảm rủi ro, nhưng nội dung bạn gửi vẫn đi qua máy chủ của nhà cung cấp. Thông tin 🔴 vẫn không đưa vào.</p>
+</div>
+<h2 id="hoi-cong-ty-truoc-khi-dung">Hỏi công ty trước khi dùng</h2>
+<p>Trong khảo sát của nhóm mình, nhiều bạn trả lời "không rõ" công ty có cho dùng AI hay không. Hỏi trước là cách bảo vệ chính bạn. Những câu nên hỏi IT hoặc quản lý:</p>
+<ul>
+<li>Công ty có cho dùng AI trong công việc không? Có văn bản quy định không?</li>
+<li>Được dùng công cụ nào? Công ty có cấp tài khoản doanh nghiệp không (ví dụ Copilot trong Microsoft 365, hoặc ChatGPT, Claude bản dành cho tổ chức)?</li>
+<li>Loại dữ liệu nào tuyệt đối không được đưa vào? Dữ liệu khách hàng thì sao?</li>
+<li>Có được dùng tài khoản cá nhân cho việc công ty không?</li>
+<li>Có được kết nối AI với email, Drive, lịch công việc không?</li>
+<li>Có được cài ứng dụng AI trên máy công ty không?</li>
+<li>Văn bản có AI hỗ trợ có cần ghi chú hay cần ai duyệt không?</li>
+<li>Lỡ đưa nhầm dữ liệu thì báo cho ai, làm gì?</li>
+</ul>
+<div class="prompt" id="p-an-toan-2" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · AT2</span><span class="prompt-title">Soạn tin nhắn hỏi về chính sách AI</span><span class="tag">Chung</span></div><pre class="prompt-body">Mình muốn hỏi [quản lý / bộ phận IT] xem công ty có cho dùng AI trong công việc không và được đưa loại dữ liệu nào vào. Mình muốn tin nhắn nghe như đang muốn làm đúng quy định, chứ không như đang xin làm việc riêng.&#10;Viết giúp mình một [tin nhắn Zalo / email] ngắn, lịch sự, kèm 4–5 câu hỏi cụ thể. Giọng [thân thiện / trang trọng].</pre><div class="prompt-actions"></div></div>
+
+<h2 id="vi-sao-ai-bia">Vì sao AI "bịa"?</h2>
+<p>Người bạn AI không tra cứu sự thật như tra từ điển. Bạn ấy đã "đọc" một lượng chữ khổng lồ và học cách <strong>dự đoán chữ tiếp theo</strong> hợp lý nhất. Giống tính năng gợi ý từ trên bàn phím điện thoại, nhưng giỏi hơn rất, rất nhiều.</p>
+<p>Vì thế bạn ấy luôn trả lời trôi chảy, kể cả khi không có thông tin. Khi tài liệu không nói, hoặc bạn ấy không biết, bạn ấy có thể <strong>đoán</strong> ra một câu nghe rất hợp lý. Giới công nghệ gọi đó là "ảo giác" (hallucination). Dân văn phòng mình gọi gọn: "bịa".</p>
+<p>Ví dụ ở <a href="cap-2.html">Bậc 2</a>: hợp đồng mẫu không hề quy định phạt bên bán khi giao chậm, vậy mà AI hay trả lời "phạt 8%", vì lấy nhầm điều khoản phạt bên mua. Câu trả lời nghe rất chắc, có cả số điều, nhưng sai.</p>
+<p>Bạn ấy dễ đoán nhất khi:</p>
+<ul>
+<li>Bạn hỏi điều <strong>không có</strong> trong tài liệu.</li>
+<li>Câu hỏi đã <strong>gài sẵn giả định</strong> sai, ví dụ hỏi "vì sao Điều 12 quy định như vậy?" trong khi hợp đồng chỉ có 10 điều.</li>
+<li>Cần <strong>con số, ngày tháng, số hiệu văn bản</strong> cụ thể.</li>
+<li>Hỏi về <strong>chuyện mới xảy ra</strong> mà bạn ấy không tìm kiếm trên mạng.</li>
+<li>Cuộc trò chuyện <strong>quá dài</strong>, phần đầu bắt đầu bị "trôi".</li>
+</ul>
+<div class="admonition view">
+<p class="admonition-title">Góc nhìn</p>
+<p>AI không nói dối, bạn ấy đoán. Giống một người bạn rất giỏi nhưng ngại nói "mình không biết". Bạn không cần sợ, chỉ cần quen hỏi "căn cứ đâu?", như cách bạn hỏi lại một đồng nghiệp trước khi ký.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dặn trước, đỡ bịa</p>
+<p>Thêm một câu vào cuối lời nhờ: <em>"Nếu tài liệu không có thông tin, nói rõ là không có, đừng đoán."</em> Câu này không chặn được mọi lỗi, nhưng giúp bạn ấy thật thà hơn hẳn.</p>
+</div>
+<h2 id="5-buoc-kiem-chung">5 bước kiểm chứng</h2>
+<p>Không phải việc gì cũng cần đủ 5 bước. Lời chúc sinh nhật thì không cần. Nhưng thứ gì sẽ <strong>ký, nộp, gửi khách hay trình sếp</strong> thì nên đi hết.</p>
+<ol>
+<li><strong>Hỏi căn cứ.</strong> Nhờ bạn ấy trích nguyên văn câu trong tài liệu, kèm số Điều hoặc số trang, và nói rõ chỗ nào là suy luận.</li>
+<li><strong>Tự kiểm 1–2 điểm.</strong> Mở bản gốc, dùng <kbd>Ctrl</kbd> + <kbd>F</kbd> tìm đúng câu được trích. Ưu tiên điểm quan trọng nhất, hoặc điểm nghe "tiện" quá.</li>
+<li><strong>Hỏi "điểm nào bạn không chắc?".</strong> Bạn ấy thường tự chỉ ra chỗ yếu khi được hỏi thẳng.</li>
+<li><strong>Đối chiếu chéo.</strong> Hỏi cùng câu đó ở một AI khác, dùng NotebookLM (trích dẫn bấm được), tra văn bản trên nguồn chính thức, hoặc tính lại bằng Excel.</li>
+<li><strong>Người ký duyệt.</strong> AI là người soạn nháp, bạn (hoặc người có thẩm quyền) là người ký. Đọc lại toàn bộ lần cuối bằng con mắt của người chịu trách nhiệm.</li>
+</ol>
+<div class="admonition check">
+<p class="admonition-title">Dám hỏi lại</p>
+<p>Nếu bạn ấy trích một câu mà bạn tìm không ra trong bản gốc, đó là dấu hiệu đỏ. Đừng sửa cho khớp, hãy hỏi lại: <em>"Mình không tìm thấy câu này trong tài liệu. Bạn kiểm tra lại giúp mình?"</em></p>
+</div>
+<h2 id="vung-rui-ro-cao-kiem-ky-gap-doi">Vùng rủi ro cao: kiểm kỹ gấp đôi</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Loại thông tin</th>
+<th>Vì sao dễ sai</th>
+<th>Kiểm thế nào</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trích dẫn pháp luật: số hiệu văn bản, số điều, khoản</td>
+<td>Dễ nhớ nhầm số, ghép điều của luật này với luật kia, thậm chí "tạo ra" một văn bản nghe rất thật</td>
+<td>Tra văn bản gốc trên nguồn chính thức, đọc đúng điều khoản được dẫn</td>
+</tr>
+<tr>
+<td>Văn bản đã sửa đổi, thay thế, hết hiệu lực</td>
+<td>Kiến thức của bạn ấy có mốc thời gian, có thể vẫn dùng bản cũ</td>
+<td>Hỏi "văn bản này còn hiệu lực không, căn cứ đâu?" rồi tự tra tình trạng hiệu lực</td>
+</tr>
+<tr>
+<td>Con số, phép tính, tổng cộng</td>
+<td>Có thể cộng sai, làm tròn, bỏ sót dòng</td>
+<td>Bảo bạn ấy chỉ cách tính, tính lại bằng Excel, kiểm 3 dòng ngẫu nhiên</td>
+</tr>
+<tr>
+<td>Ngày tháng, thời hạn</td>
+<td>Dễ nhầm ngày làm việc với ngày lịch, nhầm định dạng ngày/tháng</td>
+<td>Đếm lại trên lịch, hỏi rõ "tính theo ngày nào?"</td>
+</tr>
+<tr>
+<td>Tên người, tên công ty, chức danh</td>
+<td>Dễ sai chính tả, gán nhầm người</td>
+<td>So với hợp đồng gốc, danh bạ</td>
+</tr>
+<tr>
+<td>Thông tin hay thay đổi: thuế suất, tỷ giá, giá cả, địa chỉ hành chính</td>
+<td>Thay đổi liên tục, ví dụ địa chỉ sau đợt sắp xếp đơn vị hành chính năm 2025</td>
+<td>Kiểm tra nguồn chính thức, hỏi ngày cập nhật của nguồn</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ban-quyen-bao-mat-nhung-dieu-co-ban">Bản quyền &amp; bảo mật: những điều cơ bản</h2>
+<ul>
+<li><strong>Nghĩa vụ bảo mật vẫn còn nguyên.</strong> Thoả thuận bảo mật, hợp đồng lao động, quy tắc nghề nghiệp của luật sư, kế toán, kiểm toán vẫn áp dụng khi bạn dùng AI. Dán tài liệu của khách vào một dịch vụ bên ngoài có thể là vi phạm, dù không ai biết.</li>
+<li><strong>Tài liệu của người khác.</strong> Nhờ tóm tắt một cuốn sách để tự học khác hẳn việc chép lại nội dung đó để phát hành. Khi viết bài đăng công khai, đừng để AI chép nguyên văn của người khác.</li>
+<li><strong>Kết quả AI tạo ra.</strong> Hỏi công ty về quy định sở hữu nội dung và việc có cần ghi chú "có AI hỗ trợ" hay không.</li>
+<li><strong>Hình ảnh, giọng nói người thật.</strong> Không dùng AI tạo nội dung giả mạo người khác, kể cả để đùa.</li>
+<li><strong>Đây là hướng dẫn chung</strong>, không phải tư vấn pháp lý. Tình huống cụ thể, hỏi bộ phận pháp chế.</li>
+</ul>
+<h2 id="bo-cau-dam-hoi-lai">Bộ câu "Dám hỏi lại"</h2>
+<p>Copy, dán, dùng cho mọi việc quan trọng.</p>
+<div class="prompt" id="p-an-toan-3" data-tags="meta"><div class="prompt-head"><span class="prompt-label">Prompt · AT3</span><span class="prompt-title">Căn cứ đâu?</span><span class="tag">Hỏi thẳng</span></div><pre class="prompt-body">Với mỗi ý bạn vừa đưa ra, trích nguyên văn câu trong tài liệu kèm số Điều (hoặc số trang). Chỗ nào là bạn suy luận chứ không có trong tài liệu thì ghi rõ &quot;suy luận&quot;.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-an-toan-4" data-tags="meta"><div class="prompt-head"><span class="prompt-label">Prompt · AT4</span><span class="prompt-title">Điểm nào bạn không chắc?</span><span class="tag">Hỏi thẳng</span></div><pre class="prompt-body">Trong câu trả lời vừa rồi, điểm nào bạn không chắc chắn nhất? Xếp từ ít chắc đến chắc nhất, và nói mình nên kiểm tra từng điểm ở đâu.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-an-toan-5" data-tags="meta"><div class="prompt-head"><span class="prompt-label">Prompt · AT5</span><span class="prompt-title">Dặn trước: không có thì nói không có</span><span class="tag">Hỏi thẳng</span></div><pre class="prompt-body">Trước khi bắt đầu: chỉ trả lời dựa trên tài liệu mình gửi. Nếu tài liệu không có thông tin, nói rõ &quot;tài liệu không đề cập&quot;, đừng đoán. Nếu bạn dùng kiến thức bên ngoài, đánh dấu riêng để mình biết.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-an-toan-6" data-tags="meta"><div class="prompt-head"><span class="prompt-label">Prompt · AT6</span><span class="prompt-title">Làm sao để mình kiểm tra bạn?</span><span class="tag">Hỏi thẳng</span></div><pre class="prompt-body">Làm sao để mình biết bạn không bịa trong câu trả lời này? Gợi ý cho mình 3 cách cụ thể để tự kiểm tra, cách nhanh nhất trước.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-an-toan-7" data-tags="meta ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · AT7</span><span class="prompt-title">Chỉ cách tính</span><span class="tag">Hỏi thẳng</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Chỉ cho mình từng bước bạn tính ra con số [___]: lấy từ dòng nào, cộng trừ thế nào, có làm tròn hay bỏ dòng nào không. Chọn 3 dòng bất kỳ để mình đối chiếu với file gốc.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-an-toan-8" data-tags="meta luat"><div class="prompt-head"><span class="prompt-label">Prompt · AT8</span><span class="prompt-title">Văn bản còn hiệu lực không?</span><span class="tag">Hỏi thẳng</span><span class="tag">Pháp lý</span></div><pre class="prompt-body">Bạn vừa dẫn [tên văn bản / số điều]. Văn bản này hiện còn hiệu lực không, đã bị sửa đổi hay thay thế chưa? Kiến thức của bạn cập nhật đến khi nào? Nếu không chắc thì nói thẳng, và chỉ mình nên tra ở nguồn chính thức nào.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-an-toan-9" data-tags="meta"><div class="prompt-head"><span class="prompt-label">Prompt · AT9</span><span class="prompt-title">Đóng vai người soát lỗi khó tính</span><span class="tag">Hỏi thẳng</span></div><pre class="prompt-body">Giờ bạn đóng vai một người soát lỗi khó tính, đọc lại câu trả lời của chính bạn. Tìm mọi chỗ có thể sai: con số, ngày tháng, tên riêng, trích dẫn, suy luận vội. Liệt kê ra, rồi sửa những chỗ bạn chắc là sai.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="tu-kiem-tra">Tự kiểm tra</h2>
+<ul class="tasks">
+<li class="task"><label><input type="checkbox" data-task="an-toan:1"><span class="box" aria-hidden="true"></span><span class="txt">Mình phân biệt được 3 đèn và kể được 2 ví dụ 🔴 trong ngành của mình</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="an-toan:2"><span class="box" aria-hidden="true"></span><span class="txt">Mình đã tắt tuỳ chọn dùng dữ liệu để cải thiện mô hình trên tài khoản cá nhân</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="an-toan:3"><span class="box" aria-hidden="true"></span><span class="txt">Mình đã thử ẩn danh một tài liệu bằng bảng thay thế và <kbd>Ctrl</kbd> + <kbd>H</kbd></span></label></li>
+<li class="task"><label><input type="checkbox" data-task="an-toan:4"><span class="box" aria-hidden="true"></span><span class="txt">Mình biết chính sách AI của công ty, hoặc đã gửi câu hỏi cho người phụ trách</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="an-toan:5"><span class="box" aria-hidden="true"></span><span class="txt">Mình giải thích được cho đồng nghiệp vì sao AI "bịa"</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="an-toan:6"><span class="box" aria-hidden="true"></span><span class="txt">Mình đã dùng ít nhất 2 câu trong bộ "Dám hỏi lại" cho một việc thật</span></label></li>
+</ul></article></div>
+</main>
+
+<footer class="foot ink">
+  <div class="marquee red" aria-hidden="true"><div class="marquee-track"><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span></div></div>
+  <div class="foot-grid">
+    <div>
+      <p class="foot-big">Dám nhờ.<br><em>Dám hỏi lại.</em></p>
+    </div>
+    <div>
+      <h4 class="label">Tự học</h4>
+      <ul><li><a href="bat-dau.html">Bắt đầu ở đây</a></li><li><a href="khoang-cach.html">Khoảng cách AI</a></li><li><a href="giao-viec-nhu-dong-nghiep.html">Giao việc như đồng nghiệp</a></li><li><a href="cap-1.html">7 bậc</a></li><li><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a></li><li><a href="thu-vien-prompt.html">Thư viện prompt</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Tra cứu</h4>
+      <ul><li><a href="an-toan.html">An toàn & tỉnh táo</a></li><li><a href="cong-cu.html">Bản đồ công cụ</a></li><li><a href="tu-dien.html">Từ điển AI</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="tai-lieu.html">Tải tài liệu</a></li><li><a href="trinh-chieu.html?mode=film">Xem như phim ▶</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Về trang này</h4>
+      <p class="foot-note">Toàn bộ website và bài trình chiếu, từ nội dung, thiết kế, chuyển động đến từng khung hình, được làm bằng cách <b>trò chuyện với Claude Code</b>. <a href="giao-viec-nhu-dong-nghiep.html#mot-vi-du-that-cau-giao-viec-da-tao-ra-phien-ban-nay">Xem câu giao việc đã tạo ra nó →</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Làm thật, thấy thật · Phiên bản 2</span><span>Dữ liệu demo đều hư cấu · <a href="#top">Lên đầu trang ↑</a></span></div>
+</footer>
+
+<div class="search" data-search hidden role="dialog" aria-modal="true" aria-label="Tìm kiếm trong trang">
+  <div class="search-box">
+    <div class="search-top"><input type="search" data-search-input placeholder="Tìm bài, prompt, thuật ngữ… (gõ không dấu cũng được)" autocomplete="off" aria-label="Từ khoá"><button type="button" data-close-search>ESC</button></div>
+    <div class="search-hints"><span class="label">Gợi ý</span><button type="button">tóm tắt hợp đồng</button><button type="button">excel công thức</button><button type="button">phễu khoảng cách</button><button type="button">đồng nghiệp</button><button type="button">giọng nói</button><button type="button">họp biên bản</button><button type="button">agent</button></div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> chọn</span><span><kbd>Enter</kbd> mở</span><span><kbd>Esc</kbd> đóng</span></div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+<script src="assets/js/site.js?v=1791903580" data-ver="1791903580" defer></script>
+</body>
+</html>

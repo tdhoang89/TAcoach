@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trình chiếu · Làm thật, thấy thật V2</title>
+<meta name="description" content="Bài chia sẻ AI cho dân văn phòng: phễu khoảng cách, giao việc như giao cho đồng nghiệp, 7 bậc làm bạn với AI. Xem như trình chiếu, tự học, hoặc xem như phim.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/deck.css?v={{VER}}">
+<script>
+/* =====================================================================
+   ⚙️ CẤU HÌNH TRÌNH CHIẾU (sửa ở đây, không cần build lại nếu sửa thẳng trinh-chieu.html,
+   nhưng nên sửa ở _src/templates/trinh-chieu.html rồi chạy python _src/build.py)
+   ===================================================================== */
+window.DECK_CONFIG = {
+  presenter: '',            // tên người chia sẻ, hiện ở slide tiêu đề. Ví dụ: 'Anh Hoà'
+  event: 'Buổi chia sẻ',    // nhãn sự kiện, ví dụ: 'Buổi chia sẻ · Nhóm TA'
+  date: '',                 // ví dụ: '10 / 2026'
+  links: {
+    zalo: '',               // link nhóm Zalo (để trống = ẩn mã QR)
+    phanHoi: '',            // link phiếu phản hồi (Google Form)
+    // site: tự trỏ về chính website khi chạy trên GitHub Pages; có thể ghi đè ở đây
+  },
+  /* Phần giới thiệu sản phẩm của người chia sẻ (slide "Xem vài thứ này").
+     Để trống thì slide chỉ hiện khung "màn hình của người chia sẻ" và không nêu tên sản phẩm. */
+  showcase: [
+    // { title: 'Tên ngắn', url: 'https://…' },
+  ],
+  revealPrompt: true,       // slide cuối "Bài trình chiếu này được làm thế nào?" (đặt false để ẩn)
+  survey: true,             // slide số liệu khảo sát nhóm TA (đặt false khi chia sẻ cho nhóm khác)
+  breakSlide: true,         // slide giải lao 10 phút sau bậc 3
+};
+</script>
+</head>
+<body class="tone-ink">
+<a class="sr-only" href="index.html">Về trang tự học</a>
+<div class="vp" aria-live="off">
+  <div class="stage" id="stage">
+    <svg class="thread" viewBox="0 0 1920 1080" width="1920" height="1080" aria-hidden="true"><path d=""/><circle class="halo" r="10" cx="-99" cy="-99"/><circle class="needle" r="9" cx="-99" cy="-99"/></svg>
+    <div class="grain" aria-hidden="true"></div>
+  </div>
+</div>
+
+<div class="ui ui-top">
+  <a href="index.html" class="hide-s" title="Về trang tự học">← Website</a>
+  <div class="seg" role="group" aria-label="Chế độ xem">
+    <button type="button" data-mode="present" title="Trình chiếu (phím N để bật/tắt bài đọc)">Trình chiếu</button>
+    <button type="button" data-mode="study" title="Tự học: có bài đọc, câu nhờ để copy">Tự học</button>
+    <button type="button" data-mode="film" title="Xem như phim: tự chạy, có phụ đề (phím P)">Xem phim</button>
+  </div>
+  <span class="sp"></span>
+  <button type="button" data-a="voice" hidden>🔈 Lời dẫn</button>
+  <button type="button" data-a="index" title="Mục lục (O)">Mục lục</button>
+  <button type="button" data-a="speaker" class="hide-s" title="Màn hình người chia sẻ (S)">Ghi chú</button>
+  <button type="button" data-a="help" class="icon" title="Phím tắt (H)">?</button>
+  <button type="button" data-a="fs" class="icon hide-s" title="Toàn màn hình (F)">⛶</button>
+</div>
+
+<div class="ui ui-bot">
+  <button type="button" class="play" data-a="play" aria-label="Phát">▶</button>
+  <span class="tc">00:00 / 00:00</span>
+  <div class="tl" role="slider" aria-label="Dòng thời gian" tabindex="-1"></div>
+  <span class="cnt">1/1</span>
+</div>
+<div class="pbar"></div>
+<div class="caption" aria-live="polite"></div>
+
+<aside class="panel" aria-label="Bài đọc tự học">
+  <div class="panel-scroll"></div>
+  <div class="panel-nav">
+    <button type="button" class="pv">← Trước</button>
+    <span class="mid">1 / 1</span>
+    <button type="button" class="nx" data-a="next">Tiếp →</button>
+  </div>
+</aside>
+
+<div class="index" role="dialog" aria-label="Mục lục">
+  <div class="ix-h"><h2>Mục lục <em>bài chia sẻ</em></h2><button type="button" data-close>Đóng · Esc</button></div>
+  <div class="ix-g"></div>
+</div>
+
+<div class="help" role="dialog" aria-label="Phím tắt"><div class="hb">
+  <h3>Phím tắt</h3>
+  <dl>
+    <dt><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd></dt><dd>Tiếp (hiện từng phần, hết phần thì sang slide)</dd>
+    <dt><kbd>←</kbd> <kbd>PgUp</kbd></dt><dd>Lùi</dd>
+    <dt><kbd>12</kbd> <kbd>Enter</kbd></dt><dd>Nhảy tới slide số 12</dd>
+    <dt><kbd>O</kbd></dt><dd>Mục lục</dd>
+    <dt><kbd>N</kbd></dt><dd>Bật / tắt bài đọc tự học</dd>
+    <dt><kbd>P</kbd></dt><dd>Xem như phim: phát / dừng (tự chạy, có phụ đề)</dd>
+    <dt><kbd>S</kbd></dt><dd>Mở màn hình người chia sẻ (ghi chú, slide kế, đồng hồ) ở cửa sổ riêng</dd>
+    <dt><kbd>F</kbd></dt><dd>Toàn màn hình</dd>
+    <dt><kbd>B</kbd> / <kbd>W</kbd></dt><dd>Màn hình đen / trắng</dd>
+    <dt><kbd>T</kbd> / <kbd>Y</kbd></dt><dd>Đồng hồ 3 phút (hoặc theo slide) / 30 giây</dd>
+    <dt><kbd>L</kbd></dt><dd>Bút laser</dd>
+    <dt><kbd>Esc</kbd></dt><dd>Đóng bảng, tắt laser, dừng phim</dd>
+  </dl>
+  <p style="margin-top:18px;font-size:14px;opacity:.7">Trên điện thoại: vuốt trái / phải. Chế độ Tự học hợp nhất khi đọc một mình. Cần đọc offline? Mở <a href="trinh-chieu.html?view=print" target="_blank" rel="noopener">bản in / PDF</a>.</p>
+</div></div>
+
+<div class="timer">3:00</div>
+<div class="blank"></div>
+<div class="laser"></div>
+<div class="toast" role="status"></div>
+<div id="live" class="sr-only" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script src="assets/js/deck-content.js?v={{VER}}" defer></script>
+<script src="assets/js/deck.js?v={{VER}}" defer></script>
+</body>
+</html>

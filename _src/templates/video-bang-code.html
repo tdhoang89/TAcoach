@@ -1,0 +1,117 @@
+<header class="phero ink grain">
+  <div class="lhero-top" data-reveal><span class="label">Thủ thuật · Showcase</span><span class="label">Không camera · Không phần mềm dựng phim</span></div>
+  <h1 data-split>Video bằng code</h1>
+  <p data-reveal>Một trong những thủ thuật "wow" nhất của năm: <b>nói chuyện với Claude Code để nó viết ra cả một bộ phim</b>. Trang này giải thích nguyên lý, cho bạn xem 3 bộ phim được viết hoàn toàn bằng code ngay tại đây, và hướng dẫn bạn tự làm video MP4 thật.</p>
+</header>
+
+<div class="doc">
+<aside class="doc-side"><nav class="toc" aria-label="Mục lục"><p class="toc-label label">Trong trang này</p><ol>
+  <li><a href="#nguyen-ly">Nguyên lý: video là một hàm của thời gian</a></li>
+  <li><a href="#xem-tan-mat">Xem tận mắt: 3 bộ phim viết bằng code</a></li>
+  <li><a href="#tu-lam-mp4">Tự làm video MP4 với Claude Code + Remotion</a></li>
+  <li><a href="#khong-cai-gi">Không muốn cài gì? Dùng ngay Claude</a></li>
+  <li><a href="#nguon">Nguồn tham khảo</a></li>
+</ol></nav></aside>
+
+<article class="prose" data-slug="video-bang-code">
+
+<h2 id="nguyen-ly">Nguyên lý: video là một hàm của thời gian</h2>
+<p>Bình thường, làm video là quay, cắt, ghép, thêm chữ trong phần mềm dựng phim. Với cách làm "video bằng code", một video chỉ là <b>một hàm của thời gian</b>: ở giây thứ <i>t</i>, khung hình trông thế nào? Chữ nằm ở đâu, màu gì, to bao nhiêu? Viết điều đó ra bằng code, cho thời gian chạy từ 0 đến hết, là bạn có một bộ phim.</p>
+<p><b>Remotion</b> là một thư viện mã nguồn mở cho phép viết video bằng React (một công nghệ làm web). Mỗi khung hình là một lần "vẽ" trang web, sau đó Remotion ghép tất cả thành file <b>MP4</b>. Đầu năm 2026, đội Remotion phát hành bộ <b>Agent Skills</b>: một bộ hướng dẫn cài vào Claude Code để nó hiểu cách viết Remotion cho đúng. Từ đó, bạn chỉ cần <b>mô tả bộ phim bằng lời</b>, Claude Code viết code, Remotion xuất ra video.</p>
+<div class="admonition view"><p class="admonition-title">Góc nhìn</p><p>Đây là ví dụ rõ nhất cho câu "gần như mọi thứ bạn muốn, AI đều làm được". Bạn không cần biết dựng phim, cũng không cần biết code. Bạn cần biết mình muốn một bộ phim như thế nào, và dám nói ra.</p></div>
+<p>Các bộ phim trên trang này dùng <b>đúng nguyên lý đó</b>, nhưng chạy thẳng trong trình duyệt (vẽ lên canvas) thay vì dùng Remotion, để website chạy được trên GitHub Pages mà không cần cài gì. Bạn vẫn có thể bấm <b>Tải video</b> để trình duyệt ghi lại thành một file video thật.</p>
+
+<h2 id="xem-tan-mat">Xem tận mắt: 3 bộ phim viết bằng code</h2>
+<div class="vgrid">
+  <div>
+    <div data-film="intro"></div>
+    <h3 id="phim-1">Phim 1 · 7 bậc trong 60 giây</h3>
+    <p>Phim mở màn cho buổi chia sẻ: bìa tạp chí, ba câu tinh thần, rồi lần lượt 7 bậc. 15 cảnh, 52 giây, phong cách tạp chí đen trắng với một màu nhấn đỏ son.</p>
+    <details class="vcode"><summary>Xem code của phim này</summary><pre data-film-code="intro"></pre></details>
+  </div>
+  <div>
+    <div data-film="trap"></div>
+    <h3 id="phim-2">Phim 2 · Bẫy “AI bịa”</h3>
+    <p>Minh hoạ cấp 2: hỏi AI một điều <b>không có</b> trong hợp đồng, AI "đoán" bằng một con số trông giống đáp án. Bài học: dám hỏi lại "căn cứ đâu?".</p>
+    <details class="vcode"><summary>Xem code của phim này</summary><pre data-film-code="trap"></pre></details>
+  </div>
+  <div>
+    <div data-film="excel"></div>
+    <h3 id="phim-3">Phim 3 · Excel lộn xộn thành sạch</h3>
+    <p>Minh hoạ cấp 3: bảng chi phí "như đời thật" được sắp xếp lại, dòng trùng biến mất, tên nhà cung cấp được chuẩn hoá, rồi thành biểu đồ. Tổng đúng: 384.070.000đ.</p>
+    <details class="vcode"><summary>Xem code của phim này</summary><pre data-film-code="excel"></pre></details>
+  </div>
+</div>
+<div class="admonition tip"><p class="admonition-title">Mẹo</p><p>Nút <b>Tải video</b> ghi phim theo thời gian thực, nên hãy giữ tab mở cho tới khi phim chạy hết. Trình duyệt Chrome hoặc Edge trên máy tính cho kết quả ổn định nhất. Tuỳ trình duyệt, file sẽ là <code>.webm</code> hoặc <code>.mp4</code>.</p></div>
+
+<h2 id="tu-lam-mp4">Tự làm video MP4 với Claude Code + Remotion</h2>
+<p>Phần này dành cho bạn nào muốn thử "thật": làm video MP4 để đăng mạng xã hội, chiếu trong cuộc họp, hay làm video giới thiệu sản phẩm. Bạn cần một máy tính, gói Claude có Claude Code, và khoảng 30 phút cho lần đầu.</p>
+
+<h3 id="b1" class="step"><span class="step-n">01</span><span class="step-t">Cài Node.js</span></h3>
+<p>Vào <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>, tải bản <b>LTS</b> và cài như phần mềm bình thường. Đây là "động cơ" để chạy Remotion trên máy bạn.</p>
+
+<h3 id="b2" class="step"><span class="step-n">02</span><span class="step-t">Tạo dự án video</span></h3>
+<p>Mở Terminal (hoặc PowerShell trên Windows) trong một thư mục trống, chạy lệnh dưới đây và làm theo hướng dẫn trên màn hình. Nếu được hỏi có muốn cài Agent Skills không, hãy chọn có.</p>
+<div class="cmd"><code>npx create-video@latest</code><button type="button" data-copy-cmd>Copy</button></div>
+
+<h3 id="b3" class="step"><span class="step-n">03</span><span class="step-t">Cài Agent Skills của Remotion cho Claude Code</span></h3>
+<p>Nếu chưa cài ở bước trên, chạy lệnh này trong thư mục dự án:</p>
+<div class="cmd"><code>npx skills add remotion-dev/skills</code><button type="button" data-copy-cmd>Copy</button></div>
+
+<h3 id="b4" class="step"><span class="step-n">04</span><span class="step-t">Nói chuyện với Claude Code</span></h3>
+<p>Mở Claude Code trong thư mục dự án và mô tả bộ phim bằng lời, như nói chuyện với một người dựng phim. Nhớ chiêu quen thuộc: <b>để bạn ấy hỏi lại trước, rồi duyệt kịch bản từng cảnh</b> trước khi viết code.</p>
+<div class="prompt" id="p-video-1" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · V1</span><span class="prompt-title">Đặt hàng một bộ phim 30 giây</span><span class="tag">Chung</span></div><pre class="prompt-body">Mình muốn làm một video 30 giây giới thiệu [chủ đề, ví dụ: dịch vụ tư vấn pháp lý cho doanh nghiệp nhỏ] cho [đối tượng xem], đăng trên [Facebook / Zalo / chiếu trong cuộc họp].
+Phong cách: tạp chí thời trang, nền đen trắng, chữ serif cỡ lớn, một màu nhấn [đỏ son], chuyển cảnh mượt, chữ "trồi lên" từng dòng.
+Tỉ lệ khung hình: [16:9 hoặc 9:16 cho điện thoại].
+
+Trước khi code, bạn hỏi mình những gì bạn cần biết, từng câu một nhé. Sau đó viết kịch bản từng cảnh (thời lượng, chữ trên màn hình, chuyển động) để mình duyệt. Mình đồng ý rồi mới viết code bằng Remotion.</pre><div class="prompt-actions"></div></div>
+<div class="prompt" id="p-video-2" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · V2</span><span class="prompt-title">Chỉnh sửa như nói với người dựng phim</span><span class="tag">Chung</span></div><pre class="prompt-body">Cảnh 2 hơi nhanh, kéo dài thêm 1 giây. Chữ tiêu đề ở cảnh 3 to hơn một chút và để căn trái. Cảnh cuối thêm dòng "[lời kêu gọi]" và logo [mô tả hoặc đường dẫn file logo]. Xong thì cho mình xem lại trong Remotion Studio.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="b5" class="step"><span class="step-n">05</span><span class="step-t">Xem trước và xuất MP4</span></h3>
+<p>Xem trước trong Remotion Studio (một trang web chạy trên máy bạn, có thanh tua như phần mềm dựng phim):</p>
+<div class="cmd"><code>npm start</code><button type="button" data-copy-cmd>Copy</button></div>
+<p>Lệnh trên tương đương <code>npx remotion studio</code>.</p>
+<p>Khi ưng ý, xuất ra file MP4. Thay <code>TenComposition</code> bằng tên phim mà Claude Code đã đặt (cứ hỏi thẳng bạn ấy: "lệnh render phim này là gì?"):</p>
+<div class="cmd"><code>npx remotion render src/index.ts TenComposition out/video.mp4</code><button type="button" data-copy-cmd>Copy</button></div>
+<div class="admonition note"><p class="admonition-title">Lưu ý về giấy phép</p><p>Remotion miễn phí cho cá nhân, tổ chức phi lợi nhuận và công ty có tối đa 3 nhân viên. Công ty từ 4 người trở lên cần mua giấy phép công ty. Điều khoản có thể thay đổi, hãy đọc trang giấy phép chính thức trước khi dùng cho công việc.</p></div>
+
+<h2 id="khong-cai-gi">Không muốn cài gì? Dùng ngay Claude</h2>
+<p>Bạn vẫn có thể làm phim bằng code mà không cần cài gì: nhờ Claude (Artifacts) hoặc ChatGPT (Canvas) viết một trang HTML dùng canvas, giống hệt cách các phim trên trang này được làm. Đây cũng chính là <a href="cap-6.html">cấp 6: tự tạo công cụ không cần code</a>.</p>
+<div class="prompt" id="p-video-3" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · V3</span><span class="prompt-title">Phim 20 giây chạy ngay trong trình duyệt</span><span class="tag">Chung</span></div><pre class="prompt-body">Viết giúp mình một trang HTML duy nhất dùng thẻ canvas để chiếu một "phim" 20 giây về [chủ đề].
+- 4 cảnh, mỗi cảnh 5 giây, chữ tiếng Việt cỡ lớn trồi lên từng dòng, chuyển cảnh kiểu quét màn hình.
+- Phong cách đen trắng, một màu nhấn [màu].
+- Có nút Phát / Dừng, thanh tua, và nút "Tải video" ghi lại canvas thành file video bằng MediaRecorder.
+- Mỗi khung hình được tính từ thời gian t (video là một hàm của thời gian).
+Nếu cần thêm thông tin thì hỏi mình trước nhé.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="nguon">Nguồn tham khảo</h2>
+<ul>
+  <li><a href="https://www.remotion.dev/docs/ai/skills" target="_blank" rel="noopener">Remotion · Agent Skills</a> (cách cài Skills cho Claude Code)</li>
+  <li><a href="https://github.com/remotion-dev/skills" target="_blank" rel="noopener">GitHub · remotion-dev/skills</a></li>
+  <li><a href="https://www.remotion.dev/docs/ai/coding-agents" target="_blank" rel="noopener">Remotion · Prompting videos with coding agents</a></li>
+  <li><a href="https://www.remotion.dev/docs/cli/create-video" target="_blank" rel="noopener">Remotion · npx create-video</a></li>
+  <li><a href="https://www.remotion.dev/docs/cli/render" target="_blank" rel="noopener">Remotion · lệnh render</a></li>
+  <li><a href="https://www.remotion.dev/docs/license" target="_blank" rel="noopener">Remotion · giấy phép</a></li>
+</ul>
+<div class="admonition check"><p class="admonition-title">Dám hỏi lại</p><p>Lệnh và điều khoản của công cụ có thể thay đổi theo thời gian. Nếu một lệnh không chạy, hãy dán nguyên thông báo lỗi cho Claude Code và hỏi: "Lỗi này là gì, mình cần làm gì tiếp?"</p></div>
+
+</article>
+</div>
+
+<script>
+addEventListener('DOMContentLoaded', function () {
+  var films = (window.CodeVideo && window.CodeVideo.films) || {};
+  document.querySelectorAll('[data-film-code]').forEach(function (pre) {
+    var f = films[pre.dataset.filmCode]; if (!f) return;
+    pre.textContent = '// ' + f.title + ' · ' + f.duration + ' giây · ' + f.scenes.length + ' cảnh\n\n' + f.scenes.map(function (s) {
+      return '// ── Cảnh "' + s.name + '" · ' + s.from.toFixed(1) + 's → ' + s.to.toFixed(1) + 's\n' + s.draw.toString();
+    }).join('\n\n');
+  });
+  document.querySelectorAll('[data-copy-cmd]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.parentElement.querySelector('code').textContent;
+      (window.LTT ? window.LTT.copyText(t) : navigator.clipboard.writeText(t)).then(function () { b.textContent = 'Đã copy ✓'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+    });
+  });
+});
+</script>

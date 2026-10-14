@@ -1,0 +1,69 @@
+<header class="phero ink grain">
+  <div class="lhero-top" data-reveal><span class="label">Thư viện · {{NPROMPTS}} prompt</span><span class="label">Copy · Lọc · Mở thẳng trong ChatGPT, Claude</span></div>
+  <h1 data-split>Thư viện prompt</h1>
+  <p data-reveal>Mọi câu mở lời trong trang gom về một chỗ. Lọc theo bậc, chuyên đề hoặc theo ngành, gõ để tìm, rồi copy hoặc mở thẳng trong ChatGPT, Claude. Nhớ thay phần <b>[ngoặc vuông]</b> bằng thông tin của bạn trước khi gửi.</p>
+</header>
+
+<section class="lib" aria-label="Danh sách prompt">
+  <div class="lib-bar">
+    <input class="lib-search" type="search" placeholder="Tìm prompt… ví dụ: công văn, excel, báo cáo tuần, con học bài (không dấu cũng được)" data-lib-q aria-label="Tìm prompt">
+    <div class="chips" data-lib-level><span class="label">Nguồn</span></div>
+    <div class="chips" data-lib-tag><span class="label">Dành cho</span></div>
+    <div class="lib-count" data-lib-count></div>
+  </div>
+  <div class="lib-grid" data-lib-grid></div>
+  <p class="lib-empty" data-lib-empty hidden>Chưa có prompt nào khớp. Thử bỏ bớt bộ lọc, hoặc… <b>hỏi thẳng bạn ấy</b>: "Mình muốn [việc], bạn cần biết gì để làm tốt nhất?"</p>
+</section>
+
+<script src="assets/js/prompts-data.js?v={{VER}}" defer></script>
+<script>
+addEventListener('DOMContentLoaded', function () {
+  var P = window.PROMPTS || [], L = window.LESSONS || [], LTT = window.LTT || {};
+  var norm = LTT.norm || function (s) { return s.toLowerCase(); };
+  var TAGS = { chung: 'Chung', luat: '⚖️ Pháp lý', ketoan: '💰 Kế toán', kinhdoanh: '🤝 Kinh doanh', vanhanh: '🏗️ Vận hành', doisong: '🏡 Đời sống', meta: '🔑 Hỏi thẳng' };
+  var st = { q: '', src: 'all', tag: 'all' };
+  var levelBox = document.querySelector('[data-lib-level]'), tagBox = document.querySelector('[data-lib-tag]');
+  var grid = document.querySelector('[data-lib-grid]'), count = document.querySelector('[data-lib-count]'), empty = document.querySelector('[data-lib-empty]');
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  function chip(box, key, val, label) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'fchip' + (st[key] === val ? ' on' : ''); b.textContent = label;
+    b.addEventListener('click', function () { st[key] = val; box.querySelectorAll('.fchip').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); render(); });
+    box.append(b);
+  }
+  chip(levelBox, 'src', 'all', 'Tất cả');
+  chip(levelBox, 'src', 'found', 'Nền tảng');
+  L.forEach(function (l) { chip(levelBox, 'src', 'l' + l.level, 'Bậc ' + l.level); });
+  chip(levelBox, 'src', 'topic', 'Chuyên đề');
+  chip(levelBox, 'src', 'extra', 'Bổ sung');
+  chip(levelBox, 'src', 'page', 'Trang khác');
+  chip(tagBox, 'tag', 'all', 'Mọi người');
+  Object.keys(TAGS).forEach(function (k) { chip(tagBox, 'tag', k, TAGS[k]); });
+  P.forEach(function (p) { p._n = norm(p.title + ' ' + p.text + ' ' + p.pageTitle + ' ' + p.section); });
+  function match(p) {
+    if (st.src === 'extra' && p.kind !== 'prompts') return false;
+    var FOUND = ['bat-dau', 'khoang-cach', 'giao-viec-nhu-dong-nghiep'];
+    if (st.src === 'found' && FOUND.indexOf(p.page) < 0) return false;
+    if (st.src === 'topic' && p.kind !== 'topic') return false;
+    if (st.src === 'page' && (p.kind !== 'page' || FOUND.indexOf(p.page) > -1)) return false;
+    if (st.src[0] === 'l' && p.level !== +st.src.slice(1)) return false;
+    if (st.tag !== 'all' && p.tags.indexOf(st.tag) < 0) return false;
+    var toks = norm(st.q).split(/\s+/).filter(Boolean);
+    return toks.every(function (t) { return p._n.indexOf(t) > -1; });
+  }
+  function render() {
+    var list = P.filter(match);
+    count.textContent = list.length + ' / ' + P.length + ' prompt';
+    empty.hidden = list.length > 0;
+    grid.innerHTML = list.map(function (p) {
+      var src = p.kind === 'prompts' ? 'Bổ sung · ' + esc(p.section || '') : '<a href="' + p.url + '">' + (p.level ? 'Bậc ' + p.level + ' · ' : (p.kind === 'topic' ? 'Chuyên đề · ' : '')) + esc(p.pageTitle) + '</a>';
+      return '<div class="prompt" id="' + p.id + '"><div class="prompt-head"><span class="prompt-label">Prompt' + (p.code ? ' · ' + esc(p.code) : '') + '</span><span class="prompt-title">' + esc(p.title) + '</span>' +
+        p.tags.map(function (t) { return '<span class="tag">' + (TAGS[t] || t) + '</span>'; }).join('') + '</div><pre class="prompt-body">' + esc(p.text) + '</pre><div class="prompt-actions"></div><p class="prompt-src">Nguồn: ' + src + '</p></div>';
+    }).join('');
+    grid.querySelectorAll('.prompt').forEach(function (c) { LTT.enhancePrompt && LTT.enhancePrompt(c); });
+  }
+  var qIn = document.querySelector('[data-lib-q]');
+  qIn.addEventListener('input', function () { st.q = qIn.value; render(); });
+  render();
+  if (location.hash) { var el = document.getElementById(location.hash.slice(1)); if (el) { el.scrollIntoView({ block: 'center' }); el.classList.add('flash'); } }
+});
+</script>

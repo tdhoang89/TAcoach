@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Giao cả đầu việc cho AI agent · Làm thật, thấy thật</title>
+<meta name="description" content="Bậc 7: Giao cả đầu việc cho AI agent. Giao cho AI agent gom số liệu 5 chi nhánh thành báo cáo quản trị tháng, rồi duyệt kế hoạch và kiểm tra lại.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Giao cả đầu việc cho AI agent · Làm thật, thấy thật">
+<meta property="og:description" content="Bậc 7: Giao cả đầu việc cho AI agent. Giao cho AI agent gom số liệu 5 chi nhánh thành báo cáo quản trị tháng, rồi duyệt kế hoạch và kiểm tra lại.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=1791903580">
+<script>
+(function () {
+  var r = document.documentElement;
+  try {
+    var t = localStorage.getItem('ltt:theme'); if (t) r.dataset.theme = t;
+    var f = parseFloat(localStorage.getItem('ltt:fs')); if (f) r.style.setProperty('--fs', f);
+  } catch (e) {}
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    r.classList.add('motion-pre');
+    setTimeout(function () { r.classList.remove('motion-pre'); }, 2600);
+  }
+})();
+</script>
+
+</head>
+<body class="page-lesson" id="top">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<div class="progress-line" aria-hidden="true"></div>
+
+<header class="nav" data-nav>
+  <a class="brand" href="index.html" aria-label="Làm thật, thấy thật: trang chủ"><span>Làm thật</span><span class="brand-sep">/</span><span class="brand-b">thấy thật</span></a>
+  <nav class="nav-main" aria-label="Điều hướng chính">
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Bắt đầu <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Nền tảng · đọc trước khi vào 7 bậc</p><div class="mega-grid mega-3"><a href="bat-dau.html" class="mega-item"><span class="mega-n">NỀN TẢNG · BẮT ĐẦU Ở ĐÂY</span><span class="mega-t">Làm quen người bạn AI</span><span class="mega-h">Đọc trang này trước khi học. Ba câu để nhớ, cách tự học ở nhà, chuẩn bị tài khoản và chiêu…</span></a><a href="khoang-cach.html" class="mega-item"><span class="mega-n">NỀN TẢNG · ĐỌC TRƯỚC</span><span class="mega-t">Khoảng cách AI: phễu 6 tỷ người và vị trí của bạn</span><span class="mega-h">Phễu của Andrej Karpathy cho thấy khoảng cách dùng AI đang nới rộng. Bạn đang ở tầng nào, …</span></a><a href="giao-viec-nhu-dong-nghiep.html" class="mega-item"><span class="mega-n">NỀN TẢNG · CÁCH NÓI CHUYỆN</span><span class="mega-t">Giao việc như giao cho đồng nghiệp</span><span class="mega-h">Người tạo ra Claude Code nói prompt chẳng có bí mật gì. Chỉ cần nói rõ ba điều: muốn gì, b…</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">7 bậc <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">7 bậc đi xuống phễu · 7 cách nhờ</p><div class="mega-grid"><a href="cap-1.html" class="mega-item"><span class="mega-n">N°01</span><span class="mega-t">Email khó, viết lại trong 30 giây</span><span class="mega-h">Giao như cho đồng nghiệp, rồi nhờ góp ý thẳng</span></a><a href="cap-2.html" class="mega-item"><span class="mega-n">N°02</span><span class="mega-t">Tài liệu dài, và bẫy “AI bịa”</span><span class="mega-h">Bạn giỏi nhưng đôi khi đoán, nên cứ hỏi “căn cứ đâu?”</span></a><a href="cap-3.html" class="mega-item"><span class="mega-n">N°03</span><span class="mega-t">Excel lộn xộn thành sạch</span><span class="mega-h">Đưa đống bừa bộn, nhờ sắp xếp</span></a><a href="cap-4.html" class="mega-item"><span class="mega-n">N°04</span><span class="mega-t">Số liệu thành báo cáo thành slide</span><span class="mega-h">Một cuộc trò chuyện, nhiều thành phẩm</span></a><a href="cap-5.html" class="mega-item"><span class="mega-n">N°05</span><span class="mega-t">Trợ lý biết nhớ việc</span><span class="mega-h">Dạy bạn ấy một lần, nhờ mãi mãi</span></a><a href="cap-6.html" class="mega-item"><span class="mega-n">N°06</span><span class="mega-t">Tự tạo công cụ không cần code</span><span class="mega-h">Thiếu công cụ? Nhờ bạn ấy làm luôn</span></a><a href="cap-7.html" class="mega-item is-active"><span class="mega-n">N°07</span><span class="mega-t">Giao cả đầu việc cho AI agent</span><span class="mega-h">Giao cả đầu việc, không chỉ giao câu hỏi</span></a><a href="thu-thach-7-ngay.html" class="mega-item"><span class="mega-n">+ 7 NGÀY</span><span class="mega-t">Thử thách 7 ngày, 7 lần nhờ</span><span class="mega-h">Biến hiểu biết thành thói quen</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Chuyên đề <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Chuyên đề thực chiến · đọc theo nhu cầu</p><div class="mega-grid"><a href="giong-noi.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 01</span><span class="mega-t">Nói thay vì gõ: trò chuyện bằng giọng nói với AI</span><span class="mega-h">20 phút</span></a><a href="anh-chup.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 02</span><span class="mega-t">Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</span><span class="mega-h">20 phút</span></a><a href="tra-cuu-co-nguon.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 03</span><span class="mega-t">Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</span><span class="mega-h">30 phút</span></a><a href="hop-hanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 04</span><span class="mega-t">Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</span><span class="mega-h">25 phút</span></a><a href="hoc-nhanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 05</span><span class="mega-t">Học nhanh mọi thứ với một gia sư kiên nhẫn</span><span class="mega-h">25 phút</span></a><a href="giong-van.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 06</span><span class="mega-t">Viết đúng giọng của bạn và của công ty</span><span class="mega-h">30 phút</span></a><a href="mot-ngay.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 07</span><span class="mega-t">Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</span><span class="mega-h">25 phút đọc</span></a></div></div>
+    </div>
+    <a href="thu-vien-prompt.html">Thư viện prompt</a>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Tài nguyên <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Tra cứu & tự học thêm</p><div class="mega-list"><a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a></div></div>
+    </div>
+    <a href="trinh-chieu.html" class="nav-deck">Trình chiếu ↗</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="nav-search" type="button" data-open-search aria-label="Tìm kiếm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="nav-search-t">Tìm kiếm</span><kbd>Ctrl K</kbd></button>
+    <button class="nav-theme" type="button" data-theme-toggle aria-label="Đổi nền sáng / tối" title="Đổi nền sáng / tối">◐</button>
+    <button class="nav-burger" type="button" data-menu aria-label="Mở menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" data-menu-panel aria-hidden="true">
+  <div class="menu-cols">
+    <div class="menu-list">
+      <h3 class="label" style="color:#a29e96">Nền tảng & 7 bậc</h3>
+      <a href="bat-dau.html"><small>NỀN TẢNG</small>Bắt đầu ở đây</a><a href="khoang-cach.html"><small>NỀN TẢNG</small>Khoảng cách AI</a><a href="giao-viec-nhu-dong-nghiep.html"><small>NỀN TẢNG</small>Giao việc như đồng nghiệp</a>
+      <a href="cap-1.html"><small>N°01</small>Email khó, viết lại trong 30 giây</a><a href="cap-2.html"><small>N°02</small>Tài liệu dài, và bẫy “AI bịa”</a><a href="cap-3.html"><small>N°03</small>Excel lộn xộn thành sạch</a><a href="cap-4.html"><small>N°04</small>Số liệu thành báo cáo thành slide</a><a href="cap-5.html"><small>N°05</small>Trợ lý biết nhớ việc</a><a href="cap-6.html"><small>N°06</small>Tự tạo công cụ không cần code</a><a href="cap-7.html"><small>N°07</small>Giao cả đầu việc cho AI agent</a>
+    </div>
+    <div class="menu-list menu-res">
+      <h3 class="label" style="color:#a29e96">Chuyên đề</h3>
+      <a href="giong-noi.html"><small>CĐ 01</small>Nói thay vì gõ: trò chuyện bằng giọng nói với AI</a><a href="anh-chup.html"><small>CĐ 02</small>Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</a><a href="tra-cuu-co-nguon.html"><small>CĐ 03</small>Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</a><a href="hop-hanh.html"><small>CĐ 04</small>Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</a><a href="hoc-nhanh.html"><small>CĐ 05</small>Học nhanh mọi thứ với một gia sư kiên nhẫn</a><a href="giong-van.html"><small>CĐ 06</small>Viết đúng giọng của bạn và của công ty</a><a href="mot-ngay.html"><small>CĐ 07</small>Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</a>
+      <h3 class="label" style="color:#a29e96;margin-top:26px">Tài nguyên</h3>
+      <a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a>
+      <a href="trinh-chieu.html">Trình chiếu ↗</a>
+      <a href="#" data-open-search>Tìm kiếm…</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<header class="lhero ink grain">
+  <div class="lhero-n" aria-hidden="true">07</div>
+  <div class="lhero-top" data-reveal>
+    <span class="label">Bậc 07 / 07 · Bài tự học</span>
+    <span class="label"><a href="index.html#bo-suu-tap" style="text-decoration:none">← Cả 7 bậc</a></span>
+  </div>
+  <div class="lhero-steps" data-reveal aria-label="Vị trí trong 7 bậc"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i><span class="label">Bậc 07 trên hành trình đi xuống phễu</span></div>
+  <h1 data-split>Giao cả đầu việc cho AI agent</h1>
+  <p class="lhero-how" data-reveal>Giao cả đầu việc, không chỉ giao câu hỏi</p>
+  <p class="lhero-sum" data-reveal>Giao cho AI agent gom số liệu 5 chi nhánh thành báo cáo quản trị tháng, rồi duyệt kế hoạch và kiểm tra lại.</p>
+  <div class="lhero-meta" data-reveal>
+    <div><span class="label">Thời gian</span><b>45 phút</b></div>
+    <div><span class="label">Công cụ</span><b>Claude Cowork</b></div>
+    <div><span class="label">Bản miễn phí</span><b>Cần gói trả phí</b></div>
+    <div><span class="label">Tiến độ</span><b data-hero-progress="cap-7" data-total="6">0/6</b></div>
+  </div>
+  <div class="lhero-cta" data-reveal>
+    <a class="btn btn-solid" href="#ban-se-lam-duoc-gi">Bắt đầu đọc <span class="arr">↓</span></a>
+    <a class="btn" href="trinh-chieu.html?mode=study#b7">Xem phần trình chiếu <span class="arr">↗</span></a>
+    <a class="btn" href="trinh-chieu.html?mode=film#b7">Xem như phim <span class="arr">▶</span></a>
+  </div>
+</header>
+<div class="doc"><aside class="doc-side"><nav class="toc" aria-label="Mục lục bài"><p class="toc-label">Trong bài này</p><ol><li><a href="#ban-se-lam-duoc-gi">Bạn sẽ làm được gì</a></li><li><a href="#vi-sao-cach-nho-nay-hieu-qua">Vì sao cách nhờ này hiệu quả</a></li><li><a href="#chuan-bi">Chuẩn bị</a></li><li><a href="#lam-that-tung-buoc">Làm thật: từng bước</a></li><li><a href="#dam-hoi-lai">Dám hỏi lại</a></li><li><a href="#bien-the-theo-nganh">Biến thể theo ngành</a></li><li><a href="#con-viec-gi-giong-vay">Còn việc gì giống vậy?</a></li><li><a href="#khi-ket-qua-chua-nhu-y">Khi kết quả chưa như ý</a></li><li><a href="#tu-kiem-tra">Tự kiểm tra</a></li><li><a href="#di-xa-hon">Đi xa hơn</a></li></ol><div class="toc-progress" data-progress-of="cap-7" data-total="6"><span class="toc-progress-bar"><i></i></span><span class="toc-progress-txt">0/6 đã tích</span></div><div class="toc-tools"><button type="button" data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button type="button" data-fs="1" aria-label="Chữ lớn hơn">A+</button><button type="button" onclick="window.print()">In bài</button></div></nav></aside><article class="prose" data-slug="cap-7"><h2 id="ban-se-lam-duoc-gi">Bạn sẽ làm được gì</h2>
+<ul>
+<li>Hiểu AI agent khác chat thường ở đâu, và khi nào nên dùng.</li>
+<li>Giao một đầu việc thật: gom số liệu tháng 9 của 5 chi nhánh, mỗi nơi gửi một kiểu, thành báo cáo quản trị tháng gửi Giám đốc.</li>
+<li>Đọc và duyệt kế hoạch của bạn ấy trước khi để bạn ấy làm.</li>
+<li>Kiểm tra thành phẩm bằng những câu "dám hỏi lại" nhắm đúng chỗ dễ sai.</li>
+<li>Chưa có gói trả phí vẫn làm gần giống bằng một cuộc trò chuyện thường.</li>
+</ul>
+<h2 id="vi-sao-cach-nho-nay-hieu-qua">Vì sao cách nhờ này hiệu quả</h2>
+<p>Ở 6 bậc trước, bạn vẫn là người chạy việc: copy, dán, tải từng file lên, tải kết quả về. Với <strong>AI agent</strong>, bạn chỉ cho bạn ấy một thư mục, giao việc, và bạn ấy <strong>tự mở file, tự đọc, làm từng bước, rồi lưu thành phẩm ngay trên máy bạn</strong>. Giống hệt giao việc cho một trợ lý thật: "Số liệu các chi nhánh ở thư mục này, em gom lại thành báo cáo cho anh."</p>
+<p>Trong bài này, mình dùng <strong>Claude Cowork</strong>: AI agent trong ứng dụng Claude trên máy tính, làm việc trực tiếp với file và thư mục của bạn (cần gói trả phí). Một vài lựa chọn khác:</p>
+<ul>
+<li><strong>ChatGPT Agent:</strong> chế độ để ChatGPT tự thao tác nhiều bước. Cách đưa file và nhận kết quả khác với Cowork, xem trang hướng dẫn của OpenAI.</li>
+<li><strong>Claude Code:</strong> công cụ agent của Anthropic, chạy trong Terminal, ứng dụng desktop hoặc IDE (cần gói trả phí). Hợp với ai đã quen công cụ kỹ thuật.</li>
+</ul>
+<p>Công cụ nào thì <strong>cách giao việc</strong> trong bài vẫn dùng được: kể đủ bối cảnh, để bạn ấy hỏi lại, và yêu cầu bạn ấy <strong>trình kế hoạch cho bạn duyệt trước khi làm</strong>. Bạn ấy làm, nhưng bạn vẫn là người quyết định và người kiểm tra.</p>
+<p>Bài toán của bậc này lấy từ chính khảo sát: gom báo cáo từ nhiều file rời rạc là nỗi đau chung, có bạn kể làm báo cáo kế toán tháng mất gần một tuần.</p>
+<div class="admonition view">
+<p class="admonition-title">Góc nhìn</p>
+<p>Càng làm bạn lâu, mình càng giao được việc lớn. Từ một câu hỏi, đến một file, đến cả một đầu việc. Bạn ấy giỏi lên mỗi ngày. Câu hỏi là mình có dám giao không.</p>
+</div>
+<h2 id="chuan-bi">Chuẩn bị</h2>
+<ul>
+<li><strong>Claude Cowork:</strong> cài ứng dụng Claude cho máy tính và đăng nhập tài khoản trả phí. Kiểm tra trang chính thức của Anthropic xem gói nào có Cowork, vì gói và tính năng thay đổi thường xuyên.</li>
+<li><strong>Chưa có gói trả phí?</strong> Vẫn làm được phần lớn bài này bằng chat thường, xem Bước 6.</li>
+<li><strong>Số liệu tháng 9 của 5 chi nhánh</strong> (hư cấu, Công ty Sao Mai):</li>
+</ul>
+<p><a class="dl" href="files/cap-7/bao-cao-thang-9.zip">Tải số liệu 5 chi nhánh (.zip)</a></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Chi nhánh gửi kiểu gì</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CN Ha Noi.xlsx</code></td>
+<td>Đúng mẫu, có thêm sheet công nợ</td>
+</tr>
+<tr>
+<td><code>CN Hai Phong.xlsx</code></td>
+<td>Tính bằng <strong>triệu đồng</strong>, có ô gộp</td>
+</tr>
+<tr>
+<td><code>CN Da Nang.docx</code></td>
+<td>Viết thành đoạn văn, số liệu nằm lẫn trong câu chữ</td>
+</tr>
+<tr>
+<td><code>CN Can Tho.csv</code></td>
+<td>Xuất từ phần mềm kế toán, dùng mã tài khoản</td>
+</tr>
+<tr>
+<td><code>HCM - bao cao T9 (final) (sua lan 2).xlsx</code></td>
+<td>Cái tên quen thuộc của mọi văn phòng, bên trong có nhiều hơn một sheet</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Thời gian:</strong> khoảng 45 phút. Phần bạn ấy tự làm thường chỉ mất vài phút.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Đừng làm</p>
+<ul>
+<li><strong>Đừng để file đáp án</strong> (hay bất kỳ file nào không liên quan) trong thư mục giao cho agent. Bạn ấy đọc được mọi thứ trong đó. Nếu bạn chép bảng đáp án ở mục Dám hỏi lại ra file, hãy để ở chỗ khác.</li>
+<li><strong>Đừng giao thư mục chứa tài liệu gốc.</strong> Luôn làm trên bản sao, trong một thư mục làm việc riêng.</li>
+<li><strong>Với số liệu thật của công ty:</strong> hỏi chính sách công ty trước khi cho AI đọc, và nhớ quy tắc đèn giao thông ở <a href="cap-2.html">Bậc 2</a>.</li>
+</ul>
+</div>
+<h2 id="lam-that-tung-buoc">Làm thật: từng bước</h2>
+<h3 id="buoc-1-dung-thu-muc-lam-viec-cho-ban-ay-lam-quen" class="step"><span class="step-n">01</span><span class="step-t">Dựng thư mục làm việc, cho bạn ấy làm quen</span></h3>
+<ol>
+<li>Tạo một thư mục mới, ví dụ <code>AI-lam-viec</code> trong thư mục Documents.</li>
+<li>Giải nén file zip vào đó (chuột phải, chọn Extract All hoặc Giải nén tất cả). Bạn sẽ có thư mục con <code>bao-cao-thang-9</code> với đúng 5 file. Kiểm tra không có file nào khác.</li>
+<li>Mở ứng dụng Claude, chuyển sang Cowork và chọn thư mục <code>bao-cao-thang-9</code> làm nơi làm việc. Giao diện có thể thay đổi theo phiên bản; không thấy thì xem trang hướng dẫn chính thức.</li>
+</ol>
+<p>Trước khi giao việc, cho bạn ấy "đi một vòng văn phòng":</p>
+<div class="prompt" id="p-cap-7-1" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 7a</span><span class="prompt-title">Làm quen với thư mục</span><span class="tag">Chung</span></div><pre class="prompt-body">Trong thư mục này có số liệu tháng 9 của 5 chi nhánh. Chưa làm gì cả, bạn chỉ đọc qua từng file rồi kể lại cho mình: mỗi file của chi nhánh nào, trình bày kiểu gì, đơn vị tính là gì, có điểm gì bất thường cần lưu ý.</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Bạn ấy mở lần lượt từng file và kể lại. Một lượt đọc tốt sẽ tự nhận ra: Hải Phòng ghi "ĐVT: triệu đồng", Đà Nẵng là văn bản chứ không phải bảng, Cần Thơ dùng mã tài khoản, file HCM có hơn một sheet. Bạn ấy bỏ sót điểm nào thì ghi lại, lát nữa bạn sẽ hỏi lại đúng chỗ đó.</p>
+</div>
+<h3 id="buoc-2-giao-viec-va-de-ban-ay-hoi-lai" class="step"><span class="step-n">02</span><span class="step-t">Giao việc, và để bạn ấy hỏi lại</span></h3>
+<p>Đây là bước "Hỏi thẳng bạn ấy" của bậc 7. Bạn giao việc như giao cho một trợ lý giỏi: nói rõ cần gì, lưu ở đâu, thế nào là tốt, và mời bạn ấy hỏi trước khi làm.</p>
+<div class="prompt" id="p-cap-7-2" data-tags="ketoan chung"><div class="prompt-head"><span class="prompt-label">Prompt · 7b</span><span class="prompt-title">Giao cả đầu việc</span><span class="tag">Kế toán</span><span class="tag">Chung</span></div><pre class="prompt-body">Đây là số liệu tháng 9 của 5 chi nhánh, mỗi nơi gửi một kiểu (có nơi tính bằng triệu đồng, có nơi viết thành đoạn văn). Mình cần báo cáo quản trị tháng gửi Giám đốc, lưu vào thư mục con tên &quot;output&quot;:&#10;1. Một file Excel tổng hợp theo chi nhánh: kế hoạch doanh thu, doanh thu, % kế hoạch, giá vốn, chi phí bán hàng, chi phí quản lý, lợi nhuận trước thuế, và dòng tổng toàn công ty. Tất cả quy về đồng.&#10;2. Một file Word tóm tắt cho Giám đốc: chi nhánh hụt kế hoạch, chi phí bất thường, công nợ quá hạn trên 60 ngày, những việc cần Giám đốc quyết định.&#10;3. Một email gửi Giám đốc soạn sẵn, lưu thành file văn bản. KHÔNG gửi.&#10;Việc này quan trọng, cứ làm kỹ, không cần vội.&#10;Mỗi con số phải chỉ ra được nguồn (file nào, sheet nào, dòng nào). Chỗ nào không chắc thì hỏi mình, không tự đoán. Xong thì tự đối chiếu tổng với từng file gốc, báo mình đã kiểm gì, chưa kiểm được gì.&#10;Bạn cần biết gì thì hỏi mình trước, rồi trình kế hoạch cho mình duyệt trước khi làm nhé.</pre><div class="prompt-actions"></div></div>
+
+<p>Mỗi ý trong lời giao việc có lý do, và đủ cả ba điều Boris Cherny khuyên (xem <a href="giao-viec-nhu-dong-nghiep.html">Giao việc như giao cho đồng nghiệp</a>): <strong>muốn gì</strong> (ba thành phẩm, lưu ở đâu), <strong>công sức</strong> ("cứ làm kỹ"), <strong>kiểm tra thế nào</strong> ("chỉ ra nguồn", "tự đối chiếu", "báo đã kiểm gì"). Thư mục <code>output</code> riêng giúp file gốc không bị đụng tới. "Quy về đồng" và "chỉ ra nguồn" là hai lưới an toàn cho số liệu. "Không gửi" giữ quyền quyết định ở bạn.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Bạn ấy chưa làm ngay mà hỏi lại vài câu, ví dụ: Giám đốc xưng hô thế nào trong email; "chi phí bất thường" tính theo ngưỡng nào; báo cáo có theo mẫu sẵn nào không. Trả lời ngắn, tự nhiên. Câu nào bạn chưa nghĩ tới, cứ nói <em>"bạn đề xuất đi"</em>. Ví dụ với ngưỡng chi phí bất thường, bạn có thể trả lời: <em>"Khoản nào lệch kế hoạch trên 20%, hoặc ghi chú là đột xuất."</em></p>
+</div>
+<h3 id="buoc-3-doc-ke-hoach-truoc-khi-duyet" class="step"><span class="step-n">03</span><span class="step-t">Đọc kế hoạch trước khi duyệt</span></h3>
+<p>Bạn ấy trình kế hoạch. Đọc kỹ như duyệt kế hoạch của một nhân viên mới. Năm điều cần thấy trong kế hoạch:</p>
+<ul>
+<li>Đủ 5 file, không bỏ sót chi nhánh nào.</li>
+<li>Hải Phòng sẽ được <strong>đổi từ triệu đồng sang đồng</strong>.</li>
+<li>File HCM: dùng sheet nào, vì sao.</li>
+<li>Cần Thơ: hiểu các mã tài khoản ra sao, kế hoạch doanh thu lấy ở đâu.</li>
+<li>Tên và nơi lưu 3 thành phẩm.</li>
+</ul>
+<p>Thiếu điều gì thì hỏi thêm trước khi duyệt:</p>
+<div class="prompt" id="p-cap-7-3" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 7c</span><span class="prompt-title">Duyệt kế hoạch có điều kiện</span><span class="tag">Chung</span></div><pre class="prompt-body">Kế hoạch ổn. Trước khi làm, bổ sung giúp mình: [file HCM có mấy sheet, bạn định dùng sheet nào và vì sao?]. Trong file Excel, thêm một sheet tên &quot;Nguon&quot; ghi nguồn của từng con số. Xong thì làm đi, gặp chỗ không chắc thì dừng lại hỏi mình.</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Bạn ấy trả lời câu bạn hỏi, cập nhật kế hoạch, rồi bắt tay vào làm. Đây là khoảnh khắc đáng nhớ của bậc 7: <strong>bạn ấy hỏi trước khi làm, và bạn vẫn là người quyết định</strong>.</p>
+</div>
+<h3 id="buoc-4-de-ban-ay-lam-va-quan-sat" class="step"><span class="step-n">04</span><span class="step-t">Để bạn ấy làm, và quan sát</span></h3>
+<p>Giờ bạn ấy tự chạy: mở từng file, đọc số liệu, tính toán, tạo file mới. Bạn sẽ thấy từng bước hiện lên. Tuỳ công cụ và cài đặt, bạn ấy có thể xin phép trước một số thao tác. Đọc kỹ rồi mới đồng ý, và từ chối bất cứ việc gì bạn không giao (như xoá file, gửi email).</p>
+<p>Muốn biết bạn ấy đang ở đâu, cứ hỏi:</p>
+<div class="prompt" id="p-cap-7-4" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 7d</span><span class="prompt-title">Hỏi tiến độ</span><span class="tag">Chung</span></div><pre class="prompt-body">Đang làm tới đâu rồi? Có file nào bạn đọc chưa được, hay con số nào bạn đang phân vân không?</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Sau vài phút, thư mục <code>output</code> xuất hiện với 3 file, tên có thể như <code>Tong-hop-thang-9.xlsx</code>, <code>Bao-cao-quan-tri-thang-9.docx</code>, <code>email-gui-giam-doc.txt</code>. Trong lúc chờ, tự hỏi mình: nếu có một trợ lý như thế này, <strong>việc đầu tiên</strong> bạn giao là gì?</p>
+</div>
+<h3 id="buoc-5-mo-thanh-pham-va-doc-nhu-giam-doc" class="step"><span class="step-n">05</span><span class="step-t">Mở thành phẩm và đọc như Giám đốc</span></h3>
+<p>Mở từng file. Đọc file Word như thể bạn là Giám đốc: có hiểu ngay tình hình không, có biết mình cần quyết định gì không? Rồi nhờ bạn ấy tự tóm tắt:</p>
+<div class="prompt" id="p-cap-7-5" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 7e</span><span class="prompt-title">Tóm tắt thành phẩm</span><span class="tag">Chung</span></div><pre class="prompt-body">Tóm tắt cho mình: 3 file nằm ở đâu, mỗi file có gì, 5 con số quan trọng nhất, và những điểm bạn chưa chắc chắn. Đừng gửi email.</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>File Excel có 5 dòng chi nhánh, dòng tổng toàn công ty và sheet ghi nguồn. File Word có đủ 4 mục bạn yêu cầu. Email nằm yên trong thư mục. Phần bạn ấy tự nhận "chưa chắc chắn" là chỗ cần soi đầu tiên, rồi đối chiếu với đáp án ở mục <strong>Dám hỏi lại</strong>.</p>
+</div>
+<h3 id="buoc-6-chua-co-goi-tra-phi-mot-cuoc-tro-chuyen-tung-file-mot" class="step"><span class="step-n">06</span><span class="step-t">Chưa có gói trả phí? Một cuộc trò chuyện, từng file một</span></h3>
+<p>Không có agent, bạn vẫn làm gần giống được, bằng đúng chiêu của <a href="cap-4.html">Bậc 4</a>: <strong>giữ một cuộc trò chuyện và nói tiếp</strong>. Khác biệt duy nhất: bạn là người mang từng file tới cho bạn ấy.</p>
+<ol>
+<li>Mở một cuộc trò chuyện mới trên ChatGPT hoặc Claude. Giữ nguyên cuộc này đến cuối.</li>
+<li>Giao việc trước bằng câu 7f bên dưới.</li>
+<li>Tải lên từng file, mỗi tin nhắn một file. Chờ bạn ấy tóm tắt xong mới gửi file tiếp theo.</li>
+<li>Công cụ không nhận một loại file? Mở file ra, copy nội dung, dán vào khung chat. Với file HCM, dán <strong>cả hai sheet</strong> và ghi rõ tên từng sheet, để xem bạn ấy có chọn đúng không.</li>
+<li>Đủ 5 file thì dùng câu 7g để tổng hợp.</li>
+</ol>
+<div class="prompt" id="p-cap-7-6" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 7f</span><span class="prompt-title">Giao việc kiểu từng file</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Mình cần làm báo cáo quản trị tháng 9 từ số liệu 5 chi nhánh, mỗi nơi gửi một kiểu. Mình sẽ gửi từng file một. Với mỗi file, bạn chỉ cần: đọc kỹ, lấy ra kế hoạch doanh thu, doanh thu, giá vốn, chi phí bán hàng, chi phí quản lý, lợi nhuận trước thuế, công nợ quá hạn và ghi chú đáng chú ý; quy hết về đồng; ghi rõ mỗi con số nằm ở đâu trong file. Chưa tổng hợp vội. Chỗ nào không chắc thì hỏi mình. Sẵn sàng thì nói &quot;Gửi file đầu tiên đi&quot;.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-cap-7-7" data-tags="chung ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 7g</span><span class="prompt-title">Tổng hợp sau khi đủ 5 file</span><span class="tag">Chung</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Đủ 5 chi nhánh rồi. Giờ làm giúp mình: (1) bảng tổng hợp theo chi nhánh và dòng toàn công ty; (2) báo cáo 1 trang cho Giám đốc: chi nhánh hụt kế hoạch, chi phí bất thường, công nợ quá hạn trên 60 ngày, việc cần Giám đốc quyết định; (3) email soạn sẵn gửi Giám đốc. Nếu công cụ cho phép, tạo file Excel và Word để mình tải về.</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Kết quả gần giống bản agent: cùng bảng tổng hợp, cùng các điểm cần phát hiện. Bạn mất thêm vài phút gửi từng file và tải kết quả về, nhưng vẫn nhanh hơn nhiều so với gom tay. Và bạn sẽ hiểu agent tiết kiệm cho bạn điều gì: không phải trí tuệ, mà là <strong>công chạy việc</strong>.</p>
+</div>
+<h2 id="dam-hoi-lai">Dám hỏi lại</h2>
+<p>Đây là bước quan trọng nhất của bậc 7. Bạn ấy làm nhanh, nhưng báo cáo gửi Giám đốc mang tên bạn. Đừng hỏi chung chung "đúng chưa?". Hãy hỏi đúng những chỗ dễ sai nhất, và đòi xem dòng gốc.</p>
+<div class="prompt" id="p-cap-7-8" data-tags="ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 7h</span><span class="prompt-title">Hỏi lại quy đổi đơn vị</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Số liệu của chi nhánh Hải Phòng bạn quy đổi đơn vị thế nào? Chỉ cho mình dòng gốc trong file để mình đối chiếu.</pre><div class="prompt-actions"></div></div>
+
+<div class="prompt" id="p-cap-7-9" data-tags="ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 7i</span><span class="prompt-title">Hỏi lại các chỗ dễ sai khác</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Thêm 3 câu nữa: (1) File HCM có mấy sheet, bạn lấy số ở sheet nào, vì sao? (2) File Cần Thơ dùng mã tài khoản: bạn hiểu mỗi mã là gì, và lấy kế hoạch doanh thu ở đâu? (3) Chi phí bán hàng HCM đã gồm các dòng chi tiết bên dưới chưa, bạn có cộng thêm lần nữa không?</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition check">
+<p class="admonition-title">Dám hỏi lại</p>
+<ul>
+<li><strong>Hải Phòng:</strong> dòng 2 của file ghi <em>"ĐVT: triệu đồng"</em>. Doanh thu 3.020 phải thành 3.020.000.000đ. Mở file ra, tự nhìn dòng đó.</li>
+<li><strong>HCM:</strong> phải dùng sheet <code>BC T9</code> (doanh thu 7,82 tỷ), bỏ qua sheet <code>nhap</code> cũ (7,64 tỷ).</li>
+<li><strong>HCM, chi phí bán hàng:</strong> 612 triệu <strong>đã gồm</strong> 3 dòng chi tiết bên dưới, trong đó có khoản thưởng nóng. Không cộng thêm lần nữa.</li>
+<li><strong>Cần Thơ:</strong> 511 là doanh thu, 632 giá vốn, 641 chi phí bán hàng, 642 chi phí quản lý, 131 phải thu khách hàng. Kế hoạch 1,9 tỷ nằm ở dòng ghi chú thứ 3, trước bảng số liệu.</li>
+<li><strong>Công nợ trên 60 ngày:</strong> chỉ có 2 khoản. Thiên Phú (HCM, 55 ngày) và Hải Âu (Hải Phòng, 41 ngày) chưa tới 60 ngày, không được đưa vào mục này.</li>
+<li><strong>Email:</strong> vẫn nằm trong thư mục, chưa gửi đi đâu.</li>
+</ul>
+</div>
+<details class="answer"><summary><span>Đáp án: bảng tổng hợp tháng 9 và 4 điểm phải phát hiện</span></summary><div class="answer-body">
+<p>Đơn vị: đồng.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Chi nhánh</th>
+<th style="text-align: right;">Kế hoạch DT</th>
+<th style="text-align: right;">Doanh thu</th>
+<th style="text-align: right;">% KH</th>
+<th style="text-align: right;">Giá vốn</th>
+<th style="text-align: right;">CP bán hàng</th>
+<th style="text-align: right;">CP quản lý</th>
+<th style="text-align: right;">LN trước thuế</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hà Nội</td>
+<td style="text-align: right;">5.200.000.000</td>
+<td style="text-align: right;">5.460.000.000</td>
+<td style="text-align: right;">105,0%</td>
+<td style="text-align: right;">4.040.400.000</td>
+<td style="text-align: right;">386.000.000</td>
+<td style="text-align: right;">298.000.000</td>
+<td style="text-align: right;">735.600.000</td>
+</tr>
+<tr>
+<td>Hải Phòng</td>
+<td style="text-align: right;">3.100.000.000</td>
+<td style="text-align: right;">3.020.000.000</td>
+<td style="text-align: right;">97,4%</td>
+<td style="text-align: right;">2.265.000.000</td>
+<td style="text-align: right;">210.000.000</td>
+<td style="text-align: right;">568.000.000</td>
+<td style="text-align: right;">−23.000.000</td>
+</tr>
+<tr>
+<td>Đà Nẵng</td>
+<td style="text-align: right;">2.800.000.000</td>
+<td style="text-align: right;">2.296.000.000</td>
+<td style="text-align: right;">82,0%</td>
+<td style="text-align: right;">1.722.000.000</td>
+<td style="text-align: right;">205.000.000</td>
+<td style="text-align: right;">160.000.000</td>
+<td style="text-align: right;">209.000.000</td>
+</tr>
+<tr>
+<td>Cần Thơ</td>
+<td style="text-align: right;">1.900.000.000</td>
+<td style="text-align: right;">1.985.000.000</td>
+<td style="text-align: right;">104,5%</td>
+<td style="text-align: right;">1.468.900.000</td>
+<td style="text-align: right;">148.000.000</td>
+<td style="text-align: right;">121.500.000</td>
+<td style="text-align: right;">246.600.000</td>
+</tr>
+<tr>
+<td>TP.HCM</td>
+<td style="text-align: right;">7.500.000.000</td>
+<td style="text-align: right;">7.820.000.000</td>
+<td style="text-align: right;">104,3%</td>
+<td style="text-align: right;">5.865.000.000</td>
+<td style="text-align: right;">612.000.000</td>
+<td style="text-align: right;">455.000.000</td>
+<td style="text-align: right;">888.000.000</td>
+</tr>
+<tr>
+<td><strong>Toàn công ty</strong></td>
+<td style="text-align: right;"><strong>20.500.000.000</strong></td>
+<td style="text-align: right;"><strong>20.581.000.000</strong></td>
+<td style="text-align: right;"><strong>100,4%</strong></td>
+<td style="text-align: right;">15.361.300.000</td>
+<td style="text-align: right;">1.561.000.000</td>
+<td style="text-align: right;">1.602.500.000</td>
+<td style="text-align: right;"><strong>2.056.200.000</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Bốn điểm báo cáo <strong>phải</strong> phát hiện:</p>
+<ol>
+<li><strong>Đà Nẵng hụt kế hoạch:</strong> chỉ đạt 82% vì mất gói thầu trường học khoảng 380 triệu và mưa bão ngày 17–18/9. Số liệu nằm trong đoạn văn của file Word.</li>
+<li><strong>Chi phí bất thường ở Hải Phòng:</strong> sửa mái kho đột xuất 415 triệu, khiến chi nhánh lỗ 23 triệu. Nằm ở cột Ghi chú.</li>
+<li><strong>Nợ quá hạn trên 60 ngày:</strong> Đông Hưng (Hà Nội) 268,5 triệu, quá hạn 68 ngày; KH0087 (Cần Thơ) 412 triệu, quá hạn 75 ngày.</li>
+<li><strong>Cần Giám đốc quyết định:</strong> thưởng nóng đội bán hàng HCM 180 triệu, đã tạm ứng 50%.</li>
+</ol>
+</div></details>
+<h2 id="bien-the-theo-nganh">Biến thể theo ngành</h2>
+<h3 id="phap-ly">⚖️ Pháp lý</h3>
+<p>Gom hàng chục hồ sơ vụ việc rời rạc thành một bảng theo dõi thời hạn, có trích nguồn từng mốc.</p>
+<div class="prompt" id="p-cap-7-10" data-tags="luat"><div class="prompt-head"><span class="prompt-label">Prompt · 7j</span><span class="prompt-title">Bảng theo dõi hạn hồ sơ</span><span class="tag">Pháp lý</span></div><pre class="prompt-body">Thư mục này có [30] hồ sơ vụ việc (Word, PDF, email đã lưu). Đọc từng hồ sơ, lập file Excel theo dõi: mã vụ việc, khách hàng (chỉ ghi mã), loại việc, mốc thời hạn sắp tới, người phụ trách, việc cần làm tiếp. Tô đỏ hồ sơ còn dưới 7 ngày đến hạn. Mỗi thời hạn ghi rõ lấy từ trang nào của hồ sơ nào. Trình kế hoạch cho mình duyệt trước.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="ke-toan-tai-chinh">💰 Kế toán – Tài chính</h3>
+<p>Đối chiếu sao kê ngân hàng với sổ sách. Đây là dữ liệu nhạy cảm: che số tài khoản, hoặc chỉ dùng công cụ được công ty cho phép.</p>
+<div class="prompt" id="p-cap-7-11" data-tags="ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 7k</span><span class="prompt-title">Đối chiếu sao kê với sổ sách</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Thư mục có sao kê ngân hàng tháng [tháng] và sổ chi tiết tiền gửi xuất từ phần mềm kế toán. Đối chiếu từng giao dịch: khớp, lệch số tiền, có ở sao kê mà không có ở sổ, và ngược lại. Lập file Excel kết quả và danh sách khoản cần giải trình. Không sửa file gốc. Hỏi mình trước nếu có quy ước ghi sổ bạn chưa rõ, rồi trình kế hoạch cho mình duyệt.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="kinh-doanh-cskh">🤝 Kinh doanh – CSKH</h3>
+<p>Gộp báo giá của nhiều nhà cung cấp, mỗi nơi một định dạng, thành một bảng so sánh.</p>
+<div class="prompt" id="p-cap-7-12" data-tags="kinhdoanh"><div class="prompt-head"><span class="prompt-label">Prompt · 7l</span><span class="prompt-title">So sánh báo giá nhà cung cấp</span><span class="tag">Kinh doanh</span></div><pre class="prompt-body">Thư mục có báo giá của 5 nhà cung cấp, mỗi nơi một định dạng (PDF, Excel, ảnh chụp). Gộp thành một bảng so sánh: mã hàng, đơn giá, đã gồm VAT chưa, chiết khấu, thời gian giao, bảo hành, điều kiện thanh toán. Đánh dấu chỗ các báo giá không cùng điều kiện để so sánh. Viết thêm 1 trang đề xuất chọn nhà cung cấp nào, vì sao. Trình kế hoạch trước khi làm.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="van-hanh-xay-dung">🏗️ Vận hành – Xây dựng</h3>
+<p>Gom báo cáo ngày của nhiều công trường thành báo cáo tuần cho Ban chỉ huy.</p>
+<div class="prompt" id="p-cap-7-13" data-tags="vanhanh"><div class="prompt-head"><span class="prompt-label">Prompt · 7m</span><span class="prompt-title">Báo cáo tuần từ nhiều công trường</span><span class="tag">Vận hành</span></div><pre class="prompt-body">Thư mục có báo cáo ngày trong tuần của [3] công trường, mỗi đội viết một kiểu. Tổng hợp thành báo cáo tuần: khối lượng hoàn thành so với kế hoạch, nhân lực, sự cố an toàn, vật tư thiếu, việc cần Ban chỉ huy quyết định. Lưu thành file Word và một bảng Excel. Ghi rõ nguồn từng con số. Hỏi mình trước, rồi trình kế hoạch cho mình duyệt.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="con-viec-gi-giong-vay">Còn việc gì giống vậy?</h2>
+<div class="cols">
+<div class="admonition work">
+<p class="admonition-title">💼 Công việc</p>
+<ul>
+<li>Gom chứng từ cuối năm từ nhiều thư mục thành bảng kê.</li>
+<li>Gộp phiếu khảo sát khách hàng từ nhiều file thành báo cáo.</li>
+<li>Đổi tên và sắp xếp 200 file hợp đồng theo một quy tắc thống nhất.</li>
+<li>Rà một thư mục hồ sơ dự thầu, lập danh sách giấy tờ còn thiếu.</li>
+<li>Gom bảng chấm công của nhiều phòng thành bảng tổng hợp lương.</li>
+</ul>
+</div>
+<div class="admonition life">
+<p class="admonition-title">🏡 Đời sống</p>
+<ul>
+<li>Dọn thư mục 5.000 ảnh điện thoại theo năm và theo sự kiện.</li>
+<li>Gom hoá đơn điện, nước, internet cả năm thành một bảng chi tiêu.</li>
+<li>Sắp xếp tài liệu học tập của con theo môn và theo lớp.</li>
+<li>Gom giấy tờ bảo hiểm, bảo hành của cả nhà vào một danh mục dễ tìm.</li>
+</ul>
+</div>
+</div>
+<p>Việc nào bạn từng than "cái này phải ngồi cả ngày gom file", đó là việc nên giao cho agent.</p>
+<h2 id="khi-ket-qua-chua-nhu-y">Khi kết quả chưa như ý</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Bạn gặp</th>
+<th>Vì sao</th>
+<th>Nói với bạn ấy thế này</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tổng doanh thu chỉ khoảng 17,6 tỷ</td>
+<td>Bạn ấy cộng thẳng số triệu đồng của Hải Phòng</td>
+<td>"File Hải Phòng ghi ĐVT: triệu đồng ở dòng 2. Đổi sang đồng, tính lại và cập nhật cả 3 file."</td>
+</tr>
+<tr>
+<td>Doanh thu HCM là 7,64 tỷ</td>
+<td>Đọc nhầm sheet nháp cũ</td>
+<td>"Dùng sheet BC T9, bỏ qua sheet nhap. Tính lại và cập nhật cả 3 file."</td>
+</tr>
+<tr>
+<td>Chi phí bán hàng HCM lên tới 1.224 triệu</td>
+<td>Cộng 3 dòng chi tiết thêm một lần nữa</td>
+<td>"612 triệu đã gồm 3 dòng chi tiết bên dưới, đừng cộng thêm."</td>
+</tr>
+<tr>
+<td>Danh sách nợ trên 60 ngày có Thiên Phú hoặc Hải Âu</td>
+<td>Hiểu sai ngưỡng</td>
+<td>"Chỉ liệt kê khoản quá hạn trên 60 ngày. Ghi số ngày bên cạnh từng khoản."</td>
+</tr>
+<tr>
+<td>Bạn ấy làm luôn, không trình kế hoạch</td>
+<td>Lời giao việc chưa đủ rõ</td>
+<td>Dừng lại: "Khoan đã, trình kế hoạch cho mình duyệt trước." Lần sau giữ nguyên câu cuối của 7b.</td>
+</tr>
+<tr>
+<td>Không đọc được một file</td>
+<td>Định dạng lạ hoặc file lỗi</td>
+<td>"Đọc file [tên] không được thì nói mình, mình sẽ dán nội dung vào."</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tu-kiem-tra">Tự kiểm tra</h2>
+<ul class="tasks">
+<li class="task"><label><input type="checkbox" data-task="cap-7:1"><span class="box" aria-hidden="true"></span><span class="txt">Mình làm trên bản sao, trong thư mục làm việc riêng, không có file đáp án.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-7:2"><span class="box" aria-hidden="true"></span><span class="txt">Mình đã để bạn ấy hỏi lại và trình kế hoạch trước khi làm.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-7:3"><span class="box" aria-hidden="true"></span><span class="txt">Mình có 3 thành phẩm: Excel tổng hợp, Word báo cáo, email soạn sẵn chưa gửi.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-7:4"><span class="box" aria-hidden="true"></span><span class="txt">Mình đã hỏi lại cách quy đổi Hải Phòng và tự nhìn dòng gốc trong file.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-7:5"><span class="box" aria-hidden="true"></span><span class="txt">Tổng doanh thu (20.581.000.000đ) và lợi nhuận trước thuế (2.056.200.000đ) của mình khớp đáp án.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-7:6"><span class="box" aria-hidden="true"></span><span class="txt">Báo cáo của mình nêu đủ 4 điểm phải phát hiện.</span></label></li>
+</ul>
+<h2 id="di-xa-hon">Đi xa hơn</h2>
+<p>Nhìn lại cả 7 bậc, bạn sẽ thấy một điều: agent chỉ giỏi khi người giao việc rõ ràng. Bạn càng luyện bậc 1 đến 6 (kể đủ bối cảnh, hỏi "căn cứ đâu?", nói tiếp, dạy bạn ấy, tự làm công cụ), quy trình làm việc của bạn càng rõ: báo cáo cần gì, dữ liệu nằm đâu, chỗ nào phải kiểm tra. Quy trình càng rõ, bạn càng giao được việc lớn.</p>
+<ul>
+<li><strong>Biến thành quy trình hằng tháng:</strong> lưu lời giao việc 7b cùng các câu 7h, 7i thành một file hướng dẫn. Tháng sau chỉ cần thay số liệu và nói "làm như tháng trước, theo file hướng dẫn". Đây chính là <a href="cap-5.html">Bậc 5</a> dành cho agent.</li>
+<li><strong>Bắt đầu nhỏ với việc thật:</strong> chọn một việc lặp lại, ít rủi ro, dữ liệu không nhạy cảm. Niềm tin tăng dần theo số lần bạn kiểm chứng.</li>
+<li><strong>Bạn ấy còn làm được nhiều hơn bạn nghĩ:</strong> trang khảo sát trước buổi chia sẻ, trang tự học bạn đang đọc, và cả bài trình chiếu đi kèm, đều được làm bằng Claude Code, chỉ bằng cách nói chuyện. Câu giao việc thật có ở trang <a href="giao-viec-nhu-dong-nghiep.html">Giao việc như giao cho đồng nghiệp</a>. Muốn xem thêm một điều bất ngờ? Ghé <a href="video-bang-code.html">Làm video bằng code</a>.</li>
+<li><strong>Tự thưởng cho mình:</strong> in <a href="files/in/the-cap-do-in.html">thẻ 7 bậc</a> và <a href="files/in/chung-nhan-level-up.html">chứng nhận Level Up</a>.</li>
+<li><strong>Đi tiếp xuống phễu:</strong> chọn 2–3 <a href="index.html#chuyen-de">chuyên đề thực chiến</a> hợp với việc của bạn, và lên kế hoạch 30 ngày ở trang <a href="khoang-cach.html">Khoảng cách AI</a>.</li>
+<li>Hết 7 bậc chưa phải hết đường. Mở <a href="thu-vien-prompt.html">Thư viện prompt</a>, rồi quay lại <a href="cap-1.html">Bậc 1</a> với một việc thật của chính bạn. Và nhớ: dám nhờ mọi thứ, dám hỏi lại mọi thứ, không biết thì hỏi thẳng bạn ấy.</li>
+</ul></article></div><nav class="pager"><a class="pager-prev" href="cap-6.html"><small>← Bậc 06</small><span>Tự tạo công cụ không cần code</span></a><a class="pager-next" href="thu-thach-7-ngay.html"><small>Tiếp theo →</small><span>Thử thách 7 ngày, 7 lần nhờ</span></a></nav>
+</main>
+
+<footer class="foot ink">
+  <div class="marquee red" aria-hidden="true"><div class="marquee-track"><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span></div></div>
+  <div class="foot-grid">
+    <div>
+      <p class="foot-big">Dám nhờ.<br><em>Dám hỏi lại.</em></p>
+    </div>
+    <div>
+      <h4 class="label">Tự học</h4>
+      <ul><li><a href="bat-dau.html">Bắt đầu ở đây</a></li><li><a href="khoang-cach.html">Khoảng cách AI</a></li><li><a href="giao-viec-nhu-dong-nghiep.html">Giao việc như đồng nghiệp</a></li><li><a href="cap-1.html">7 bậc</a></li><li><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a></li><li><a href="thu-vien-prompt.html">Thư viện prompt</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Tra cứu</h4>
+      <ul><li><a href="an-toan.html">An toàn & tỉnh táo</a></li><li><a href="cong-cu.html">Bản đồ công cụ</a></li><li><a href="tu-dien.html">Từ điển AI</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="tai-lieu.html">Tải tài liệu</a></li><li><a href="trinh-chieu.html?mode=film">Xem như phim ▶</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Về trang này</h4>
+      <p class="foot-note">Toàn bộ website và bài trình chiếu, từ nội dung, thiết kế, chuyển động đến từng khung hình, được làm bằng cách <b>trò chuyện với Claude Code</b>. <a href="giao-viec-nhu-dong-nghiep.html#mot-vi-du-that-cau-giao-viec-da-tao-ra-phien-ban-nay">Xem câu giao việc đã tạo ra nó →</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Làm thật, thấy thật · Phiên bản 2</span><span>Dữ liệu demo đều hư cấu · <a href="#top">Lên đầu trang ↑</a></span></div>
+</footer>
+
+<div class="search" data-search hidden role="dialog" aria-modal="true" aria-label="Tìm kiếm trong trang">
+  <div class="search-box">
+    <div class="search-top"><input type="search" data-search-input placeholder="Tìm bài, prompt, thuật ngữ… (gõ không dấu cũng được)" autocomplete="off" aria-label="Từ khoá"><button type="button" data-close-search>ESC</button></div>
+    <div class="search-hints"><span class="label">Gợi ý</span><button type="button">tóm tắt hợp đồng</button><button type="button">excel công thức</button><button type="button">phễu khoảng cách</button><button type="button">đồng nghiệp</button><button type="button">giọng nói</button><button type="button">họp biên bản</button><button type="button">agent</button></div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> chọn</span><span><kbd>Enter</kbd> mở</span><span><kbd>Esc</kbd> đóng</span></div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+<script src="assets/js/site.js?v=1791903580" data-ver="1791903580" defer></script>
+</body>
+</html>

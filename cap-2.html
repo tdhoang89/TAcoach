@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tài liệu dài, và bẫy “AI bịa” · Làm thật, thấy thật</title>
+<meta name="description" content="Bậc 2: Tài liệu dài, và bẫy “AI bịa”. Tóm tắt hợp đồng dài trong vài phút, tự tay bắt quả tang AI đoán, và tập thói quen hỏi căn cứ cho mọi câu trả lời quan trọng.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tài liệu dài, và bẫy “AI bịa” · Làm thật, thấy thật">
+<meta property="og:description" content="Bậc 2: Tài liệu dài, và bẫy “AI bịa”. Tóm tắt hợp đồng dài trong vài phút, tự tay bắt quả tang AI đoán, và tập thói quen hỏi căn cứ cho mọi câu trả lời quan trọng.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=1791903580">
+<script>
+(function () {
+  var r = document.documentElement;
+  try {
+    var t = localStorage.getItem('ltt:theme'); if (t) r.dataset.theme = t;
+    var f = parseFloat(localStorage.getItem('ltt:fs')); if (f) r.style.setProperty('--fs', f);
+  } catch (e) {}
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    r.classList.add('motion-pre');
+    setTimeout(function () { r.classList.remove('motion-pre'); }, 2600);
+  }
+})();
+</script>
+
+</head>
+<body class="page-lesson" id="top">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<div class="progress-line" aria-hidden="true"></div>
+
+<header class="nav" data-nav>
+  <a class="brand" href="index.html" aria-label="Làm thật, thấy thật: trang chủ"><span>Làm thật</span><span class="brand-sep">/</span><span class="brand-b">thấy thật</span></a>
+  <nav class="nav-main" aria-label="Điều hướng chính">
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Bắt đầu <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Nền tảng · đọc trước khi vào 7 bậc</p><div class="mega-grid mega-3"><a href="bat-dau.html" class="mega-item"><span class="mega-n">NỀN TẢNG · BẮT ĐẦU Ở ĐÂY</span><span class="mega-t">Làm quen người bạn AI</span><span class="mega-h">Đọc trang này trước khi học. Ba câu để nhớ, cách tự học ở nhà, chuẩn bị tài khoản và chiêu…</span></a><a href="khoang-cach.html" class="mega-item"><span class="mega-n">NỀN TẢNG · ĐỌC TRƯỚC</span><span class="mega-t">Khoảng cách AI: phễu 6 tỷ người và vị trí của bạn</span><span class="mega-h">Phễu của Andrej Karpathy cho thấy khoảng cách dùng AI đang nới rộng. Bạn đang ở tầng nào, …</span></a><a href="giao-viec-nhu-dong-nghiep.html" class="mega-item"><span class="mega-n">NỀN TẢNG · CÁCH NÓI CHUYỆN</span><span class="mega-t">Giao việc như giao cho đồng nghiệp</span><span class="mega-h">Người tạo ra Claude Code nói prompt chẳng có bí mật gì. Chỉ cần nói rõ ba điều: muốn gì, b…</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">7 bậc <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">7 bậc đi xuống phễu · 7 cách nhờ</p><div class="mega-grid"><a href="cap-1.html" class="mega-item"><span class="mega-n">N°01</span><span class="mega-t">Email khó, viết lại trong 30 giây</span><span class="mega-h">Giao như cho đồng nghiệp, rồi nhờ góp ý thẳng</span></a><a href="cap-2.html" class="mega-item is-active"><span class="mega-n">N°02</span><span class="mega-t">Tài liệu dài, và bẫy “AI bịa”</span><span class="mega-h">Bạn giỏi nhưng đôi khi đoán, nên cứ hỏi “căn cứ đâu?”</span></a><a href="cap-3.html" class="mega-item"><span class="mega-n">N°03</span><span class="mega-t">Excel lộn xộn thành sạch</span><span class="mega-h">Đưa đống bừa bộn, nhờ sắp xếp</span></a><a href="cap-4.html" class="mega-item"><span class="mega-n">N°04</span><span class="mega-t">Số liệu thành báo cáo thành slide</span><span class="mega-h">Một cuộc trò chuyện, nhiều thành phẩm</span></a><a href="cap-5.html" class="mega-item"><span class="mega-n">N°05</span><span class="mega-t">Trợ lý biết nhớ việc</span><span class="mega-h">Dạy bạn ấy một lần, nhờ mãi mãi</span></a><a href="cap-6.html" class="mega-item"><span class="mega-n">N°06</span><span class="mega-t">Tự tạo công cụ không cần code</span><span class="mega-h">Thiếu công cụ? Nhờ bạn ấy làm luôn</span></a><a href="cap-7.html" class="mega-item"><span class="mega-n">N°07</span><span class="mega-t">Giao cả đầu việc cho AI agent</span><span class="mega-h">Giao cả đầu việc, không chỉ giao câu hỏi</span></a><a href="thu-thach-7-ngay.html" class="mega-item"><span class="mega-n">+ 7 NGÀY</span><span class="mega-t">Thử thách 7 ngày, 7 lần nhờ</span><span class="mega-h">Biến hiểu biết thành thói quen</span></a></div></div>
+    </div>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Chuyên đề <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Chuyên đề thực chiến · đọc theo nhu cầu</p><div class="mega-grid"><a href="giong-noi.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 01</span><span class="mega-t">Nói thay vì gõ: trò chuyện bằng giọng nói với AI</span><span class="mega-h">20 phút</span></a><a href="anh-chup.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 02</span><span class="mega-t">Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</span><span class="mega-h">20 phút</span></a><a href="tra-cuu-co-nguon.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 03</span><span class="mega-t">Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</span><span class="mega-h">30 phút</span></a><a href="hop-hanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 04</span><span class="mega-t">Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</span><span class="mega-h">25 phút</span></a><a href="hoc-nhanh.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 05</span><span class="mega-t">Học nhanh mọi thứ với một gia sư kiên nhẫn</span><span class="mega-h">25 phút</span></a><a href="giong-van.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 06</span><span class="mega-t">Viết đúng giọng của bạn và của công ty</span><span class="mega-h">30 phút</span></a><a href="mot-ngay.html" class="mega-item"><span class="mega-n">CHUYÊN ĐỀ 07</span><span class="mega-t">Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</span><span class="mega-h">25 phút đọc</span></a></div></div>
+    </div>
+    <a href="thu-vien-prompt.html">Thư viện prompt</a>
+    <div class="has-mega">
+      <button class="nav-btn" type="button" aria-expanded="false">Tài nguyên <span>+</span></button>
+      <div class="mega"><p class="label" style="color:#a29e96;margin:0 0 14px">Tra cứu & tự học thêm</p><div class="mega-list"><a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a></div></div>
+    </div>
+    <a href="trinh-chieu.html" class="nav-deck">Trình chiếu ↗</a>
+  </nav>
+  <div class="nav-tools">
+    <button class="nav-search" type="button" data-open-search aria-label="Tìm kiếm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="nav-search-t">Tìm kiếm</span><kbd>Ctrl K</kbd></button>
+    <button class="nav-theme" type="button" data-theme-toggle aria-label="Đổi nền sáng / tối" title="Đổi nền sáng / tối">◐</button>
+    <button class="nav-burger" type="button" data-menu aria-label="Mở menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" data-menu-panel aria-hidden="true">
+  <div class="menu-cols">
+    <div class="menu-list">
+      <h3 class="label" style="color:#a29e96">Nền tảng & 7 bậc</h3>
+      <a href="bat-dau.html"><small>NỀN TẢNG</small>Bắt đầu ở đây</a><a href="khoang-cach.html"><small>NỀN TẢNG</small>Khoảng cách AI</a><a href="giao-viec-nhu-dong-nghiep.html"><small>NỀN TẢNG</small>Giao việc như đồng nghiệp</a>
+      <a href="cap-1.html"><small>N°01</small>Email khó, viết lại trong 30 giây</a><a href="cap-2.html"><small>N°02</small>Tài liệu dài, và bẫy “AI bịa”</a><a href="cap-3.html"><small>N°03</small>Excel lộn xộn thành sạch</a><a href="cap-4.html"><small>N°04</small>Số liệu thành báo cáo thành slide</a><a href="cap-5.html"><small>N°05</small>Trợ lý biết nhớ việc</a><a href="cap-6.html"><small>N°06</small>Tự tạo công cụ không cần code</a><a href="cap-7.html"><small>N°07</small>Giao cả đầu việc cho AI agent</a>
+    </div>
+    <div class="menu-list menu-res">
+      <h3 class="label" style="color:#a29e96">Chuyên đề</h3>
+      <a href="giong-noi.html"><small>CĐ 01</small>Nói thay vì gõ: trò chuyện bằng giọng nói với AI</a><a href="anh-chup.html"><small>CĐ 02</small>Chụp ảnh là nhờ được: ảnh, ảnh chụp màn hình, giấy tờ</a><a href="tra-cuu-co-nguon.html"><small>CĐ 03</small>Tra cứu có nguồn: tìm kiếm web và nghiên cứu sâu</a><a href="hop-hanh.html"><small>CĐ 04</small>Họp nhẹ hơn: từ chuẩn bị đến biên bản và việc cần làm</a><a href="hoc-nhanh.html"><small>CĐ 05</small>Học nhanh mọi thứ với một gia sư kiên nhẫn</a><a href="giong-van.html"><small>CĐ 06</small>Viết đúng giọng của bạn và của công ty</a><a href="mot-ngay.html"><small>CĐ 07</small>Một ngày làm việc cùng AI: bốn nghề, từ sáng đến tối</a>
+      <h3 class="label" style="color:#a29e96;margin-top:26px">Tài nguyên</h3>
+      <a href="thu-vien-prompt.html">Thư viện prompt</a><a href="an-toan.html">An toàn &amp; tỉnh táo</a><a href="cong-cu.html">Bản đồ công cụ</a><a href="tu-dien.html">Từ điển AI</a><a href="hoi-dap.html">Hỏi đáp</a><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a><a href="tai-lieu.html">Tải tài liệu</a><a href="video-bang-code.html">Video bằng code</a>
+      <a href="trinh-chieu.html">Trình chiếu ↗</a>
+      <a href="#" data-open-search>Tìm kiếm…</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<header class="lhero ink grain">
+  <div class="lhero-n" aria-hidden="true">02</div>
+  <div class="lhero-top" data-reveal>
+    <span class="label">Bậc 02 / 07 · Bài tự học</span>
+    <span class="label"><a href="index.html#bo-suu-tap" style="text-decoration:none">← Cả 7 bậc</a></span>
+  </div>
+  <div class="lhero-steps" data-reveal aria-label="Vị trí trong 7 bậc"><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><span class="label">Bậc 02 trên hành trình đi xuống phễu</span></div>
+  <h1 data-split>Tài liệu dài, và bẫy “AI bịa”</h1>
+  <p class="lhero-how" data-reveal>Bạn giỏi nhưng đôi khi đoán, nên cứ hỏi “căn cứ đâu?”</p>
+  <p class="lhero-sum" data-reveal>Tóm tắt hợp đồng dài trong vài phút, tự tay bắt quả tang AI đoán, và tập thói quen hỏi căn cứ cho mọi câu trả lời quan trọng.</p>
+  <div class="lhero-meta" data-reveal>
+    <div><span class="label">Thời gian</span><b>30 phút</b></div>
+    <div><span class="label">Công cụ</span><b>Claude, ChatGPT · NotebookLM</b></div>
+    <div><span class="label">Bản miễn phí</span><b>Có</b></div>
+    <div><span class="label">Tiến độ</span><b data-hero-progress="cap-2" data-total="6">0/6</b></div>
+  </div>
+  <div class="lhero-cta" data-reveal>
+    <a class="btn btn-solid" href="#ban-se-lam-duoc-gi">Bắt đầu đọc <span class="arr">↓</span></a>
+    <a class="btn" href="trinh-chieu.html?mode=study#b2">Xem phần trình chiếu <span class="arr">↗</span></a>
+    <a class="btn" href="trinh-chieu.html?mode=film#b2">Xem như phim <span class="arr">▶</span></a>
+  </div>
+</header>
+<div class="doc"><aside class="doc-side"><nav class="toc" aria-label="Mục lục bài"><p class="toc-label">Trong bài này</p><ol><li><a href="#ban-se-lam-duoc-gi">Bạn sẽ làm được gì</a></li><li><a href="#vi-sao-cach-nho-nay-hieu-qua">Vì sao cách nhờ này hiệu quả</a></li><li><a href="#chuan-bi">Chuẩn bị</a></li><li><a href="#lam-that-tung-buoc">Làm thật: từng bước</a></li><li><a href="#dam-hoi-lai">Dám hỏi lại</a></li><li><a href="#bien-the-theo-nganh">Biến thể theo ngành</a></li><li><a href="#con-viec-gi-giong-vay">Còn việc gì giống vậy?</a></li><li><a href="#khi-ket-qua-chua-nhu-y">Khi kết quả chưa như ý</a></li><li><a href="#tu-kiem-tra">Tự kiểm tra</a></li><li><a href="#di-xa-hon">Đi xa hơn</a></li></ol><div class="toc-progress" data-progress-of="cap-2" data-total="6"><span class="toc-progress-bar"><i></i></span><span class="toc-progress-txt">0/6 đã tích</span></div><div class="toc-tools"><button type="button" data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button type="button" data-fs="1" aria-label="Chữ lớn hơn">A+</button><button type="button" onclick="window.print()">In bài</button></div></nav></aside><article class="prose" data-slug="cap-2"><h2 id="ban-se-lam-duoc-gi">Bạn sẽ làm được gì</h2>
+<ul>
+<li>Biết dữ liệu nào kể thoải mái, dữ liệu nào phải che, dữ liệu nào không đưa cho AI.</li>
+<li>Tóm tắt một hợp đồng 10 điều kèm phụ lục theo góc nhìn bên mua: ai làm gì, hạn khi nào, chỗ nào bất lợi.</li>
+<li>Tự tay đặt bẫy để thấy AI "đoán" như thế nào, và vì sao.</li>
+<li>Nhờ chính bạn ấy chỉ cách kiểm tra bạn ấy, rồi đòi trích nguyên văn kèm số Điều.</li>
+<li>Đối chiếu trích dẫn với tài liệu gốc trong 2 phút, kể cả khi bạn không phải dân luật.</li>
+</ul>
+<h2 id="vi-sao-cach-nho-nay-hieu-qua">Vì sao cách nhờ này hiệu quả</h2>
+<p>Đọc kỹ một hợp đồng 6–7 trang kèm phụ lục và tìm hết chỗ bất lợi thường mất cả buổi. Người bạn AI đọc xong trong vài giây. Câu hỏi là: có tin được không?</p>
+<p>Câu trả lời của mình: <strong>AI không nói dối, nó đoán.</strong> Khi bạn hỏi điều tài liệu không nói, bạn ấy hiếm khi đáp "không có". Bạn ấy muốn giúp, nên tìm thứ gần giống nhất trong tài liệu hoặc lấy từ kiến thức chung, rồi trả lời rất tự tin. Càng trôi chảy, mình càng dễ tin.</p>
+<p>Andrej Karpathy gọi hiện tượng này là năng lực AI "không đều", như răng cưa: cực giỏi ở việc kiểm chứng được, nhưng thất thường ở việc khác. Tóm tắt một hợp đồng là việc bạn ấy làm rất tốt. Trả lời một điều hợp đồng <em>không nói</em> lại là chỗ răng cưa lõm xuống. Biết chỗ lõm ở đâu là một phần của việc đi xuống phễu (xem <a href="khoang-cach.html">Khoảng cách AI</a>).</p>
+<p>Cách chữa rất quen với dân văn phòng: <strong>hỏi "căn cứ đâu?"</strong>. Khi phải trích nguyên văn kèm số Điều, mỗi câu trả lời trở thành thứ bạn kiểm tra được trong 30 giây. Chỗ nào bạn ấy không trích được, đó là chỗ đang suy luận hoặc đang đoán. Và bạn không cần tự nghĩ ra cách kiểm tra: <strong>hỏi thẳng bạn ấy</strong> "làm sao để mình biết bạn không bịa?". Bạn ấy hiểu điểm yếu của chính mình khá rõ.</p>
+<div class="admonition view">
+<p class="admonition-title">Góc nhìn</p>
+<p>AI không nói dối, nó đoán, giống một người bạn rất giỏi nhưng ngại nói "mình không biết". Bạn không cần sợ, chỉ cần quen hỏi "căn cứ đâu?", như cách bạn hỏi lại một đồng nghiệp trước khi ký.</p>
+</div>
+<h2 id="chuan-bi">Chuẩn bị</h2>
+<h3 id="den-giao-thong-du-lieu">Đèn giao thông dữ liệu</h3>
+<p>Bạn thân đến mấy cũng có chuyện mình không kể. Với AI cũng vậy. Trước khi upload bất kỳ tài liệu nào, hãy nhìn đèn:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Loại dữ liệu</th>
+<th>Có đưa cho bạn ấy không?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢</td>
+<td><strong>Công khai:</strong> văn bản pháp luật, tin tức, kiến thức chung, tài liệu đã công bố</td>
+<td>Thoải mái</td>
+</tr>
+<tr>
+<td>🟡</td>
+<td><strong>Nội bộ:</strong> hợp đồng, báo cáo, email công việc</td>
+<td><strong>Che trước:</strong> tên người, tên công ty, số tiền, mã số (số hợp đồng, mã số thuế)</td>
+</tr>
+<tr>
+<td>🔴</td>
+<td><strong>Bí mật:</strong> thông tin khách hàng, số tài khoản, mật khẩu, dữ liệu chưa công bố</td>
+<td><strong>Không đưa</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Che nhanh: trong Word, dùng Tìm và thay thế (<kbd>Ctrl</kbd> + <kbd>H</kbd>) đổi tên công ty thành "Công ty A", "Công ty B", số tiền thành "[X] đồng". Điều khoản vẫn nguyên nên bạn ấy vẫn phân tích được. Chi tiết ở trang <a href="an-toan.html">An toàn</a>. Với tài liệu công ty, luôn xem trước quy định của công ty bạn.</p>
+<div class="admonition note">
+<p class="admonition-title">Hôm nay an toàn tuyệt đối</p>
+<p>Hợp đồng dùng trong bài là <strong>hư cấu</strong>: mọi công ty, con người, số liệu đều không có thật. Cứ thoải mái upload.</p>
+</div>
+<h3 id="cong-cu-va-file">Công cụ và file</h3>
+<ul>
+<li><strong>Công cụ:</strong> Claude (<a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>) hoặc ChatGPT (<a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a>), cả hai đều nhận file Word. Thêm NotebookLM (<a href="https://notebooklm.google.com" target="_blank" rel="noopener">notebooklm.google.com</a>) nếu muốn thử Bước 6. Bản miễn phí có thể giới hạn số file hoặc số lượt upload; giới hạn thay đổi thường xuyên, hãy xem trang chính thức.</li>
+<li><strong>Thời gian:</strong> khoảng 30 phút.</li>
+<li><strong>Vai của bạn:</strong> người phụ trách pháp chế của <strong>bên mua</strong>.</li>
+<li><strong>File:</strong> hợp đồng mẫu bên dưới.</li>
+</ul>
+<p><a class="dl" href="files/cap-2/hop-dong-mua-ban-ke-kho-MAU.docx">Tải hợp đồng mẫu (.docx)</a></p>
+<p>Hợp đồng mua bán kệ kho số 27/2026/HĐMB/PA-SM. Bên A (bên bán) là Công ty TNHH Kệ kho Phú An, bên B (bên mua) là Công ty CP Phân phối Thiết bị Văn phòng Sao Mai. Tổng giá trị 1.164.240.000đ, gồm 10 điều kèm phụ lục. Lướt qua một phút thôi: hôm nay bạn ấy là người đọc, bạn là người kiểm tra.</p>
+<h2 id="lam-that-tung-buoc">Làm thật: từng bước</h2>
+<h3 id="buoc-1-upload-hop-dong-va-nho-tom-tat-nhu-noi-chuyen" class="step"><span class="step-n">01</span><span class="step-t">Upload hợp đồng và nhờ tóm tắt như nói chuyện</span></h3>
+<p>Mở cuộc trò chuyện mới, bấm biểu tượng đính kèm (hình ghim hoặc dấu +), chọn file, rồi gõ:</p>
+<div class="prompt" id="p-cap-2-1" data-tags="luat chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2a</span><span class="prompt-title">Tóm tắt theo góc nhìn bên mua</span><span class="tag">Pháp lý</span><span class="tag">Chung</span></div><pre class="prompt-body">Mình là bên mua. Tóm tắt giúp mình hợp đồng này nhé. Mình cần biết: ai phải làm gì, hạn khi nào, và chỗ nào bất lợi hoặc viết mơ hồ cho mình.</pre><div class="prompt-actions"></div></div>
+
+<p>Câu "Mình là bên mua" là chìa khoá. Cùng một điều khoản, bên bán thấy "chặt chẽ", bên mua thấy "thiệt". Nói rõ bạn đứng ở đâu thì bạn ấy mới biết soi theo hướng nào.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Một bản tóm tắt gọn: các bên, giá trị, thanh toán, giao hàng, bảo hành, phạt vi phạm, tranh chấp. Cuối cùng là danh sách điểm bất lợi hoặc mơ hồ cho bên mua, thường kèm số Điều. <strong>Đếm xem bạn ấy tìm được mấy điểm</strong> rồi để đó. Đáp án nằm ở mục Dám hỏi lại.</p>
+</div>
+<h3 id="buoc-2-dat-bay-mot-cau-hoi-nghe-rat-binh-thuong" class="step"><span class="step-n">02</span><span class="step-t">Đặt bẫy: một câu hỏi nghe rất bình thường</span></h3>
+<p>Để bẫy dễ "ăn", hãy <strong>mở một cuộc trò chuyện mới</strong>, upload lại file, rồi hỏi luôn câu dưới đây, không nói gì thêm:</p>
+<div class="prompt" id="p-cap-2-2" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2-bẫy</span><span class="prompt-title">Thử bắt bạn ấy đoán</span><span class="tag">Chung</span></div><pre class="prompt-body">Nếu bên bán giao hàng chậm thì bị phạt bao nhiêu tiền?</pre><div class="prompt-actions"></div></div>
+
+<p>Câu này ai mua hàng cũng muốn biết, nhưng nó là một cái bẫy. Cứ hỏi và ghi lại câu trả lời. Trước khi đọc, thử tự đoán: hợp đồng có ghi mức phạt cụ thể không?</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Thường là một trong hai kiểu:</p>
+<ul>
+<li><strong>Một con số rất tự tin</strong>, ví dụ một tỷ lệ phần trăm hoặc một mức phạt theo ngày, kèm số Điều nghe rất có lý.</li>
+<li><strong>Bạn ấy nói hợp đồng không quy định rõ.</strong></li>
+</ul>
+<p>Đừng vội tin kiểu nào. Chụp màn hình lại, ta sẽ kiểm tra ở các bước sau.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Bạn ấy trả lời đúng ngay?</p>
+<p>Hôm nay bạn ấy cẩn thận, nhưng không phải lúc nào cũng vậy. Thử lại ở cuộc trò chuyện mới hoặc công cụ khác, với câu "gài" hơn: "Mức phạt khi bên bán giao chậm là bao nhiêu phần trăm?". Câu hỏi đã ngầm cho rằng có một con số, nên bạn ấy dễ đi tìm một con số. Đời thật cũng vậy: cách mình hỏi có thể dắt bạn ấy đi sai.</p>
+</div>
+<h3 id="buoc-3-hoi-thang-ban-ay-lam-sao-de-minh-biet-ban-khong-bia" class="step"><span class="step-n">03</span><span class="step-t">Hỏi thẳng bạn ấy: "Làm sao để mình biết bạn không bịa?"</span></h3>
+<p>Đây là khoảnh khắc chính của bậc này. Ngay trong cuộc trò chuyện có câu bẫy, hỏi:</p>
+<div class="prompt" id="p-cap-2-3" data-tags="meta chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2b</span><span class="prompt-title">Hỏi thẳng bạn ấy</span><span class="tag">Hỏi thẳng</span><span class="tag">Chung</span></div><pre class="prompt-body">Làm sao để mình biết bạn không bịa? Bạn gợi ý cách để mình kiểm tra câu trả lời của bạn đi.</pre><div class="prompt-actions"></div></div>
+
+<p>Vì sao hiệu quả: bạn không cần học kỹ thuật kiểm chứng nào. Bạn ấy biết mình hay sai ở đâu, nên sẽ tự chỉ cách bắt lỗi chính mình.</p>
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Những gợi ý rất thực tế: trích nguyên văn kèm số Điều hoặc số trang, tách phần "tài liệu nói" với phần "suy luận", nói thẳng "không tìm thấy" khi tài liệu không có. Nhiều khi bạn ấy còn tự nhận ra câu trả lời trước đã quá tay.</p>
+</div>
+<h3 id="buoc-4-lam-theo-chinh-goi-y-cua-ban-ay" class="step"><span class="step-n">04</span><span class="step-t">Làm theo chính gợi ý của bạn ấy</span></h3>
+<div class="prompt" id="p-cap-2-4" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2c</span><span class="prompt-title">Trích nguyên văn kèm số Điều</span><span class="tag">Chung</span></div><pre class="prompt-body">Ok, làm đúng như bạn vừa nói nhé: với mỗi ý, trích nguyên văn câu trong tài liệu kèm số Điều (hoặc số trang). Chỗ nào là bạn suy luận thì nói rõ.</pre><div class="prompt-actions"></div></div>
+
+<p>Rồi hỏi lại câu bẫy, lần này với "luật chơi" mới:</p>
+<div class="prompt" id="p-cap-2-5" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2d</span><span class="prompt-title">Hỏi lại câu bẫy với luật chơi mới</span><span class="tag">Chung</span></div><pre class="prompt-body">Giờ trả lời lại câu lúc nãy theo đúng cách đó: nếu bên bán giao hàng chậm thì bị phạt bao nhiêu? Chỉ dùng thông tin trong hợp đồng, trích nguyên văn. Hợp đồng không nói thì nói là không có.</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Câu trả lời đổi hẳn chất: mỗi ý đi kèm một câu trong ngoặc kép và số Điều. Với câu bẫy, bạn ấy trích một điều khoản cụ thể, và nếu lần trước đoán sai thì thường tự đính chính. Giờ bạn đã có thứ để đối chiếu.</p>
+</div>
+<h3 id="buoc-5-tu-mo-hop-dong-ra-doi-chieu" class="step"><span class="step-n">05</span><span class="step-t">Tự mở hợp đồng ra đối chiếu</span></h3>
+<p>Bước nhiều người bỏ qua, nhưng quan trọng nhất. Mở hợp đồng bằng Word, nhấn <kbd>Ctrl</kbd> + <kbd>F</kbd>, gõ "7.2", rồi "5.2". So từng chữ câu bạn ấy trích với câu trong file.</p>
+<p>Không cần kiểm mọi câu. Chọn 1–2 câu <strong>quan trọng nhất</strong> (ảnh hưởng đến quyết định ký hay không) hoặc chọn ngẫu nhiên. Câu trích không khớp từng chữ là tín hiệu đỏ: bạn ấy đang diễn đạt lại hoặc nhớ nhầm. Khi đó, nói thẳng:</p>
+<div class="prompt" id="p-cap-2-6" data-tags="chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2e</span><span class="prompt-title">Khi trích dẫn không khớp</span><span class="tag">Chung</span></div><pre class="prompt-body">Câu bạn trích ở Điều [số] không khớp với file của mình. Trong file ghi: &quot;[dán câu gốc]&quot;. Kiểm tra lại toàn bộ các trích dẫn khác và sửa những chỗ sai giúp mình.</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Điều 7.2 chỉ nói hai bên sẽ "cùng thương lượng mức phạt phù hợp", không có con số nào. Điều 5.2 cho bên bán tự quyết định hư hỏng có phải do "lỗi sử dụng" hay không. Trích dẫn khớp với file thì bạn yên tâm hơn với phần còn lại. Không khớp thì bạn vừa bắt được một lỗi trước khi nó thành chuyện lớn.</p>
+</div>
+<h3 id="buoc-6-tuy-chon-notebooklm-trich-dan-bam-duoc" class="step"><span class="step-n">06</span><span class="step-t">(Tuỳ chọn) NotebookLM: trích dẫn bấm được</span></h3>
+<p>Với tài liệu dài hoặc nhiều tài liệu cùng lúc, NotebookLM của Google rất đáng thử: mỗi câu trả lời có số trích dẫn nhỏ, <strong>bấm vào là nhảy thẳng tới đoạn gốc</strong>. Việc đối chiếu ở Bước 5 nhanh hơn hẳn.</p>
+<p>Vào notebooklm.google.com, tạo notebook mới, thêm hợp đồng làm nguồn. Nếu không tải lên được file .docx, mở bằng Word, lưu thành PDF (File → Save As → PDF) rồi tải lên. Sau đó hỏi:</p>
+<div class="prompt" id="p-cap-2-7" data-tags="luat chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2f</span><span class="prompt-title">Hỏi trong NotebookLM</span><span class="tag">Pháp lý</span><span class="tag">Chung</span></div><pre class="prompt-body">Mình là bên mua. Liệt kê các điều khoản bất lợi cho mình. Nếu bên bán giao hàng chậm thì bị phạt bao nhiêu?</pre><div class="prompt-actions"></div></div>
+
+<div class="admonition result">
+<p class="admonition-title">Bạn sẽ thấy</p>
+<p>Các số nhỏ cạnh từng ý. Rê chuột hoặc bấm vào, đoạn gốc trong hợp đồng hiện ra. NotebookLM được thiết kế để bám sát nguồn bạn đưa vào, nên rất hợp với hợp đồng, quy chế, tài liệu nhiều trang. Dù vậy, vẫn bấm thử vài trích dẫn cho chắc.</p>
+</div>
+<h2 id="dam-hoi-lai">Dám hỏi lại</h2>
+<p>Ở bậc này, "dám hỏi lại" là cả bài học. Gói lại thành ba câu nên hỏi với <strong>mọi</strong> tài liệu quan trọng:</p>
+<ol>
+<li>"Căn cứ đâu? Trích nguyên văn kèm số Điều."</li>
+<li>"Chỗ nào là bạn suy luận, chỗ nào tài liệu nói thẳng?"</li>
+<li>"Có điều khoản nào dẫn chiếu đến một tài liệu khác mà mình chưa đưa cho bạn không?"</li>
+</ol>
+<p>Câu thứ ba hay bị bỏ quên. Hợp đồng thật thường nhắc đến phụ lục, quy chế, báo giá… Thiếu tài liệu nào, bạn ấy chỉ phân tích được phần mình nhìn thấy. Thử hỏi câu này với hợp đồng mẫu, có thể bạn sẽ bất ngờ.</p>
+<div class="admonition check">
+<p class="admonition-title">Kiểm chứng trong 2 phút</p>
+<ul>
+<li>Chọn 1–2 câu trích dẫn quan trọng nhất, tìm bằng <kbd>Ctrl</kbd> + <kbd>F</kbd> trong file gốc, so từng chữ.</li>
+<li>Mọi con số (tiền, phần trăm, số ngày): luôn tìm lại trong file gốc trước khi dùng.</li>
+<li>Bạn ấy nói "không có"? Cũng tìm lại, đôi khi bạn ấy bỏ sót thật.</li>
+<li>Trộn cả kiến thức luật chung? Yêu cầu tách riêng phần "hợp đồng nói" và "luật chung nói".</li>
+</ul>
+</div>
+<p>Giờ so kết quả Bước 1 và câu bẫy với đáp án:</p>
+<details class="answer"><summary><span>Xem đáp án: 3 điểm bất lợi + các điểm phụ</span></summary><div class="answer-body">
+<p><strong>3 điểm bất lợi chính cho bên mua:</strong></p>
+<ol>
+<li><strong>Điều 3.2 + 4.1 + 4.3:</strong> bên mua trả <strong>100% trước khi giao hàng</strong>, và rủi ro chuyển sang bên mua <strong>ngay khi hàng được xếp lên xe tại kho bên bán</strong>. Bên mua mất đòn bẩy. Hàng hỏng hoặc mất trên đường thì bên mua chịu, dù giá đã gồm vận chuyển và bên bán là bên lo vận chuyển.</li>
+<li><strong>Điều 5.2:</strong> bên bán <strong>tự quyết định</strong> hư hỏng có phải do "lỗi sử dụng" hay không. Bên bán dễ từ chối bảo hành, bên mua không có cơ chế phản biện.</li>
+<li><strong>Điều 7.1 so với 7.2:</strong> bên mua chậm trả thì bị phạt <strong>8%</strong> cộng lãi chậm trả <strong>0,1%/ngày</strong>; bên bán chậm giao thì chỉ "thương lượng". Phạt một chiều, bên mua không có chế tài nào với bên bán.</li>
+</ol>
+<p><strong>Điểm phụ (bạn ấy giỏi sẽ phát hiện thêm):</strong></p>
+<ul>
+<li><strong>Điều 2.2</strong> dẫn chiếu Phụ lục 01 về quy cách kỹ thuật, nhưng <strong>Phụ lục 01 không được đính kèm</strong> (chỉ có Phụ lục 02 và 03).</li>
+<li><strong>Điều 4.4:</strong> chỉ có <strong>02 ngày</strong> để kiểm tra hàng; quá hạn mà không có ý kiến bằng văn bản thì coi như đã nghiệm thu.</li>
+<li><strong>Điều 5.3:</strong> bảo hành "trong thời gian hợp lý", không có số ngày cụ thể.</li>
+<li><strong>Điều 9.2:</strong> tranh chấp giải quyết tại toà án nơi <strong>bên bán</strong> đặt trụ sở.</li>
+<li><strong>Phụ lục 02, mục 5:</strong> bên mua chịu chi phí đi lại của kỹ thuật viên khi ở ngoài <strong>30 km</strong> tính từ trụ sở bên bán.</li>
+<li><strong>Phụ lục 03, mục 3:</strong> thời gian chờ do mặt bằng chưa sẵn sàng <strong>không tính</strong> vào thời gian lắp đặt.</li>
+</ul>
+<p>Bạn ấy tìm đủ 3 điểm chính là rất tốt, mỗi điểm phụ là điểm cộng. Điểm nào bị bỏ sót, hỏi thử: "Bạn xem lại Điều [số] giúp mình, có gì bất lợi cho bên mua không?"</p>
+</div></details>
+<details class="answer"><summary><span>Xem đáp án câu bẫy</span></summary><div class="answer-body">
+<p><strong>Hợp đồng không quy định mức phạt cụ thể khi bên bán giao chậm.</strong> Điều 7.2 chỉ ghi hai bên "sẽ cùng thương lượng mức phạt phù hợp trên tinh thần hợp tác".</p>
+<p><strong>Vì sao bạn ấy hay đoán sai?</strong> Vì hợp đồng có sẵn hai con số "trông giống đáp án":</p>
+<ul>
+<li><strong>8%:</strong> lấy nhầm từ Điều 7.1. Nhưng đó là mức phạt khi <strong>bên mua</strong> chậm thanh toán, không phải bên bán. Con số 8% còn trùng với mức trần phạt vi phạm trong Luật Thương mại, nên bạn ấy càng dễ tin là đúng.</li>
+<li><strong>0,1%/ngày:</strong> lấy nhầm từ Điều 3.4. Đó là <strong>lãi chậm trả của bên mua</strong>.</li>
+</ul>
+<p>Cả hai đều nói về "chậm" và "phạt", nên khi không bị ràng buộc "chỉ dùng thông tin trong tài liệu", bạn ấy dễ ghép nhầm. Thú vị là câu bẫy này còn chỉ ra một lỗ hổng thật của hợp đồng: phạt một chiều, đúng điểm bất lợi số 3.</p>
+</div></details>
+<h2 id="bien-the-theo-nganh">Biến thể theo ngành</h2>
+<h3 id="phap-ly">⚖️ Pháp lý</h3>
+<p>So sánh hai phiên bản văn bản là việc bạn ấy làm rất nhanh, nhưng càng phải đòi trích dẫn vì sai một chữ là sai nghĩa.</p>
+<div class="prompt" id="p-cap-2-8" data-tags="luat"><div class="prompt-head"><span class="prompt-label">Prompt · 2g</span><span class="prompt-title">So sánh hai phiên bản văn bản</span><span class="tag">Pháp lý</span></div><pre class="prompt-body">Mình gửi bạn 2 file: bản cũ và bản mới của [văn bản / hợp đồng]. Điểm nào mới, điểm nào bị bỏ, điểm nào sửa câu chữ làm đổi nghĩa? Với mỗi điểm, trích nguyên văn cả bản cũ và bản mới kèm số Điều.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="ke-toan-tai-chinh">💰 Kế toán – Tài chính</h3>
+<p>Với báo cáo tài chính, đòi bạn ấy chỉ ra con số gốc nằm ở đâu trước khi tin bất kỳ phần trăm thay đổi nào.</p>
+<div class="prompt" id="p-cap-2-9" data-tags="ketoan"><div class="prompt-head"><span class="prompt-label">Prompt · 2h</span><span class="prompt-title">Đọc nhanh báo cáo tài chính</span><span class="tag">Kế toán</span></div><pre class="prompt-body">Đây là báo cáo tài chính [kỳ này] (đã che tên công ty). Khoản mục nào thay đổi nhiều nhất so với kỳ trước, vì sao? Với mỗi con số, ghi rõ lấy từ bảng nào, dòng nào để mình đối chiếu. Phần trăm thay đổi thì ghi luôn cách tính.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="kinh-doanh-cskh">🤝 Kinh doanh – CSKH</h3>
+<p>Hồ sơ mời thầu thường dài và có những điều kiện "không đáp ứng là loại ngay". Nhờ bạn ấy tách riêng những điều kiện đó.</p>
+<div class="prompt" id="p-cap-2-10" data-tags="kinhdoanh"><div class="prompt-head"><span class="prompt-label">Prompt · 2i</span><span class="prompt-title">Đọc hồ sơ mời thầu</span><span class="tag">Kinh doanh</span></div><pre class="prompt-body">Đây là hồ sơ mời thầu. Liệt kê giúp mình: các yêu cầu bắt buộc (không đáp ứng là bị loại), hạn nộp và các mốc thời gian, những điểm công ty mình có thể yếu. Mỗi ý trích nguyên văn kèm số mục hoặc số trang.</pre><div class="prompt-actions"></div></div>
+
+<h3 id="van-hanh-xay-dung">🏗️ Vận hành – Xây dựng</h3>
+<p>Hợp đồng thi công có nhiều nghĩa vụ và mốc thời gian dễ bị bỏ sót, nhất là khi nằm rải rác trong phụ lục.</p>
+<div class="prompt" id="p-cap-2-11" data-tags="vanhanh"><div class="prompt-head"><span class="prompt-label">Prompt · 2j</span><span class="prompt-title">Rà nghĩa vụ trong hợp đồng thi công</span><span class="tag">Vận hành</span></div><pre class="prompt-body">Mình là bên [nhà thầu / chủ đầu tư]. Đọc hợp đồng thi công này, lập bảng: nghĩa vụ của bên mình, mốc thời gian, điều kiện nghiệm thu, mức phạt nếu chậm. Mỗi dòng trích nguyên văn kèm số Điều. Chỗ nào hợp đồng không nói rõ thì ghi &quot;không quy định&quot;.</pre><div class="prompt-actions"></div></div>
+
+<h2 id="con-viec-gi-giong-vay">Còn việc gì giống vậy?</h2>
+<div class="cols">
+<div class="admonition work">
+<p class="admonition-title">💼 Công việc</p>
+<ul>
+<li>Quy chế công ty mới ban hành: điều gì ảnh hưởng đến phòng mình?</li>
+<li>Thông tư, nghị định mới: thay đổi gì so với văn bản cũ?</li>
+<li>Biên bản họp dài 10 trang: ai nhận việc gì, hạn khi nào?</li>
+<li>Hồ sơ năng lực của đối tác: điểm mạnh, điểm cần hỏi thêm</li>
+<li>Hướng dẫn sử dụng phần mềm mới: 5 thao tác mình cần dùng hằng ngày</li>
+</ul>
+</div>
+<div class="admonition life">
+<p class="admonition-title">🏡 Đời sống</p>
+<ul>
+<li>Hợp đồng thuê nhà trước khi ký: điều gì bất lợi cho người thuê?</li>
+<li>Điều khoản bảo hiểm: trường hợp nào không được chi trả?</li>
+<li>Cuốn sách 300 trang chưa có thời gian đọc</li>
+<li>Hướng dẫn sử dụng máy giặt, điều hoà mới mua</li>
+<li>Điều kiện vay mua nhà: trả nợ trước hạn thì mất phí bao nhiêu?</li>
+</ul>
+</div>
+</div>
+<p>Tài liệu nào dài mà quan trọng, cứ nhờ bạn ấy đọc giúp. Nhưng với câu trả lời sẽ dẫn đến một quyết định, luôn hỏi: <strong>"căn cứ đâu?"</strong></p>
+<h2 id="khi-ket-qua-chua-nhu-y">Khi kết quả chưa như ý</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Bạn gặp</th>
+<th>Vì sao</th>
+<th>Nói với bạn ấy thế này</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Câu "trích nguyên văn" không khớp với file</td>
+<td>Bạn ấy diễn đạt lại thay vì chép đúng</td>
+<td>"Câu này không khớp với file. Chép đúng từng chữ, kể cả dấu câu. Không tìm thấy thì nói không tìm thấy."</td>
+</tr>
+<tr>
+<td>Tóm tắt chung chung, không chỉ ra điểm bất lợi</td>
+<td>Bạn ấy chưa biết bạn đứng ở phía nào</td>
+<td>"Mình là bên mua. Đọc lại với con mắt luật sư của bên mua, liệt kê từng điểm bất lợi kèm số Điều."</td>
+</tr>
+<tr>
+<td>Bạn ấy báo không đọc được file, hoặc hết lượt upload</td>
+<td>Giới hạn của bản miễn phí, hoặc định dạng file</td>
+<td>Lưu file sang PDF rồi thử lại. Hoặc copy phần cần hỏi dán thẳng vào khung chat: "Đây là Điều 3 đến Điều 7, mình hỏi về phần này."</td>
+</tr>
+<tr>
+<td>Bạn ấy giữ nguyên câu trả lời sai dù bạn đã hỏi lại</td>
+<td>Bạn ấy bám vào những gì đã nói ở phía trên</td>
+<td>Mở cuộc trò chuyện mới, upload lại file, đặt luật chơi ngay từ câu đầu: "Chỉ dùng thông tin trong tài liệu, trích nguyên văn kèm số Điều."</td>
+</tr>
+<tr>
+<td>Phụ lục, các điều cuối bị bỏ sót</td>
+<td>Tài liệu dài, phần cuối dễ bị lướt qua</td>
+<td>"Đọc lại riêng các phụ lục và các điều từ Điều [7] trở đi, có gì bất lợi cho bên mua không?" Hoặc chuyển sang NotebookLM.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tu-kiem-tra">Tự kiểm tra</h2>
+<ul class="tasks">
+<li class="task"><label><input type="checkbox" data-task="cap-2:1"><span class="box" aria-hidden="true"></span><span class="txt">Phân biệt được dữ liệu 🟢 🟡 🔴 và biết che gì trước khi upload tài liệu thật.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-2:2"><span class="box" aria-hidden="true"></span><span class="txt">Đã nhờ tóm tắt hợp đồng theo góc nhìn bên mua và so với đáp án.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-2:3"><span class="box" aria-hidden="true"></span><span class="txt">Đã thử câu bẫy và hiểu vì sao AI hay đoán 8% hoặc 0,1%/ngày.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-2:4"><span class="box" aria-hidden="true"></span><span class="txt">Đã hỏi "làm sao để mình biết bạn không bịa?" và làm theo gợi ý của bạn ấy.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-2:5"><span class="box" aria-hidden="true"></span><span class="txt">Đã tự mở hợp đồng, đối chiếu ít nhất một câu trích dẫn.</span></label></li>
+<li class="task"><label><input type="checkbox" data-task="cap-2:6"><span class="box" aria-hidden="true"></span><span class="txt">(Tuỳ chọn) Đã thử NotebookLM và bấm vào một trích dẫn.</span></label></li>
+</ul>
+<h2 id="di-xa-hon">Đi xa hơn</h2>
+<ul>
+<li><strong>Nhờ soạn luôn đề xuất sửa đổi.</strong> "Dựa trên 3 điểm bất lợi, soạn giúp mình đề xuất sửa đổi gửi bên bán, lời lẽ hợp tác." Rồi dùng chiêu của <a href="cap-1.html">Bậc 1</a>: nhờ bạn ấy đóng vai pháp chế bên bán để phản biện trước.</li>
+<li><strong>Hỏi chéo hai công cụ.</strong> Đưa cùng tài liệu, cùng câu hỏi cho cả Claude và ChatGPT. Chỗ nào hai bên trả lời khác nhau, đó là chỗ bạn cần tự đọc kỹ.</li>
+<li><strong>Gom cả bộ hồ sơ vào NotebookLM</strong>: hợp đồng, phụ lục, email trao đổi, rồi hỏi xuyên suốt.</li>
+<li><strong>Biến bài học thành checklist.</strong> "Từ hợp đồng này, lập checklist 15 điểm mình nên kiểm tra với mọi hợp đồng mua hàng."</li>
+<li><strong>Đặt luật chơi ngay từ câu đầu</strong> với mọi tài liệu quan trọng, khỏi phải sửa sau:</li>
+</ul>
+<div class="prompt" id="p-cap-2-12" data-tags="meta chung"><div class="prompt-head"><span class="prompt-label">Prompt · 2k</span><span class="prompt-title">Luật chơi khi đọc tài liệu</span><span class="tag">Hỏi thẳng</span><span class="tag">Chung</span></div><pre class="prompt-body">Trong cuộc trò chuyện này, chỉ dùng thông tin trong tài liệu mình gửi. Mỗi ý trích nguyên văn kèm số Điều hoặc số trang. Chỗ nào là suy luận thì ghi rõ &quot;suy luận&quot;. Tài liệu không nói thì trả lời &quot;không có trong tài liệu&quot;, đừng đoán.</pre><div class="prompt-actions"></div></div>
+
+<p>Bạn đã biết cách tin mà vẫn kiểm. Sang <a href="cap-3.html">Bậc 3: Excel lộn xộn → sạch</a>, nơi bạn đưa cho bạn ấy cả một đống bừa bộn.</p></article></div><nav class="pager"><a class="pager-prev" href="cap-1.html"><small>← Bậc 01</small><span>Email khó, viết lại trong 30 giây</span></a><a class="pager-next" href="cap-3.html"><small>Bậc 03 →</small><span>Excel lộn xộn thành sạch</span></a></nav>
+</main>
+
+<footer class="foot ink">
+  <div class="marquee red" aria-hidden="true"><div class="marquee-track"><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span><span>Dám nhờ mọi thứ</span><span>✺</span><span>Dám hỏi lại mọi thứ</span><span>✺</span><span>Hỏi thẳng bạn ấy</span><span>✺</span><span>Giao việc như giao cho đồng nghiệp</span><span>✺</span></div></div>
+  <div class="foot-grid">
+    <div>
+      <p class="foot-big">Dám nhờ.<br><em>Dám hỏi lại.</em></p>
+    </div>
+    <div>
+      <h4 class="label">Tự học</h4>
+      <ul><li><a href="bat-dau.html">Bắt đầu ở đây</a></li><li><a href="khoang-cach.html">Khoảng cách AI</a></li><li><a href="giao-viec-nhu-dong-nghiep.html">Giao việc như đồng nghiệp</a></li><li><a href="cap-1.html">7 bậc</a></li><li><a href="thu-thach-7-ngay.html">Thử thách 7 ngày</a></li><li><a href="thu-vien-prompt.html">Thư viện prompt</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Tra cứu</h4>
+      <ul><li><a href="an-toan.html">An toàn & tỉnh táo</a></li><li><a href="cong-cu.html">Bản đồ công cụ</a></li><li><a href="tu-dien.html">Từ điển AI</a></li><li><a href="hoi-dap.html">Hỏi đáp</a></li><li><a href="tai-lieu.html">Tải tài liệu</a></li><li><a href="trinh-chieu.html?mode=film">Xem như phim ▶</a></li></ul>
+    </div>
+    <div>
+      <h4 class="label">Về trang này</h4>
+      <p class="foot-note">Toàn bộ website và bài trình chiếu, từ nội dung, thiết kế, chuyển động đến từng khung hình, được làm bằng cách <b>trò chuyện với Claude Code</b>. <a href="giao-viec-nhu-dong-nghiep.html#mot-vi-du-that-cau-giao-viec-da-tao-ra-phien-ban-nay">Xem câu giao việc đã tạo ra nó →</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Làm thật, thấy thật · Phiên bản 2</span><span>Dữ liệu demo đều hư cấu · <a href="#top">Lên đầu trang ↑</a></span></div>
+</footer>
+
+<div class="search" data-search hidden role="dialog" aria-modal="true" aria-label="Tìm kiếm trong trang">
+  <div class="search-box">
+    <div class="search-top"><input type="search" data-search-input placeholder="Tìm bài, prompt, thuật ngữ… (gõ không dấu cũng được)" autocomplete="off" aria-label="Từ khoá"><button type="button" data-close-search>ESC</button></div>
+    <div class="search-hints"><span class="label">Gợi ý</span><button type="button">tóm tắt hợp đồng</button><button type="button">excel công thức</button><button type="button">phễu khoảng cách</button><button type="button">đồng nghiệp</button><button type="button">giọng nói</button><button type="button">họp biên bản</button><button type="button">agent</button></div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> chọn</span><span><kbd>Enter</kbd> mở</span><span><kbd>Esc</kbd> đóng</span></div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+<script src="assets/js/site.js?v=1791903580" data-ver="1791903580" defer></script>
+</body>
+</html>
